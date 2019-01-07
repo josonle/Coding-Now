@@ -18,6 +18,8 @@
 
 ## Linux命令及Shell脚本学习笔记
 
+- [](https://github.com/josonle/Coding-Now/blob/master/Linux命令及Shell脚本学习笔记/Win10转Linux学习.md)
+
 
 
 
@@ -52,9 +54,19 @@
 ## 常用网站收纳
 
 - [并发编程网](http://ifeve.com/)——有很多不错的Java文章及外文翻译文章
-- 
+
+- [谷歌 机器学习速成课程](https://developers.google.cn/machine-learning/crash-course/)
+- [云+社区](https://cloud.tencent.com/developer/search/article-Spark)
+- [Stack Overflow搜索栏](https://stackoverflow.com/tags)，程序猿都该去的网站（当然还有GayHub）
+- [Coursera](https://www.coursera.org)，没事可以听听网课
 
 ## 工具
+
+- [Bird.so 小众搜索引擎](http://caup.cn/)
+- [Google 镜像站](http://scholar.hedasudi.com/)
+- 程序员翻译工具——[彩云小译](http://caiyunapp.com/fanyi/)
+  - [插件获取](http://caiyunapp.com/#xiaoyi-web)
+- 
 
 
 
