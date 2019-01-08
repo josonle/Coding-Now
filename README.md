@@ -48,6 +48,10 @@
 - [GitHub - apachecn/hands_on_Ml_with_Sklearn_and_TF: OReilly Hands On Machine Learning with Scikit Learn and TensorFlow (Sklearn与TensorFlow机器学习实用指南)](https://github.com/apachecn/hands_on_Ml_with_Sklearn_and_TF)
 - [AI研习社 - 研习AI产学研新知，助力AI学术开发者成长。](https://ai.yanxishe.com/)
 
+### GitHub上相关项目推荐
+
+- [homemade-machine-learning](https://github.com/trekhleb/homemade-machine-learning) (在家学习机器学习)，现在6.9K星，确实不错，不过全英文的
+
 ### 数据分析竞赛
 
 - 哪里可以参加比赛？【我常去的就这几个】
@@ -74,6 +78,25 @@
   - [机器学习：数据预处理之独热编码（One-Hot）_慕课手记](http://www.imooc.com/article/35900)
 
 ## 大数据篇
+
+## 算法篇
+
+- 网课
+  - [《算法第四版》-Coursera网课](https://www.coursera.org/learn/algorithms-part1/supplement/icGHT/welcome-to-algorithms-part-i)
+  > 算法课程Coursera网上主推的是Robert Sedgewick的算法课【红宝书的作者，普林斯顿计算机系创始人】
+
+  - [《算法第四版》在线资源](https://algs4.cs.princeton.edu/)
+  - 还有一门是Coursera上的斯坦福大学的算法课，我感觉偏理论，难度不如上面的那门
+
+- 推荐一门面试课，我感觉还是可以的，极客时间的【数据结构与算法之美】
+
+- 在线刷题：[LeetCode练手](https://leetcode.com/problemset/all/)
+
+  > LeetCode现在有中文版的了，[力扣中国](https://leetcode-cn.com/problemset/all/)
+
+- 每周基于Java、C++的LeetCode刷题记录
+
+- 项目
 
 ## eBook
 
