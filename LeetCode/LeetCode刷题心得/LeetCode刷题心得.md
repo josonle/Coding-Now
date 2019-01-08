@@ -172,9 +172,9 @@ https://blog.csdn.net/liuxialong/article/details/6556096
 > 
 > ```
 
+![](assets/Cycle.png)
 
 
-![](/leetcode/Cycle.png)
 
 #### 删除链表倒数第N个节点
 
@@ -213,7 +213,7 @@ https://blog.csdn.net/liuxialong/article/details/6556096
 
 #### 反转链表
 
-![1545790754297](/leetcode/reverseList.png)
+![](assets/reverseList.png)
 
 思路就是每次把节点1后面的节点移到head处（作为head节点），时间复杂度O(n)，空间复杂度O(1)
 
@@ -291,7 +291,7 @@ public ListNode removeElements(ListNode head, int val) {
   - 应当保持奇数节点和偶数节点的相对顺序。
   - 链表的第一个节点视为奇数节点，第二个节点视为偶数节点，以此类推。
 
-![1545793841798](/leetcode/奇偶链表.png)
+![](assets/奇偶链表.png)
 
 ```java
 public ListNode oddEvenList(ListNode head) {
