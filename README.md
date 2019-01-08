@@ -96,7 +96,9 @@
 
 - 每周基于Java、C++的LeetCode刷题记录
 
-- 项目
+- GitHub项目推荐
+
+  - [**LeetCodeAnimation** 用动画的形式呈现解LeetCode题目的思路](https://github.com/MisterBooo/LeetCodeAnimation) 
 
 ## eBook
 
@@ -183,5 +185,7 @@
 - [百度脑图](http://naotu.baidu.com/)
 - 路过图床
 
+#### 插件
 
+- [Chrome Extension Downloader](https://chrome-extension-downloader.com/)——可以通过此网站来下载因为某些原因无法在线安装 Chrome 插件
 
