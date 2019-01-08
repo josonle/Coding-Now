@@ -96,6 +96,9 @@
 
 - 每周基于Java、C++的LeetCode刷题记录
 
+  - [文档记录：LeetCode刷题心得.md](https://github.com/josonle/Coding-Now/blob/master/LeetCode/LeetCode刷题心得/LeetCode刷题心得.md)
+  - 代码驱动：【待补充】
+
 - GitHub项目推荐
 
   - [**LeetCodeAnimation** 用动画的形式呈现解LeetCode题目的思路](https://github.com/MisterBooo/LeetCodeAnimation) 
