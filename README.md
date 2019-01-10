@@ -28,6 +28,7 @@
 
 - [Windows转Linux学习.md](https://github.com/josonle/Coding-Now/blob/master/Linux命令及Shell脚本学习笔记/Win10转Linux学习.md)
 
+- [包管理工具apt使用.md](https://github.com/josonle/Coding-Now/blob/master/Linux%E5%91%BD%E4%BB%A4%E5%8F%8AShell%E8%84%9A%E6%9C%AC%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%8C%85%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7apt%E4%BD%BF%E7%94%A8.md)
 - 
 
 ## 爬虫篇（Python）
