@@ -136,5 +136,7 @@ U盘至少8g，因为过程中可能需要格式化u盘，提前备份好数据
 
 [办公平台之字体安装](https://bbs.deepin.org/forum.php?mod=viewthread&tid=157250&highlight=%E5%AE%89%E8%A3%85)
 
+[Deepin下如何科学上网：小飞机 1.2.2 版本发布！](https://bbs.deepin.org/forum.php?mod=viewthread&tid=166962) 
+
 参考我接下来几篇如何搭建开发环境的文章
 
