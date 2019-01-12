@@ -101,11 +101,41 @@ chmod u+x file1	//u增加对file1的可执行权限
 chmod o-wx f1  //对o删减f1的写、执行权限
 chmod a+x f1  //a代表所有用户，增加执行权限
 chmod uo+w f1  //对u、o增加f1的写权限
+chmod  u=rw,go=  f1  //u赋予读写权限，g、o不赋予任何权限，逗号后面不能有空格
 ```
 
 也可以用二进制数来表示权限，三个字母刚好可用二进制的0~7表示
 
+#### 查看文件和文件夹大小 df和du命令
 
+- df查看一级文件夹大小、使用情况、挂入点（**是只对文件夹有效**）
+
+```
+df -T  //查看所有所有文件系统的可用空间及使用的情况
+df -h  //同上，不过h代表用户容易查看的，human-readable
+```
+- du可查看文件和文件夹大小
+    - 参数`--max-depth`指定可以深入查看目录的层数，否则会遍历目录下的所有文件输出
+    - `-D`或`–-dereference-args` 显示指定符号连接的源文件大小
+    - `–exclude=<目录或文件>` 略过指定的目录或文件
+    - `-s` 仅显示总计，即当前目录的大小
+    - 还有是不赋予root权限无法查看一些不可访问的目录、文件啥的
+```
+du -h --max-depth=1 YOUR_DIR
+du -sh *  //显示当前目录内文件夹和文件的情况
+du -sh --exclude='*Mu*' *  //显示当前目录内不包括名字含MU的文件夹、文件的情况
+```
+
+![](assets/du-h.png)
+
+***
+![](assets/du-0.png)
+***
+![](assets/du-exclude.png)
+***
+还有一点是，你指定的YOUR_DIR
+![](assets/du-maxdepth.png)
+如图，是指定当前YOUR_DIR目录，还是YOUR_DIR下的目录
 
 ### ssh连接远程Linux服务器
 
@@ -124,12 +154,6 @@ ln f1 f2 【创建硬链接，实际上f1到f2的镜像，f1和f2在同一分区
 ln -s f1 f3 【删除f1，f3就没用了，但f2有用】
 
 文件访问权限
-u：创建文件的用户，g：同组用户，o：其他用户  【root用户无视权限设置】
-chmod  o+[r/w/x]  f1	【o赋予r/w/x权限】
-chmod  u=rw,go=  f1 【u赋予读写权限，go不赋予任何权限，逗号后面不能有空格】
-
-可以用数字代替rwx，ugo的rwx对应1~9个值【二进制】，转换为八进制即可【比如rwx为111，即7；r--为100，即4】
-
 chown 把权限赋予给某个用户，一般是root修改文件后把权限给其他用户
 
 通配符
@@ -192,3 +216,10 @@ hdfs dfs -setrep <copy num> <filename> 设置数据文件备份的份数
 
 ```
 
+## Linux下如何离线安装Chrome插件
+- 搜索相应的crx后缀名在插件
+- 命令行下输入`/usr/bin/google-chrome-stable --enable-easy-off-store-extension-install` 启动chrome
+- chrome中打开网址chrome://extensions/
+- 把下载好的插件拖到网页中即可
+
+chrome一定要装的插件有：oneTab、谷歌访问助手、
