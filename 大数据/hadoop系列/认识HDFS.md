@@ -42,7 +42,7 @@ HDFS所能存储的文件总数受限于Namenode的内存容量
 
 - 整体结构
 
-![](/MarkDown_images/大数据/HDFS名词.jpg)
+![](大数据/HDFS名词.jpg)
 
 - Namenode和Secondary Namenode
 
@@ -53,7 +53,7 @@ Namenode是HDFS的智脑，维护整个系统的目录树及目录树中的文�
 
 Secondary Namenode不能按照名字以为是Namenode的备份，他只是负责将镜像文件和编辑日志合并，以此来控制 edits 文件的大小在合理的范围，缩短集
 群重启时Namenode重建fsimage的时间。一般每个集群都有单独运行在一台服务器上的一个Secondary Namenode。Secondary Namenode也有恢复部分数据的作用
-![](/MarkDown_images/大数据/SecNamenode.jpg)
+![](大数据/SecNamenode.jpg)
 
 - Datanode 
 
@@ -81,7 +81,7 @@ HDFS上文件会被分成若干块分开存储，使得文件可以比磁盘容�
         - 文件由哪些块组成、块ID
         - 每个块的存放位置
 其存储是依赖本地文件：镜像文件和编辑日志文件，前者保存上面提到的两类，后者保存的是客户端请求新建、移动、写文件操作时的记录（先记录在编辑日志，成功后才更改内存中数据）
-![](/MarkDown_images/大数据/metadata.jpg)
+![](大数据/metadata.jpg)
 
 ### HDFS容错能力
 - 可靠性（不出错）、可用性（出错还能提供服务）

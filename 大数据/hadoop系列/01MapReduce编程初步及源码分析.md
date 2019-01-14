@@ -7,7 +7,7 @@ toc: true
 ---
 ## 初识MapReduce
 先看一张图
-![](/MarkDown_images/大数据/mapreduce.jpg)
+![](大数据/mapreduce.jpg)
 
 ## MapReduce程序词频统计源码分析
 - 前言
@@ -234,4 +234,4 @@ public class GradesAverage {
 ```
 
 查看平均成绩结果文件，目录结构如图
-![](/MarkDown_images/大数据/MapReduce_coding.png)
+![](大数据/MapReduce_coding.png)
