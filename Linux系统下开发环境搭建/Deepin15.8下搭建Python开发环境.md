@@ -18,6 +18,7 @@ sudo apt install python-pip   //安装pip（对应Python2）
 
 还有就是这里pip源在国外，下载巨慢。可以参考这个：https://bbs.deepin.org/forum.php?mod=viewthread&tid=167144
 在用户目录下配置下pip源即可，我这里选的是阿里云的，也推荐中科大的速度也很快
+
 ```
 mkdir ~/.pip  //创建一个.pip目录
 vi ~/.pip/pip.conf  //创建并修改旗下的pip.conf文件
@@ -38,15 +39,17 @@ trusted-host=mirrors.aliyun.com
 - 官网下载linux版本的pycharm，我这里下的是专业版（pycharm-professional-2018.3.3.tar.gz，我有edu账号）
 - 解压到`/home/用户/`目录下，`tar -zxvf pycharm-professional-2018.3.3.tar.gz -C ~`
 - 解压会产生一个pycharm-2018.3.3文件夹，其下bin目录中会有一个pycharm.sh脚本，`./pycharm.sh`执行即可安装
-- 安装过程依据提示进行
-![](assets/pycharm安装00.png)
-![](assets/pycharm安装01.png)
+- 安装过程依据提示进行，大多是默认选项，下一步即可。
 
-- 如何添加桌面快捷方式和启动器快捷方式
+ ![](assets/pycharm安装00.png)
+ 这个是接受用户协议,之后就是激活步骤了(省略)，完成后就是如下图进行安装
+  ![](assets/pycharm安装01.png)
+
+#### 如何添加桌面快捷方式和启动器快捷方式
 
 ![](assets/pycharm安装02.png)
 ![](assets/pycharm安装03.png)
-按图片上创建桌面快捷方式可能没用
+**按图片上创建桌面快捷方式可能没用**
 
 怎么说呢，我的deepin是15.8版本的，安装后启动器里就已经有pycharm的图标了。没有的话，你可以命令行下：
 ```
@@ -67,7 +70,7 @@ Icon=~/pycharm-2018.3.3/bin/pycharm.png
 Terminal=pycharm
 Categories=Pycharm;
 ```
-主要是Exec、Icon改成你pycharm安装的位置，然后启动器里会有pycharm图标，你右键给发送到桌面即可
+**主要是Exec、Icon改成你pycharm安装的位置**，然后启动器里会有pycharm图标，你右键给发送到桌面即可
 
 ### 开发环境配置
 - numpy
@@ -75,11 +78,11 @@ Categories=Pycharm;
 - scipy
 - matplotlib
 - seaborn
-- scikit-learn
+- scikit-learn（sklearn）
 - Pillow（3.x好像是自带的）
 - jupyter notebook
 
-以上常用，需要啥装啥吧
+以上常用，需要啥装啥吧。不知道是不是，好像linux下不用考虑这些包之间的依赖关系（比如说sklearn依赖numpy、pandas），也就是版本是否对应上，因为我每次安装时依赖的包会被重新下载安装
 
 ### Jupyter Notebook安装配置
 
