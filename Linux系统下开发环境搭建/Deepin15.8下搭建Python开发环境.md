@@ -95,7 +95,7 @@ pip freeze > requirements.txt
 # 快速安装
 pip install -r requirements.txt
 ```
-我在项目中付了一个我最初安装时的[requirements.txt文件]()配置
+我在项目中付了一个我最初安装时的[requirements.txt文件](https://github.com/josonle/Coding-Now/blob/master/Linux%E7%B3%BB%E7%BB%9F%E4%B8%8B%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/requirements.txt)配置
 
 **其次是我建议单独创建一个虚拟环境来安装这些包，和本地的环境隔离，便于开发及版本间切换等等**
 
@@ -120,7 +120,9 @@ pip install -r requirements.txt
 ### 命令行下进入pycharm创建好的虚拟环境并运行jupyter notebook
 当然，你可以打开Pycharm后在下面打开Terminal后默认就进入了venv，但是pycharm太占内存了，又想用jupyter的话，还是命令行方便
 ![](assets/venv.png)
-如图，我创建的虚拟环境DataProcessing，其下有一个`venv/bin`目录
+如图，我创建的虚拟环境DataProcessing，其下有一个`venv/bin`目录，我划红线的一个是进入虚拟环境，一个是启动jupyter的命令
+
+如下图，`source activate`进入虚拟环境了，然后jupyter-notebook就能打开jupyter了
 
 ![](assets/启动venv.png)
 ### 注意事项
