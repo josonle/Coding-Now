@@ -90,6 +90,7 @@ fail -20f file  //文件确定后，查看末尾20行
 head file  //一般用来看下文件数据长啥样
 ```
 
+**注意:**`tail -f`可以实时一直查看文件
 #### echo命令
 
 ```
@@ -141,6 +142,21 @@ cat /proc/cpuinfo  //查看cpu信息
 cat /proc/meminfo   //查看内存使用信息
 
 ```
+
+#### date查看日期，cal查看日历表
+```
+date  //显示系统时期，2019年 01月 17日 星期四 16:17:04 CST
+date -R  //显示标准时区，Thu, 17 Jan 2019 16:17:21 +0800  
+
+cal 2019  //显示2019年的日历
+```
+
+- date设置时间
+
+> 切换root用户，
+date -s 2019-01-01 即可设置
+
+
 #### 查看文件和文件夹大小 df和du命令
 
 - df查看一级文件夹大小、使用情况、挂入点（**是只对文件夹有效**）
@@ -158,6 +174,7 @@ df -h  //同上，不过h代表用户容易查看的，human-readable
 ```
 du -h --max-depth=1 YOUR_DIR
 du -sh *  //显示当前目录内文件夹和文件的情况
+du -sh /home/josonlee/Download  //显示该目录空间大小
 du -sh --exclude='*Mu*' *  //显示当前目录内不包括名字含MU的文件夹、文件的情况
 ```
 
@@ -171,6 +188,107 @@ du -sh --exclude='*Mu*' *  //显示当前目录内不包括名字含MU的文件�
 还有一点是，你指定的YOUR_DIR
 ![](assets/du-maxdepth.png)
 如图，是指定当前YOUR_DIR目录，还是YOUR_DIR下的目录
+
+#### fdisk查看磁盘使用情况
+```
+sudo fdisk -l [磁盘号]  //不带上磁盘号，会显示所有磁盘使用情况
+```
+![](assets/fdisk.png)
+像`/dev/sda3`表示C盘
+
+> 如果磁盘有坏道，可以用`fsck 磁盘号`修复
+
+#### 挂载磁盘mount和卸载umount
+```
+mount  //可以查看所有磁盘挂载信息
+mount [磁盘号] 目的目录  //挂载设备到该目录下，如 mount /dev/sda10 /media/data
+umount [磁盘号]  //卸载该挂载的磁盘设备
+```
+
+#### 查看内存使用命令 free和top
+```
+free [-m -h]  //显示当前系统内存使用情况，默认是以Kb为单位的，-m或-h参数是Mb和Gb为单位
+top  //显示当前系统进程内存使用情况
+```
+ 
+### Linux下软件安装的方式
+- 通过apt、rpm、yum下载安装
+- 通过tar解压源码文件安装
+
+> 应用中apt和dpkg主要针对debian体系的linux，yum和rpm主要针对centos系列的linux
+可参考：[白话apt、dpkg和yum、rpm安装命令的详述与差异（集成版）](https://hk.saowen.com/a/b7e536f5e8c18900c790176892dde9f1717f4c13d317818240b17f3819efc739)
+
+```
+#查看某个软件是否安装
+rpm -qa|grep java
+#卸载已安装软件
+rpm -e --nodeps xxxx
+#安装软件
+rpm -ivh xxx.rpm
+```
+因为Deepin是debian体系的，所以支持apt
+![](assets/apt使用.png)
+*** 
+
+```
+#解压到目录dir
+tar -zxvf xxx.tar.gz -C dir
+
+#压缩为xxx.tar.ga
+tar -zxcf xxx.tar.gz dir|file  //把目录DIR或文件file压缩成xxx.tar.gz
+```
+
+### 防火墙相关
+Deepin不清楚，我用下面的查看命令没用
+```
+sudo service iptables status  //查看防火墙状态
+# 临时性防火墙处理，重启又会生效
+sudo service iptables stop/start  //关闭/启动防火墙
+
+# 永久性处理
+sudo chkconfiig iptables off/on  //永久关闭/打开防火墙
+# 还要关闭selinux，感觉是可选的，原来在配置hadoop时这步没做也能关闭防火墙
+sudo vi /etc/sysconfig/selinux
+# 修改selinux=disabled
+```
+![](assets/selinux.png)
+
+### 定时任务 crontab命令
+```
+josonlee@josonlee-PC:~$ crontab --help
+crontab: 不适用的选项 -- -
+crontab: usage error: unrecognized option
+usage:	crontab [-u user] file
+	crontab [ -u user ] [ -i ] { -e | -l | -r }
+		(default operation is replace, per 1003.2)
+	-e	(edit user's crontab)
+	-l	(list user's crontab)
+	-r	(delete user's crontab)
+	-i	(prompt before deleting user's crontab)
+
+```
+- 参数：
+    - -e：创建并编辑定时任务
+    - -l：列出用户的所有定时任务
+    - -r：删除用户的所有定时任务
+
+#### crontab任务文件中定义任务的语法
+`* * * * * cmd`，这就是一个任务，由六个字段组成，最后是该任务要执行的命令或shell脚本。字段由空格分隔开。前面5个星，分别代表分（1-59）、时（0-23）、日（1-31）、月（1-12）、星期（0-6,0是周日）
+
+```
+# 每隔1分钟，执行xxx
+*/1 * * * * date>>~/Desktop/log.txt
+# 每天12点半，执行xxx
+30 12 * * * cmd
+# 每个月7,14,21号，执行xxx
+* * 7,14,21 * * cmd
+# 每天20点到23点，每半小时，执行xxx
+0,30 20-23 * * * cmd
+```
+编写一个crontab中可以有多个任务，其中`#`用来注释。
+第一个任务结果如图
+![](assets/crontab.png)
+由上可知，连续值可由`-`连接，每隔多少可由`/`连接，零散值可由`,`连接
 
 ### ssh连接远程Linux服务器
 
@@ -251,6 +369,11 @@ hdfs dfs -setrep <copy num> <filename> 设置数据文件备份的份数
 
 ```
 
+## 用户目录下的`.bashrc`文件可以自定义命令的快捷方式(alias)
+比如`alias c=clear`，然后`source .bashrc`使之生效
+
+## 设置普通用户的sudo权限(免密)
+切换到root用户，`vi /etc/sudoers`，然后第一行添加 `用户名 ALL=(root)NOPASSWD:ALL`
 ## Linux下如何离线安装Chrome插件
 - 搜索相应的crx后缀名在插件
 - 命令行下输入`/usr/bin/google-chrome-stable --enable-easy-off-store-extension-install` 启动chrome
