@@ -169,7 +169,35 @@ find用来查找文件，命令格式 `find [指定目录][查找条件][指定�
 find ~ -cmin -60 -a -name *conf
 ```
 
+至于指定的动作，如`-ls`显示详细信息，我觉得没必要，可以找到文件即可了，其他多数一行命令就行了
+
+
+
+#### whereIS、搜索命令
+
+> whereis命令只能用于程序名的搜索，而且只搜索二进制文件（参数-b）、man说明文件（参数-m）和源代码文件（参数-s）。如果省略参数，则返回所有信息
+
+#### which搜索命令
+
+> which命令的作用是，在PATH变量指定的路径中，搜索某个系统命令的位置，并且返回第一个搜索结果。也就是说，使用which命令，就可以看到某个系统命令是否存在，以及执行的到底是哪一个位置的命令
+
+#### locate搜索命令
+
+这个是个工具，没有自带的要自己装。deepin下安装locate，`sudo apt-get install locate`
+
+[deepin linux下怎么安装使用locate进行文件搜索_百度经验](https://jingyan.baidu.com/article/2a138328f3ebb0074a134ff5.html) 
+
+> locate命令其实是"find -name"的另一种写法，但是要比后者快得多，原因在于它不搜索具体目录，而是搜索一个数据库（/var/lib/locatedb），这个数据库中含有本地所有文件信息。Linux系统自动创建这个数据库，并且每天自动更新一次，所以使用locate命令查不到最新变动过的文件。为了避免这种情况，可以在使用locate之前，先使用**updatedb**命令，手动更新数据库
+
+```
+locate -i ~/py  //搜索用户目录下所有py开头不区分大小写的文件
+locate ~/*.txt
+```
+
+详细locate使用可参考：[Linux 命令（文件和目录管理 - locate）](https://blog.csdn.net/liang19890820/article/details/53285624) 
+
 ### Linux系统管理命令
+
 #### uname命令显示系统内核
 ```
 uname
