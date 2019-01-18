@@ -238,6 +238,8 @@
 
 视频资源 点这里--->[eBook/Spark系列](https://github.com/josonle/Coding-Now/tree/master/eBook/Spark系列) 
 
+- <https://pan.baidu.com/s/1Ld35QE4xfsOQ9o6qFwxL0A> 密码：detm
+
 - Spark 2.0从入门到精通245讲 【**墙推**】
 
 - 01-基于Spark2.x新闻网大数据实时分析可视化系统项目
