@@ -238,7 +238,7 @@
 
 视频资源 点这里--->[eBook/Spark系列](https://github.com/josonle/Coding-Now/tree/master/eBook/Spark系列) 
 
-- <https://pan.baidu.com/s/1Ld35QE4xfsOQ9o6qFwxL0A> 密码：detm
+- 学习 Scala 进击大数据 Spark 生态圈：https://pan.baidu.com/s/1Ld35QE4xfsOQ9o6qFwxL0A 密码：detm
 
 - Spark 2.0从入门到精通245讲 【**墙推**】
 
