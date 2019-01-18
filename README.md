@@ -191,12 +191,31 @@
 
   - [**LeetCodeAnimation** 用动画的形式呈现解LeetCode题目的思路](https://github.com/MisterBooo/LeetCodeAnimation) 
 
-## eBook
+## eBook和视频资源
+
+只推荐我看过的，且个人觉得不错的
 
 ### Python
 
+- Python3数据分析与挖掘（某课网）
+- python分布式爬虫打造搜索引擎【完整版 某课网】
+- Python升级3.6 强力Django+Xadmin打造在线教育平台
 
+电子书推荐
 
+- 入门
+  - 《Python基本教程》，貌似出第三版了
+  - 《Python核心编程》
+  - 《Python CookBook》
+- 爬虫
+  - 《Python网络数据采集》
+  - 也有人推荐崔庆才的书，我只看过他的博客觉得挺不错的，书想比也可以吧
+  - 我更推荐看博客，爬虫这一块更新太快了，书跟不上步伐
+- 数据分析
+  - 《用Python进行数据分析》足以
+- 机器学习和深度学习
+  - 《机器学习实战》
+  - 我看的更多的是官方文档和博客，反正不推荐看国人写的书，
 ### Java系列
 
 
