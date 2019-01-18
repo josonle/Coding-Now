@@ -228,7 +228,7 @@
 
 ### Spark系列
 
-视频资源 
+视频资源 点这里--->[eBook/Spark系列](https://github.com/josonle/Coding-Now/tree/master/eBook/Spark系列) 
 
 - Spark 2.0从入门到精通245讲 【**墙推**】
 
@@ -240,6 +240,8 @@
 - 06-Spark大型项目实战：电商用户行为分析大数据平台
 
 ### 算法系列
+
+- 牛客网算法
 
 ### 数据库
 
