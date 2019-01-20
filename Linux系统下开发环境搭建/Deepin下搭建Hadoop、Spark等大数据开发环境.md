@@ -18,7 +18,7 @@ tar -zxvf jdk-8u191-linux-x64.tar.gz -C /opt/
 - 然后输入 `java -version` 可以看到java版本信息就成功了
 
 ### eclipse安装
-![点击这里下载](https://www.eclipse.org/downloads/packages/)
+[点击这里下载](https://www.eclipse.org/downloads/packages/)
 
 ![](assets/eclipse下载.png)
 
@@ -191,7 +191,7 @@ yum install net-tools
 
 0、先下载wget工具 `yum -y install wget`
 
---------------------- 
+---------------------
 1、备份
 
 `mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.backup`
