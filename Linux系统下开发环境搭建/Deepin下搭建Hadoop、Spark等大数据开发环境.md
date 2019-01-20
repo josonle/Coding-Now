@@ -162,7 +162,7 @@ https://askubuntu.com/questions/767791/vmware-virtual-machine-monitor-failed-in-
 # 卸载vmware
 sudo vmware-installer -u vmware-workstation
 ```
-还有就是，我从deepin的启动器里看到还有
+还有就是，我从deepin的启动器里看到还有vmware-Networkeditor啥的，也是用`sudo vmware-installer -um 名字 `来卸载
 
 
 ### VMware最小化安装centos 搭建集群
@@ -218,8 +218,8 @@ wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-
 ```
 
 3、清理yum缓存 
-yum clean all
+`yum clean all`
 4、重建缓存 
-yum makecache 
-5、升级Linux系统
-yum -y update 
+`yum makecache` 
+5、升级yum
+`yum -y update `
