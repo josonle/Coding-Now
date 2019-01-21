@@ -45,7 +45,7 @@ tar -zxvf jdk-8u191-linux-x64.tar.gz -C /opt/
 ```
 josonlee@josonlee-PC:~$ eclipse/eclipse 
 ```
-![](assets/选择workspace.png)
+![](assets/20190120220106492.png)
 
 #### 配置eclipse启动图标并添加到桌面
 看过我上一篇文章Deepin下Python开发环境配置的应该知道如何处理。在`/usr/share/applications`下新建一个eclipse.desktop文件并编辑，添加如下内容：
@@ -226,9 +226,13 @@ wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-
 5、升级yum
 `yum -y update `
 
-## Scala下载安装
+## Scala下载及安装
 
 > Spark runs on Java 8+, Python 2.7+/3.4+ and R 3.1+. For the Scala API, Spark 2.4.0 uses Scala 2.11. You will need to use a compatible Scala version (2.11.x).
 >
 > Note that support for Java 7, Python 2.6 and old Hadoop versions before 2.6.5 were removed as of Spark 2.2.0. Support for Scala 2.10 was removed as of 2.3.0.
+
+我这里是选择Spark 2.4.0，所以Scala选择2.11.12版本
+
+下载：https://www.scala-lang.org/download/2.11.12.html
 
