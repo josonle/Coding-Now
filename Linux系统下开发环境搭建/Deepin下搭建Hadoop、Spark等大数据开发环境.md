@@ -101,7 +101,9 @@ export PATH=$PATH:$MAVEN_HOME/bin:
 
 因为我们这里已经安装好maven了，所有直接在eclipse中导入就好了。窗口Window->preferences–>maven–>Installations。如图选择add，然后把你maven安装的目录导进来就好了。
 ![](assets/add.png)
+
 下面这个也要配置一下
+
 ![](assets/mvnsetting.png)
 
 ### MySQL数据库安装
@@ -162,7 +164,7 @@ https://askubuntu.com/questions/767791/vmware-virtual-machine-monitor-failed-in-
 # 卸载vmware
 sudo vmware-installer -u vmware-workstation
 ```
-还有就是，我从deepin的启动器里看到还有vmware-Networkeditor啥的，也是用`sudo vmware-installer -um 名字 `来卸载
+还有就是，我从deepin的启动器里看到还有vmware-Networkeditor啥的，也是用`sudo vmware-installer -u 名字 `来卸载
 
 
 ### VMware最小化安装centos 搭建集群
