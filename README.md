@@ -107,6 +107,7 @@
 以下出自我在csdn上的一些文章，https://blog.csdn.net/lzw2016/
 
 - [大数据之Hadoop学习（环境配置）——Hadoop伪分布式集群搭建](https://blog.csdn.net/lzw2016/article/details/84197986)
+- [【向Linux迁移记录】Deepin Linux下快速Hadoop完全分布式集群搭建](https://mp.csdn.net/postedit/86618345)
 - [Spark本地安装及Linux下伪分布式搭建](https://blog.csdn.net/lzw2016/article/details/84673410)
 
 ### Hadoop系列
