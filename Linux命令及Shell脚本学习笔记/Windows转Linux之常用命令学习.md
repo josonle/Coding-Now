@@ -360,6 +360,20 @@ usage:	crontab [-u user] file
 `ssh [Linux主机名]@Linux服务器所在IP`，之后要输了linux的登录密码（可以本地通过ssh-keygen生成公私钥，并推送到Linux上可以省去每次登录输入密码）
 
 
+#### ssh连接Linux服务器报错 Host key verification failed.
+
+![](assets/ssh连接失败.png)
+如图，像红线处显示的是.ssh/known_hosts出了问题。删除.ssh/known_hosts中和１９２．１６８．１７．１０相关的rsa相关信息即可，或者把整个known_howts删除即可，然后再次连接
+
+
+
+### rz/sz命令使用
+首先要安装lrzsz工具（lrzsz就是一个支持 Zmodem 传输协议的工具），`yum -y install lrzsz`
+    
+- sz：使用（服务器发送文件，也就是客户端下载文件）
+- rz：使用（服务器接受文件，也就是客户端上传文件）
+
+> [Linux基础：利用SSH上传、下载（使用sz与rz命令）](http://blog.51cto.com/skypegnu1/1538371)
 
 ### 注意
 - `^`这个符号在linux中敲ctrl键

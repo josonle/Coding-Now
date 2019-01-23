@@ -226,6 +226,13 @@ wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-
 5、升级yum
 `yum -y update `
 
+###　修改ＶＭＷａｒｅ的网络配置
+
+这一步主要是为了给虚拟机分配一个固定ｉｐ地址，便于集群间通讯
+
+启动器或者打开ＶＭＷａｒｅ找到ｖｍｗａｒｅ　Ｎｅｔｗｏｒｋ　Ｅｄｉｔｏｒ，如下图配置
+
+![](assets/vm网络设置.png)
 ## Scala下载及安装
 
 > Spark runs on Java 8+, Python 2.7+/3.4+ and R 3.1+. For the Scala API, Spark 2.4.0 uses Scala 2.11. You will need to use a compatible Scala version (2.11.x).
@@ -236,3 +243,319 @@ wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-
 
 下载：https://www.scala-lang.org/download/2.11.12.html
 
+- 解压到用户目录下（你随便，我这里是应为根目录空间不太够） `tar -zxvf scala-2.11.12.tgz -C ~`
+- 同java一样要配置环境变量
+
+```
+sudo vi /etc/profile
+
+# 末尾添加
+# SCALA_HOME指定scala安装在哪里
+export SCALA_HOME=/home/josonlee/tools/scala-2.11.12
+export PATH=$SCALA_HOME/bin:$PATH
+```
+如图是我scala解压的位置，以及环境变量写法
+![](assets/scalalocation.png)
+
+- scala就这样安装好了，试着命令行下输入scala写两行代码
+
+
+### 启动scala报错 java.lang.NumberFormatException: For input string: "0x100" 解决
+
+报错信息如下，貌似也不影响scala运行，因为还是可以编译代码的
+```
+josonlee@josonlee-PC:~$ scala
+Welcome to Scala 2.11.12 (Java HotSpot(TM) 64-Bit Server VM, Java 1.8.0_191).
+Type in expressions for evaluation. Or try :help.
+[ERROR] Failed to construct terminal; falling back to unsupported
+java.lang.NumberFormatException: For input string: "0x100"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Integer.parseInt(Integer.java:580)
+	at java.lang.Integer.valueOf(Integer.java:766)
+	at jline.internal.InfoCmp.parseInfoCmp(InfoCmp.java:59)
+	at jline.UnixTerminal.parseInfoCmp(UnixTerminal.java:242)
+	at jline.UnixTerminal.<init>(UnixTerminal.java:65)
+	at jline.UnixTerminal.<init>(UnixTerminal.java:50)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at java.lang.Class.newInstance(Class.java:442)
+	at jline.TerminalFactory.getFlavor(TerminalFactory.java:211)
+	at jline.TerminalFactory.create(TerminalFactory.java:102)
+	at jline.TerminalFactory.get(TerminalFactory.java:186)
+	at jline.TerminalFactory.get(TerminalFactory.java:192)
+	at jline.console.ConsoleReader.<init>(ConsoleReader.java:243)
+	at jline.console.ConsoleReader.<init>(ConsoleReader.java:235)
+	at jline.console.ConsoleReader.<init>(ConsoleReader.java:223)
+	at scala.tools.nsc.interpreter.jline.JLineConsoleReader.<init>(JLineReader.scala:64)
+	at scala.tools.nsc.interpreter.jline.InteractiveReader.<init>(JLineReader.scala:33)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at scala.tools.nsc.interpreter.ILoop$$anonfun$scala$tools$nsc$interpreter$ILoop$$instantiater$1$1.apply(ILoop.scala:858)
+	at scala.tools.nsc.interpreter.ILoop$$anonfun$scala$tools$nsc$interpreter$ILoop$$instantiater$1$1.apply(ILoop.scala:855)
+	at scala.tools.nsc.interpreter.ILoop.scala$tools$nsc$interpreter$ILoop$$mkReader$1(ILoop.scala:862)
+	at scala.tools.nsc.interpreter.ILoop$$anonfun$22$$anonfun$apply$10.apply(ILoop.scala:873)
+	at scala.tools.nsc.interpreter.ILoop$$anonfun$22$$anonfun$apply$10.apply(ILoop.scala:873)
+	at scala.util.Try$.apply(Try.scala:192)
+	at scala.tools.nsc.interpreter.ILoop$$anonfun$22.apply(ILoop.scala:873)
+	at scala.tools.nsc.interpreter.ILoop$$anonfun$22.apply(ILoop.scala:873)
+	at scala.collection.immutable.Stream.map(Stream.scala:418)
+	at scala.tools.nsc.interpreter.ILoop.chooseReader(ILoop.scala:873)
+	at scala.tools.nsc.interpreter.ILoop$$anonfun$process$1$$anonfun$newReader$1$1.apply(ILoop.scala:893)
+	at scala.tools.nsc.interpreter.ILoop$$anonfun$process$1.newReader$1(ILoop.scala:893)
+	at scala.tools.nsc.interpreter.ILoop$$anonfun$process$1.scala$tools$nsc$interpreter$ILoop$$anonfun$$preLoop$1(ILoop.scala:897)
+	at scala.tools.nsc.interpreter.ILoop$$anonfun$process$1$$anonfun$startup$1$1.apply(ILoop.scala:964)
+	at scala.tools.nsc.interpreter.ILoop$$anonfun$process$1.apply$mcZ$sp(ILoop.scala:990)
+	at scala.tools.nsc.interpreter.ILoop$$anonfun$process$1.apply(ILoop.scala:891)
+	at scala.tools.nsc.interpreter.ILoop$$anonfun$process$1.apply(ILoop.scala:891)
+	at scala.reflect.internal.util.ScalaClassLoader$.savingContextLoader(ScalaClassLoader.scala:97)
+	at scala.tools.nsc.interpreter.ILoop.process(ILoop.scala:891)
+	at scala.tools.nsc.MainGenericRunner.runTarget$1(MainGenericRunner.scala:74)
+	at scala.tools.nsc.MainGenericRunner.run$1(MainGenericRunner.scala:87)
+	at scala.tools.nsc.MainGenericRunner.process(MainGenericRunner.scala:98)
+	at scala.tools.nsc.MainGenericRunner$.main(MainGenericRunner.scala:103)
+	at scala.tools.nsc.MainGenericRunner.main(MainGenericRunner.scala)
+
+scala>
+```
+
+解决方法如下：
+```
+sudo vi /etc/profile
+# 在环境变量中导入
+export TERM=xterm-color
+```
+
+还有一中方法是：
+> 
+I found the package which causes this issue: ncurses. I downgraded ncurses to version ncurses-6.0+20170429-1 (I am using Arch Linux) and SBT starts just fine.
+>
+Steps for Arch Linux:
+>```
+cd /var/cache/pacman/pkg
+sudo pacman -U ncurses-6.0+20170429-1-x86_64.pkg.tar.xz # or some other older version
+```
+Steps for Mac: see https://github.com/jline/jline2/issues/281
+>
+I think this issue was introduced with ncurses version 20170506, see: http://invisible-island.net/ncurses/NEWS.html#index-t20170506
+>
++ modify tic/infocmp display of numeric values to use hexadecimal when
+      they are "close" to a power of two, making the result more readable.
+I filed an issue on the SBT issue tracker: https://github.com/sbt/sbt/issues/3240
+
+参考stackoverflow上的问题：https://stackoverflow.com/questions/44317384/sbt-error-failed-to-construct-terminal-falling-back-to-unsupported
+
+## hadoop完全分布式集群搭建
+可参考我在csdn上的文章：[【向Linux迁移记录】Deepin Linux下快速Hadoop完全分布式集群搭建](https://mp.csdn.net/postedit/86618345)
+
+三台虚拟机分别对应master、slave1、slave2
+
+主机名	IP地址
+namenode1	192.168.17.10
+datanode1	192.168.17.11
+datanode2	192.168.17.12
+
+core-site.xml
+```
+<configuration>
+ <property>
+        <name>fs.defaultFS</name>
+        <value>hdfs://master:9000</value>
+    </property>
+    <property>
+        <name>hadoop.tmp.dir</name>
+        <value>/home/hadoop/hadoop-2.6.0-cdh5.12.1/tmp</value>
+ </property>
+</configuration>
+```
+hdfs-site.xml
+```
+<configuration>
+<property>
+    <name>dfs.namenode.name.dir</name>
+    <value>/home/hadoop/hadoop-2.6.0-cdh5.12.1/hdfs/name</value>
+</property>
+<property>
+    <name>dfs.datanode.data.dir</name>
+    <value>/home/hadoop/hadoop-2.6.0-cdh5.12.1/hdfs/data</value>
+</property>
+<property>
+    <name>dfs.replication</name>
+    <value>2</value>
+</property>
+  <property>
+    <name>dfs.permissions</name>
+    <value>false</value>
+  </property>
+</configuration>
+```
+
+yarn-site.xml
+```
+<property>
+	<name>yarn.nodemanager.aux-services</name>
+	<value>mapreduce_shuffle</value>
+</property>
+<property>
+	<name>yarn.resourcemanager.resource-tracker.address</name>
+	<value>master:8031</value>
+</property>
+<property>
+	<name>yarn.resourcemanager.address</name>
+	<value>master:8032</value>
+</property>
+<property>
+    	<name>yarn.resourcemanager.admin.address</name>
+        <value>master:8033</value>
+</property>
+<property>
+	<name>yarn.resourcemanager.scheduler.address</name>
+	<value>master:8034</value>
+</property>
+<property>
+	<name>yarn.resourcemanager.webapp.address</name>
+	<value>master:8088</value>
+</property>
+<property>
+	<name>yarn.log-aggregation-enable</name>
+	<value>true</value>
+</property>
+<property>
+  	<name>yarn.log.server.url</name>
+	<value>http://master:19888/jobhistory/logs/</value>
+</property>
+```
+
+配置好后关闭虚拟机，进入文件系统将该虚拟机复制两份（当然虚拟机放在哪是你安装是定义的）
+![](assets/复制vm.png)
+然后在虚拟机中导入并重命名
+![](assets/重命名.png)
+
+启动虚拟机，分别修改slave1、slave2的IP地址和主机名，并重启服务（参见前文）
+
+修改之后，重启三台虚拟机。我介意你用命令行工具来链接虚拟机,因为我是Deepin上借助vm实现centos最小化安装，不知道怎么搞定vm tools一直安装不成功。搞的虚拟机中命令界面很难看、别扭。我这里借助Deepin的命令行自带的连接服务器功能，如图
+![](assets/20190123162839.png)
+
+### ssh免密登录
+1. 分别在三台虚拟机上设置秘钥，`ssh-keygen -t rsa`，然后三下回车，如图
+
+![](assets/ssh免密.png)
+默认在**/home/hadoop/.ssh**目录(用户目录下的.ssh)下生成公钥id_rsa.pub和私钥文件id_rsa
+
+2. 将slave1、slave2节点的公钥汇总到mster的.ssh/authorized_keys文件中
+
+```
+ssh-copy-id -i ~/.ssh/id_rsa.pub master
+```
+然后如图操作
+![](assets/传输公钥.png)
+
+3. 把master的公钥也汇总到authorized_keys文件
+
+```
+# master节点上执行
+cd .ssh/
+cat id_rsa.pub >> authorized_keys
+chmod 600 cat authorized_keys  //有必要赋予访问权限
+```
+4. 把汇总后的authorized_keys文件分别发送到slave1、slave2的.ssh目录下
+
+```
+# master节点上执行
+scp authorized_keys slave1:.ssh  //执行两次
+scp authorized_keys slave2:.ssh
+```
+如图，输入yes后，分别输入slave1、slave2的登录密码
+![](assets/发送masterpub.png)
+
+5. 测试ssh免密登录
+```
+ssh 主机名		//第一次连接时如有提示，输入yes，以后则没有提示也不需要密码即可连接
+```
+如图是slave2免密登录master、slave1，不成功的话删掉.ssh下面的文件重复上面步骤
+
+![](assets/slave2.png)
+
+## 启动hadoop
+以下操作全在master上进行
+### 格式化hdfs文件系统
+```
+hdfs namenode -format
+```
+### 启动hdfs和yarn
+```
+start-dfs.sh  //启动hdfs
+start-yarn.sh  //启动yarn
+jps  //查看启动进程
+```
+浏览器查看hdfs：http://192.168.17.10:50070，yarn：http://192.168.17.10:8088
+
+注意：master下只能看到NameNode、SecondaryNameNode(未配置但依然会启动，配置的话还需要一台虚拟机)、ResourceManager；slave下有Datanode、NodeManager
+
+```
+# master上
+[hadoop@master hadoop-2.6.0-cdh5.12.1]$ jps
+3809 ResourceManager
+3491 NameNode
+3668 SecondaryNameNode
+4072 Jps
+
+# slave上
+[hadoop@slave2 ~]$ jps
+2102 NodeManager
+2232 Jps
+1998 DataNode
+```
+### Master节点无法启动ResourceManager解决
+进入日志文件查看信息
+```
+cd /home/hadoop/hadoop-2.6.0-cdh5.12.1/logs/
+tail -100f yarn-hadoop-resourcemanager-master.log
+```
+
+报错信息如下：
+```
+Caused by: java.net.BindException: Problem binding to [master::8031] java.net.BindException: 无法指定被请求的地址; For more details see:  http://wiki.apache.org/hadoop/BindException
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.apache.hadoop.net.NetUtils.wrapWithMessage(NetUtils.java:791)
+	at org.apache.hadoop.net.NetUtils.wrapException(NetUtils.java:720)
+	at org.apache.hadoop.ipc.Server.bind(Server.java:482)
+	at org.apache.hadoop.ipc.Server$Listener.<init>(Server.java:688)
+	at org.apache.hadoop.ipc.Server.<init>(Server.java:2376)
+	at org.apache.hadoop.ipc.RPC$Server.<init>(RPC.java:1042)
+	at org.apache.hadoop.ipc.ProtobufRpcEngine$Server.<init>(ProtobufRpcEngine.java:535)
+	at org.apache.hadoop.ipc.ProtobufRpcEngine.getServer(ProtobufRpcEngine.java:510)
+	at org.apache.hadoop.ipc.RPC$Builder.build(RPC.java:887)
+	at org.apache.hadoop.yarn.factories.impl.pb.RpcServerFactoryPBImpl.createServer(RpcServerFactoryPBImpl.java:169)
+	at org.apache.hadoop.yarn.factories.impl.pb.RpcServerFactoryPBImpl.getServer(RpcServerFactoryPBImpl.java:132)
+	... 17 more
+Caused by: java.net.BindException: 无法指定被请求的地址
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:433)
+	at sun.nio.ch.Net.bind(Net.java:425)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+	at org.apache.hadoop.ipc.Server.bind(Server.java:465)
+	... 25 more
+2019-01-23 17:26:56,226 INFO org.apache.hadoop.yarn.server.resourcemanager.ResourceManager: SHUTDOWN_MSG: 
+/************************************************************
+SHUTDOWN_MSG: Shutting down ResourceManager at master/192.168.17.10
+************************************************************/
+```
+
+从日志可以看出是ip地址绑定出了问题`Caused by: java.net.BindException: Problem binding to [master::8031] java.net.BindException: 无法指定被请求的地址`，我这里多写了个冒号
+
+重新编辑下yarn-site.xml，修改如下
+```
+<property>
+        <name>yarn.resourcemanager.resource-tracker.address</name>
+        <value>master:8031</value>
+</property>
+```
+> 我上文的配置是修改后的，没有错
