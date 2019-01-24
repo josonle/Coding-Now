@@ -53,6 +53,10 @@
 
 
 - [Git使用教程：最详细、最傻瓜、最浅显、真正手把手教！from 龙恩0707 www.cnblogs.com/tugenhua0707](https://blog.csdn.net/lzw2016/article/details/86633909) 
+- GitHub如何快速给README.md添加目录
+
+  - [ghtoc Github地址（pyhon）](https://link.jianshu.com/?t=https%3A%2F%2Fgithub.com%2Fsk1418%2Fghtoc) 见toc.py，（python2.7，使用方法·：`python toc.py MDFile`，会生成一个.bak备份文件）【推荐这个可以用，也不用装其他工具】
+  - [gh-md-toc Github地址](https://link.jianshu.com/?t=https%3A%2F%2Fgithub.com%2Fekalinin%2Fgithub-markdown-toc)
 
 ## Linux系统下开发环境搭建
 
