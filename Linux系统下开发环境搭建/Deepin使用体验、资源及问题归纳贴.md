@@ -88,7 +88,7 @@ scala>
 
 
 
-### java使用的一个warning：Picked up _JAVA_OPTIONS
+### java使用的一个warning：Picked up _JAVA_OPTIONS: -Dawt.useSystemAAFontSettings=gasp
 
 ```
 # sudo vi /etc/profile
@@ -98,4 +98,21 @@ unset _JAVA_OPTIONS
 # java环境配置
 export JAVA_HOME=/opt/jdk1.8.0_191
 ...
+
+# source /etc/profile
 ```
+
+### VMware tools安装问题
+
+vmware安装成功，但是启动时显示系统内核和vmware的编译接口不匹配需要更新，但是vmware tools一直安装不成功。
+
+如何安装：
+
+1. 虚拟机内安装open-vm-tools：`sudo apt-get install open-vm-tools open-vm-tools-desktop open-vm-tools-dkms`
+2. 参考这篇文章：[Ubuntu18.04系统下全程图解安装VMware Tools的方法](https://ywnz.com/linuxjc/3144.html)
+
+
+
+报错解决：VMware Tools - There was a problem updating a software component. Try again later and if the problem persists, contact VMware Support
+
+> 参考这个讨论：https://bbs.deepin.org/forum.php?mod=viewthread&tid=167661&extra
