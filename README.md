@@ -209,6 +209,52 @@
 
   - [**LeetCodeAnimation** 用动画的形式呈现解LeetCode题目的思路](https://github.com/MisterBooo/LeetCodeAnimation) 
 
+## GitHub上一些技术书籍、翻译书籍、面试题库推荐
+
+**《Python最佳实践指南！》**
+
+​      为什么推荐这份实践指南？这份指南与官方文档有什么不同吗？这份指南包含了作者非常强烈地主观感受，不单单是Python的安装、配置或者每个框架的使用，作者通过个人实践，对自己比较看好的框架标注了强烈推荐，对一些需要注意的地方也进行了标注，基本相当于作者的实践心得，阅读过程中会感受到与作者的思想碰撞。
+
+（Github开源地址：http://pythonguidecn.readthedocs.io/zh/latest/）
+
+**《国内一线互联网公司内部面试题库》**
+
+​      该开源项目在Github上已有6000多Star，主要是来自国内一线互联网公司的面试题集锦，涉及Java和Android两大方向，涉及的公司有百度、小米、美团、58、猎豹、360、新浪、搜狐等。据说，掌握这些知识点可以大大增加前两轮技术面试的通过概率。
+
+（Github开源地址：https://github.com/JackyAndroid/AndroidInterview-Q-A/blob/master/README-CN.md）
+
+**《神经网络与深度学习》相关代码 Python 实现**
+
+​      该开源项目是对《神经网络与深度学习》一书中相关Python代码的实现。建议先弄明白书中所讲的神经网络、反向传播等概念，再结合代码实现，会有更深的理解。
+
+（Github开源地址：https://github.com/mnielsen/neural-networks-and-deep-learning）
+
+**百度前端研发团队的文档与源码编写风格**
+
+​     该项目存放了百度前端研发研发部门的代码编写规范及统一文档，主要涉及JavaScript、CSS、HTML编码规范以及Markdown编写规范等。
+
+（Github开源地址：https://github.com/fex-team/styleguide）
+
+**《自上而下的学习路线: 软件工程师的机器学习》**
+
+​      该项目的作者是一名自学成才的移动端软件开发者，后又转型成为一名机器学习工程师，他在Github上公布了自己整个实践过程中的学习方法、参考资料以及知识竞赛等。内容非常全面且丰富，涉及的参考书籍就多达十几本，还有一些博客资源。如果你正在思考如何转型成为一名机器学习工程师，这个开源项目或许是最适合你的。
+
+（中文版本：https://github.com/ZuzooVn/machine-learning-for-software-engineers/blob/master/README-zh-CN.md）
+
+**《Shell 编程范例》**
+
+​      本项目贡献者是一名重度的开源项目贡献者。他认为，这本书与传统Shell书籍非常不同，没有用大量的篇幅去介绍Shell语法，而是直接以面向“对象”的方式开始介绍大量Shell操作，从实践入手，涵盖了数值、逻辑值、字符串、文件、进程等方方面面。
+
+（Github开源地址：https://github.com/tinyclub/open-shell-book）
+
+**《Docker — 从入门到实践》**
+
+​     Docker现在变得越来越流行，无论是开发者、运维人员还是其他信息技术人员都很有必要对Docker知识有所了解。本书更适合具备Linux基础的Docker初学者，前六章为基础内容，可以帮助初学者梳理Docker的基本概念和操作。六章之后，逐渐介绍了一些高级操作，包括高级应用场景和实操案例。这对初学者和老司机都非常有帮助，同时本书也对安全或技术实现等话题进行了说明，强烈推荐。
+
+（Github开源地址：https://github.com/yeasy/docker_practice）
+
+**待续**
+
 ## eBook和视频资源
 
 只推荐我看过的，且个人觉得不错的
