@@ -789,9 +789,11 @@ hive> drop database mydb cascade;	          //删除非空数据库
 Hive就是这样简单搭建成功
 
 可以再去MySQL下看看到底改变了存储了什么信息，如图
+
 ![](assets/metadata.png)
 
 其中上面创建的user表的字段信息存储在COLUMN_V2里，如图
+
 ![](assets/字段.png)
 
 https://www.cnblogs.com/qingyunzong/p/8710356.html#_label5_0
