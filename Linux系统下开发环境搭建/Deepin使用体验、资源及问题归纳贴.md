@@ -86,3 +86,16 @@ scala>
 
 解决办法：https://blog.csdn.net/lzw2016/article/details/86618570
 
+
+
+### java使用的一个warning：Picked up _JAVA_OPTIONS
+
+```
+# sudo vi /etc/profile
+
+...
+unset _JAVA_OPTIONS
+# java环境配置
+export JAVA_HOME=/opt/jdk1.8.0_191
+...
+```
