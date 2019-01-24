@@ -330,23 +330,25 @@ export TERM=xterm-color
 ```
 
 还有一中方法是：
-> 
-I found the package which causes this issue: ncurses. I downgraded ncurses to version ncurses-6.0+20170429-1 (I am using Arch Linux) and SBT starts just fine.
 >
-Steps for Arch Linux:
->```
-cd /var/cache/pacman/pkg
-sudo pacman -U ncurses-6.0+20170429-1-x86_64.pkg.tar.xz # or some other older version
-```
+> I found the package which causes this issue: ncurses. I downgraded ncurses to version ncurses-6.0+20170429-1 (I am using Arch Linux) and SBT starts just fine.
+>
+> Steps for Arch Linux:
+> ```
+> cd /var/cache/pacman/pkg
+> sudo pacman -U ncurses-6.0+20170429-1-x86_64.pkg.tar.xz # or some other older version
+> ```
 Steps for Mac: see https://github.com/jline/jline2/issues/281
 >
 I think this issue was introduced with ncurses version 20170506, see: http://invisible-island.net/ncurses/NEWS.html#index-t20170506
 >
-+ modify tic/infocmp display of numeric values to use hexadecimal when
-      they are "close" to a power of two, making the result more readable.
+>+ modify tic/infocmp display of numeric values to use hexadecimal when
+  ​    they are "close" to a power of two, making the result more readable.
 I filed an issue on the SBT issue tracker: https://github.com/sbt/sbt/issues/3240
 
 参考stackoverflow上的问题：https://stackoverflow.com/questions/44317384/sbt-error-failed-to-construct-terminal-falling-back-to-unsupported
+
+***
 
 ## hadoop完全分布式集群搭建
 可参考我在csdn上的文章：[【向Linux迁移记录】Deepin Linux下快速Hadoop完全分布式集群搭建](https://mp.csdn.net/postedit/86618345)
@@ -362,12 +364,12 @@ core-site.xml
 ```
 <configuration>
  <property>
-        <name>fs.defaultFS</name>
-        <value>hdfs://master:9000</value>
-    </property>
-    <property>
-        <name>hadoop.tmp.dir</name>
-        <value>/home/hadoop/hadoop-2.6.0-cdh5.12.1/tmp</value>
+​        <name>fs.defaultFS</name>
+​        <value>hdfs://master:9000</value>
+​    </property>
+​    <property>
+​        <name>hadoop.tmp.dir</name>
+​        <value>/home/hadoop/hadoop-2.6.0-cdh5.12.1/tmp</value>
  </property>
 </configuration>
 ```
@@ -375,20 +377,20 @@ hdfs-site.xml
 ```
 <configuration>
 <property>
-    <name>dfs.namenode.name.dir</name>
-    <value>/home/hadoop/hadoop-2.6.0-cdh5.12.1/hdfs/name</value>
+​    <name>dfs.namenode.name.dir</name>
+​    <value>/home/hadoop/hadoop-2.6.0-cdh5.12.1/hdfs/name</value>
 </property>
 <property>
-    <name>dfs.datanode.data.dir</name>
-    <value>/home/hadoop/hadoop-2.6.0-cdh5.12.1/hdfs/data</value>
+​    <name>dfs.datanode.data.dir</name>
+​    <value>/home/hadoop/hadoop-2.6.0-cdh5.12.1/hdfs/data</value>
 </property>
 <property>
-    <name>dfs.replication</name>
-    <value>2</value>
+​    <name>dfs.replication</name>
+​    <value>2</value>
 </property>
   <property>
-    <name>dfs.permissions</name>
-    <value>false</value>
+​    <name>dfs.permissions</name>
+​    <value>false</value>
   </property>
 </configuration>
 ```
@@ -396,36 +398,36 @@ hdfs-site.xml
 yarn-site.xml
 ```
 <property>
-	<name>yarn.nodemanager.aux-services</name>
-	<value>mapreduce_shuffle</value>
+​	<name>yarn.nodemanager.aux-services</name>
+​	<value>mapreduce_shuffle</value>
 </property>
 <property>
-	<name>yarn.resourcemanager.resource-tracker.address</name>
-	<value>master:8031</value>
+​	<name>yarn.resourcemanager.resource-tracker.address</name>
+​	<value>master:8031</value>
 </property>
 <property>
-	<name>yarn.resourcemanager.address</name>
-	<value>master:8032</value>
+​	<name>yarn.resourcemanager.address</name>
+​	<value>master:8032</value>
 </property>
 <property>
-    	<name>yarn.resourcemanager.admin.address</name>
-        <value>master:8033</value>
+​    	<name>yarn.resourcemanager.admin.address</name>
+​        <value>master:8033</value>
 </property>
 <property>
-	<name>yarn.resourcemanager.scheduler.address</name>
-	<value>master:8034</value>
+​	<name>yarn.resourcemanager.scheduler.address</name>
+​	<value>master:8034</value>
 </property>
 <property>
-	<name>yarn.resourcemanager.webapp.address</name>
-	<value>master:8088</value>
+​	<name>yarn.resourcemanager.webapp.address</name>
+​	<value>master:8088</value>
 </property>
 <property>
-	<name>yarn.log-aggregation-enable</name>
-	<value>true</value>
+​	<name>yarn.log-aggregation-enable</name>
+​	<value>true</value>
 </property>
 <property>
   	<name>yarn.log.server.url</name>
-	<value>http://master:19888/jobhistory/logs/</value>
+​	<value>http://master:19888/jobhistory/logs/</value>
 </property>
 ```
 
@@ -519,34 +521,35 @@ tail -100f yarn-hadoop-resourcemanager-master.log
 报错信息如下：
 ```
 Caused by: java.net.BindException: Problem binding to [master::8031] java.net.BindException: 无法指定被请求的地址; For more details see:  http://wiki.apache.org/hadoop/BindException
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.apache.hadoop.net.NetUtils.wrapWithMessage(NetUtils.java:791)
-	at org.apache.hadoop.net.NetUtils.wrapException(NetUtils.java:720)
-	at org.apache.hadoop.ipc.Server.bind(Server.java:482)
-	at org.apache.hadoop.ipc.Server$Listener.<init>(Server.java:688)
-	at org.apache.hadoop.ipc.Server.<init>(Server.java:2376)
-	at org.apache.hadoop.ipc.RPC$Server.<init>(RPC.java:1042)
-	at org.apache.hadoop.ipc.ProtobufRpcEngine$Server.<init>(ProtobufRpcEngine.java:535)
-	at org.apache.hadoop.ipc.ProtobufRpcEngine.getServer(ProtobufRpcEngine.java:510)
-	at org.apache.hadoop.ipc.RPC$Builder.build(RPC.java:887)
-	at org.apache.hadoop.yarn.factories.impl.pb.RpcServerFactoryPBImpl.createServer(RpcServerFactoryPBImpl.java:169)
-	at org.apache.hadoop.yarn.factories.impl.pb.RpcServerFactoryPBImpl.getServer(RpcServerFactoryPBImpl.java:132)
-	... 17 more
+​	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+​	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+​	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+​	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+​	at org.apache.hadoop.net.NetUtils.wrapWithMessage(NetUtils.java:791)
+​	at org.apache.hadoop.net.NetUtils.wrapException(NetUtils.java:720)
+​	at org.apache.hadoop.ipc.Server.bind(Server.java:482)
+​	at org.apache.hadoop.ipc.Server$Listener.<init>(Server.java:688)
+​	at org.apache.hadoop.ipc.Server.<init>(Server.java:2376)
+​	at org.apache.hadoop.ipc.RPC$Server.<init>(RPC.java:1042)
+​	at org.apache.hadoop.ipc.ProtobufRpcEngine$Server.<init>(ProtobufRpcEngine.java:535)
+​	at org.apache.hadoop.ipc.ProtobufRpcEngine.getServer(ProtobufRpcEngine.java:510)
+​	at org.apache.hadoop.ipc.RPC$Builder.build(RPC.java:887)
+​	at org.apache.hadoop.yarn.factories.impl.pb.RpcServerFactoryPBImpl.createServer(RpcServerFactoryPBImpl.java:169)
+​	at org.apache.hadoop.yarn.factories.impl.pb.RpcServerFactoryPBImpl.getServer(RpcServerFactoryPBImpl.java:132)
+​	... 17 more
 Caused by: java.net.BindException: 无法指定被请求的地址
-	at sun.nio.ch.Net.bind0(Native Method)
-	at sun.nio.ch.Net.bind(Net.java:433)
-	at sun.nio.ch.Net.bind(Net.java:425)
-	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)
-	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
-	at org.apache.hadoop.ipc.Server.bind(Server.java:465)
-	... 25 more
+​	at sun.nio.ch.Net.bind0(Native Method)
+​	at sun.nio.ch.Net.bind(Net.java:433)
+​	at sun.nio.ch.Net.bind(Net.java:425)
+​	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)
+​	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+​	at org.apache.hadoop.ipc.Server.bind(Server.java:465)
+​	... 25 more
 2019-01-23 17:26:56,226 INFO org.apache.hadoop.yarn.server.resourcemanager.ResourceManager: SHUTDOWN_MSG: 
 /************************************************************
 SHUTDOWN_MSG: Shutting down ResourceManager at master/192.168.17.10
 ************************************************************/
+
 ```
 
 从日志可以看出是ip地址绑定出了问题`Caused by: java.net.BindException: Problem binding to [master::8031] java.net.BindException: 无法指定被请求的地址`，我这里多写了个冒号
@@ -554,8 +557,266 @@ SHUTDOWN_MSG: Shutting down ResourceManager at master/192.168.17.10
 重新编辑下yarn-site.xml，修改如下
 ```
 <property>
-        <name>yarn.resourcemanager.resource-tracker.address</name>
-        <value>master:8031</value>
+​        <name>yarn.resourcemanager.resource-tracker.address</name>
+​        <value>master:8031</value>
 </property>
+
 ```
 > 我上文的配置是修改后的，没有错
+
+## 基于Hadoop集群的Hive安装配置
+
+Hive可以安装在任一节点或集群之外，我这里是计划装在Master节点上。
+![](assets/wHive.png)
+其次Hive也就是在hadoop上加了一层SQL接口，便于通过简单的SQL语言翻译成MapReduce作业。而hdfs的特性是可追加不可修改，但数据库表是可以修改删除的，所以Hive的所存储的数据应当分成两部分，表的元数据外部存储以便修改，表中数据存储在hdfs上即可。
+hive是默认将元数据保存在本地内嵌的 Derby 数据库中，但Derby不支持多会话连接，所以我这里选择mysql来存储metadata元数据
+
+### 准备
+- Hive CDH发行版本（http://archive-primary.cloudera.com/cdh5/cdh/5/ ），为了和Hadoop、HBase、flume等版本对应，这里限定使用cdh5.12.1结尾的hive-1.1.0-cdh5.12.1.tar.gz
+- 下载mysql驱动（https://dev.mysql.com/downloads/connector/j/）
+![](assets/mysql驱动.png)
+
+### 在线安装并配置MySQL
+1. 上传MySQL在线安装源的配置文件
+
+用root账号登录master节点
+将mysql-community.repo 文件上传到 `/etc/yum.repos.d/` 目录
+将c 文件上传到 `/etc/pki/rpm-gpg/` 目录
+> 这两文件是指定mysql的yum源，centos系统盘里是没有的。我放了个链接在最后
+```
+# Enable to use MySQL 5.6
+[mysql56-community]
+name=MySQL 5.6 Community Server
+baseurl=http://repo.mysql.com/yum/mysql-5.6-community/el/7/$basearch/
+enabled=1           #enabled=1表明下载使用MySQL5.6，如果要用5.7的话把下面的enabled改为1
+gpgcheck=1
+gpgkey=file:/etc/pki/rpm-gpg/RPM-GPG-KEY-mysql
+
+# Note: MySQL 5.7 is currently in development. For use at your own risk.
+# Please read with sub pages: https://dev.mysql.com/doc/relnotes/mysql/5.7/en/
+[mysql57-community-dmr]
+name=MySQL 5.7 Community Server Development Milestone Release
+baseurl=http://repo.mysql.com/yum/mysql-5.7-community/el/7/$basearch/
+enabled=0
+gpgcheck=1
+gpgkey=file:/etc/pki/rpm-gpg/RPM-GPG-KEY-mysql
+```
+
+2. 更新yum源并安装mysql server（默认同时会安装mysql client）
+
+```
+# yum repolist
+# yum install mysql-server
+```
+
+3. 查看MySQL各组件是否成功安装
+
+```
+# rpm -qa | grep mysql
+```
+![](assets/查看mysql.png)
+
+4. 启动MySQL Server并查看其状态
+```
+# systemctl start mysqld
+# systemctl status mysqld
+```
+![](assets/启动musqld.png)
+
+> 设置开机启动mysql服务：systemctl enable mysqld
+> 关闭开机自启动：systemctl diable mysqld
+> 停止MySQL服务：systemctl stop mysqld
+
+5. 查看MySQL版本
+```
+# mysql -V
+```
+
+6. 连接MySQL，默认root密码为空
+```
+# mysql -u root 
+mysql> 
+```
+
+> 为root用户设置密码：
+mysql>set password for 'root'@'localhost'=password('newPasswd');
+
+7. 查看数据库
+```
+mysql> show databases; （注意：必须以分号结尾，否则会出现续行输入符“>”）
+```
+
+8. 创建hive元数据数据库（metastore）
+```
+mysql> create database hive; 
+```
+
+9. 创建用户hive，密码是123456
+```
+mysql> CREATE USER 'hive'@'%' IDENTIFIED BY '123456';
+```
+
+注意：删除用户是DROP USER命令 ，%代表可以在任一台主机（IP地址）上使用hive用户
+
+10. 授权用户hadoop拥有数据库hive的所有权限
+```
+mysql> GRANT ALL PRIVILEGES ON hive.* TO 'hive'@'%' WITH GRANT OPTION;
+```
+11. 查看新建的MySQL用户（数据库名：mysql，表名：user）
+```
+mysql> select host,user,password from mysql.user;
+```
+
+12. 删除空用户记录，如果没做这一步，新建的hive用户将无法登录，后续无法启动hive客户端
+```
+mysql> delete from mysql.user where user='';
+```
+13. 刷新系统授权表（不用重启mysql服务）
+```
+mysql> flush privileges; 
+```
+14. 测试hive用户登录
+```
+$ mysql -u hive -p
+Enter password：123456
+```
+
+### 安装Hive
+
+- 切换hadoop用户登录（我先前centos创建的用户hadoop）
+- 上传下载的源码文件并解压到用户目录下 `tar -zxvf hive-1.1.0-cdh5.12.1.tar.gz ~`
+- 在.bash_profile文件中添加hive环境变量
+
+```
+export HIVE_HOME=/home/hadoop/hive-1.1.0-cdh5.12.1
+export PATH=$HIVE_HOME/bin:$PATH
+```
+
+并使之生效 `source .bash_profile`
+
+- 编辑$HIVE_HOME/conf/hive-env.sh文件，在末尾添加HADOOP_HOME变量
+
+```
+$ cd ​$HIVE_HOME/conf
+$ cp hive-env.sh.template hive-env.sh	（默认不存在，可从模板文件复制）
+​$ vi hive-env.sh
+# 添加HADOOP_HOME=/home/hadoop/hadoop-2.6.0-cdh5.12.1
+```
+- 同样在conf目录下新建hive-site.xml
+
+```
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+​        # 下面几步指定使用创建的hive用户访问mysql
+​        <property>
+​                <name>javax.jdo.option.ConnectionDriverName</name>
+​                <value>com.mysql.jdbc.Driver</value>
+​        </property>
+​        <property>
+​                <name>javax.jdo.option.ConnectionURL</name>
+​                <value>jdbc:mysql://192.168.17.10:3306/hive</value>
+​        </property>
+​        <property>
+​                <name>javax.jdo.option.ConnectionUserName</name>
+​                <value>hive</value>
+​        </property>
+​        <property>
+​                <name>javax.jdo.option.ConnectionPassword</name>
+​                <value>123456</value>
+​        </property>
+​	<property>
+​		<name>hive.metastore.warehouse.dir</name> #指定仓库目录，在hdfs上
+​		<value>/hive/warehouse</value>
+​	</property>
+​	<property>
+​		<name>hive.exec.scratchdir</name>
+​		<value>/hive/tmp </value>
+​	</property>
+​        <property>
+​                <name>hive.metastore.schema.verification</name>
+​                <value>false</value>
+​        </property>
+</configuration>
+
+```
+
+如配置文件中指明了hive仓库在hdfs上，所以要创建/hive/warehouse和/hive/tmp目录
+
+- 启动hdfs服务并创建所述目录
+
+```
+start-dfs.sh #起hdfs
+hdfs dfs -mkdir -p /hive/warehouse /hive/tmp #创建多级目录
+hdfs dfs -ls -R /hive #查看
+
+```
+
+- 将先前下载的mysql驱动上传并解压到$HIVE_HOME/lib目录下
+
+- 启动hive,前提确保hadoop集群启动了，命令行输入`hive`
+
+### hive简单使用
+和mysql使用差不多的，类似SQL语句的HSQL
+- 启动hive：`hive`
+- 退出：quit;
+- 查看数据库和表，同sql语句 show databases，show tables from xxx
+- 创建表，我这里随便建了个`create table user(name string,age int,id string);`
+- 查看表结构 desc user；
+- 查看表详细信息 desc fromatted user；
+- 插入数据 `insert into user values('hadoop',10,'0x001'),('hbase',6,'0x002'),('josonlee',20,'0x003');`
+
+![](assets/insert.png)
+
+- 查询select * from user;
+
+![](assets/select.png)
+
+- 创建数据库
+```
+hive> create database testdb;		//在默认位置创建DB(配置中指定的/hive/warehouse/)
+hive> create database testdb location ‘/hive/testdb’		//在HDFS指定目录下创建DB
+
+```
+- 查看数据库结构 desc database testdb;
+- 切换数据库 use testdb;
+- 删除数据库
+```
+hive> drop database testdb; 	//只能删除空数据库（数据库中没表）
+hive> drop database mydb cascade;	          //删除非空数据库
+```
+
+Hive就是这样简单搭建成功
+
+可以再去MySQL下看看到底改变了存储了什么信息，如图
+![](assets/metadata.png)
+
+其中上面创建的user表的字段信息存储在COLUMN_V2里，如图
+![](assets/字段.png)
+
+https://www.cnblogs.com/qingyunzong/p/8710356.html#_label5_0
+
+其余表对应Hive数据库相关信息如下：
+```
+一、存储Hive版本的元数据表（VERSION）
+二、Hive数据库相关的元数据表（DBS、DATABASE_PARAMS）
+    1、DBS
+    2、DATABASE_PARAMS
+三、Hive表和视图相关的元数据表
+    1、TBLS
+    2、TABLE_PARAMS
+    3、TBL_PRIVS
+四、Hive文件存储信息相关的元数据表
+    1、SDS
+    2、SD_PARAMS
+    3、SERDES
+    4、SERDE_PARAMS
+五、Hive表字段相关的元数据表
+    1、COLUMNS_V2
+六、Hive表分区相关的元数据表
+    1、PARTITIONS
+    2、PARTITION_KEYS
+    3、PARTITION_KEY_VALS
+    4、PARTITION_PARAMS
+
+```
