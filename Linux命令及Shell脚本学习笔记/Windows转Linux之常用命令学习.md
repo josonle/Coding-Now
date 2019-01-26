@@ -72,6 +72,11 @@ cat f1 > f2
 cat f3 > f2     f3的数据会覆盖原有被写入f2中的数据
 cat f1 f3 >> f2     这个是把f1f3的数据追加到f2
 ```
+cat 可以同时显示多个文件的内容，比如我们可以在一个cat命令上同时显示两个文件的内容； 
+`cat f1 f2`
+
+cat 对于内容极大的文件来说，可以通过管道|传送到more 工具，然后一页一页的查看； 
+`cat /etc/fstab /etc/profile | more `
 
 ```
 > 把命令的输出写到文件中，如 dat > date.out
@@ -81,15 +86,41 @@ ls -Rl / >> out 2> error 【正确信息写入out，2>把错误信息写入error
 有的时候不需要错误信息，直接 2>/dev/null 给空即可
 ```
 
+cat还有创建文件的功能，创建文件后，要以EOF或STOP结束
+```
+$ cat>abc.txt<<eof      //创建(或覆盖创建)abc.txt并以eof退出编辑状态；如果是>>，就是追加创建到abc.txt中
+> adflhlaskfd
+> 阿斯顿发货款了
+> eof
+
+$ cat abc.txt 
+adflhlaskfd
+阿斯顿发货款了
+
+```
+
 more命令查看文件，以翻页形式，适合大文件
 
+```
+Enter       向下n行，需要定义，默认为1行； 
+Ctrl+f    向下滚动一屏； 
+空格键          向下滚动一屏； 
+Ctrl+b  返回上一屏； 
+=         输出当前行的行号； 
+:f      输出文件名和当前行的行号； 
+v      调用vi编辑器； 
+! 命令            调用Shell，并执行命令； 
+q     退出more当我们查看某一文件时，想调用vi来编辑它，不要忘记了v动作指令，这是比较方便的； 
+```
 #### tail和head查看文件末尾和头部
 tail多和-f参数连用，表示查看末尾多少行，比如100f代表末尾100行
 ```
 tail -f file  //实时查看文件末尾
-fail -20f file  //文件确定后，查看末尾20行
+tail -20f file  //文件确定后，查看末尾20行
+tail -n 20 file  //查看文件后20行，非实时的
 
 head file  //一般用来看下文件数据长啥样
+head -n 10 file  //查看前10行
 ```
 
 **注意:**`tail -f`可以实时一直查看文件
@@ -99,6 +130,7 @@ head file  //一般用来看下文件数据长啥样
 echo hello [屏幕打印]
 echo hello> f1 [hello输出到文件f1]
 ```
+> 更多文件查看命令的详细可参考：https://my.oschina.net/junn/blog/304868
 
 #### 文件权限 chmod命令
 
@@ -132,6 +164,26 @@ chgrp groupName file
 ```
 useradd newUser
 passwd newUser
+```
+
+#### 删除用户
+```
+userdel userName
+```
+
+#### 查询用户信息
+```
+id userName  //查询userName的信息，用户不存在时,返回无此用户
+
+whoami/w/who  //查询当前用户
+```
+
+#### 用户组管理
+```
+groupadd newGroup   //新增组
+groupdel groupName  //删除组
+useradd -g groupName userName   //增加用户时指定所属组，默认是归为userName组
+usermod -g groupName userName   //修改用户所属组
 ```
 #### find搜索命令
 
@@ -468,3 +520,10 @@ chrome一定要装的插件有：oneTab、谷歌访问助手、
 - `ZZ`是快速保存修改
 - `x`是删除光标所在的那个字符
 - `o`是跳一行输入
+- `G`是跳到最后一行，`gg`是跳到第一行
+
+- ':set nu/nonu'是文件添加/删除行号
+- `:/关键字`是搜索关键字，按‘n’是搜索下一个
+
+更多常用命令如图：
+![](assets/vi常用命令.png)

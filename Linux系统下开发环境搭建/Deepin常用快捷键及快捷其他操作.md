@@ -4,6 +4,9 @@
 
 ## 常用快捷键
 
+- 命令行下使用深度编辑器打开文件 `dedit fileName`
+- 命令行下使用默认应用程序打开文件 `dde-open fileName`
+
 先说明键盘上的Windows图标在deepin中是Super键
 - Super+s 显示工作区
 - 在工作区中使用Ctrl+alt+数字a，可以切换到第a个工作区

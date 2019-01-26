@@ -1,0 +1,1 @@
+rpm下载软件安装到指定目录方法：http://fhqdddddd.blog.163.com/blog/static/1869915420100645644424/
