@@ -409,6 +409,12 @@ usage:	crontab [-u user] file
 
 ### ssh连接远程Linux服务器
 
+有些linux貌似是没装ssh的，例如ubuntu，所以要先安装
+
+```
+sudo apt-get install openssh-server
+```
+
 `ssh [Linux主机名]@Linux服务器所在IP`，之后要输了linux的登录密码（可以本地通过ssh-keygen生成公私钥，并推送到Linux上可以省去每次登录输入密码）
 
 
@@ -417,11 +423,22 @@ usage:	crontab [-u user] file
 ![](assets/ssh连接失败.png)
 如图，像红线处显示的是.ssh/known_hosts出了问题。删除.ssh/known_hosts中和１９２．１６８．１７．１０相关的rsa相关信息即可，或者把整个known_howts删除即可，然后再次连接
 
+#### 使用scp命令来进行文件传输
 
+scp是基于ssh的，如下使用
+
+```
+#从服务器上下载文件
+scp [主机名]@主机IP:[文件路径]  目的路径
+#上传文件
+scp 文件路径 [主机名]@主机IP:[目的路径]
+```
+
+如果是拷贝目录，加上`-r`参数即可。scp命令成功执行后，返回代码为0, 任何错误出现返回代码都大于0
 
 ### rz/sz命令使用
 首先要安装lrzsz工具（lrzsz就是一个支持 Zmodem 传输协议的工具），`yum -y install lrzsz`
-    
+​    
 - sz：使用（服务器发送文件，也就是客户端下载文件）
 - rz：使用（服务器接受文件，也就是客户端上传文件）
 
@@ -522,8 +539,9 @@ chrome一定要装的插件有：oneTab、谷歌访问助手、
 - `o`是跳一行输入
 - `G`是跳到最后一行，`gg`是跳到第一行
 
-- ':set nu/nonu'是文件添加/删除行号
+- `:set nu/nonu`是文件添加/删除行号
 - `:/关键字`是搜索关键字，按‘n’是搜索下一个
 
 更多常用命令如图：
+【图片来源网络，出处不详】
 ![](assets/vi常用命令.png)
