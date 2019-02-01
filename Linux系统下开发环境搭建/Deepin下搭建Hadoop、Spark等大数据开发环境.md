@@ -12,7 +12,7 @@
   - [修改VMWare的网络配置](#修改VMWare的网络配置)
 - [Scala下载及安装](#Scala下载及安装)
   - [eclipse安装Scala IDE插件](#eclipse安装Scala-IDE插件)
-  - 启动scala报错 java.lang.NumberFormatException: For input string: "0x100" 解决
+  - [启动scala报错 java.lang.NumberFormatException: For input string: "0x100" 解决](#启动scala报错-java.lang.NumberFormatException:-For-input-string:-"0x100"-解决)
 - [hadoop完全分布式集群搭建](#hadoop完全分布式集群搭建)
   - [ssh免密登录](#ssh免密登录)
 - [启动hadoop](#启动hadoop)
@@ -21,7 +21,7 @@
   - [Master节点无法启动ResourceManager解决](#Master节点无法启动ResourceManager解决)
 - [基于Hadoop集群的Hive安装配置](#基于Hadoop集群的Hive安装配置)
 - [Spark本地模式及基于Yarn的分布式集群环境搭建](#Spark本地模式及基于Yarn的分布式集群环境搭建)
-- [为集群配置Spark History Server](#为集群配置Spark History Server)
+- [为集群配置Spark-History-Server](#为集群配置Spark-History-Server)
 
 
 
@@ -305,7 +305,7 @@ export PATH=$SCALA_HOME/bin:$PATH
 
 
 
-### 启动scala报错 java.lang.NumberFormatException: For input string: "0x100" 解决
+### 启动scala报错-java.lang.NumberFormatException:-For-input-string:-"0x100"-解决
 
 报错信息如下，貌似也不影响scala运行，因为还是可以编译代码的
 ```
@@ -948,7 +948,7 @@ cd $SPARK_HOME
 ```
 job运行过程中可以在浏览器通过http://master:4040查看，但任务结束后就看不了了。但考虑后续运行细节，就需要为集群配置Spark History Server了
 
-## 为集群配置Spark History Server
+## 为集群配置Spark-History-Server
 - 修改spark-defaults.conf配置文件
 ```
 $ cp spark-defaults.conf.template spark-defaults.conf
