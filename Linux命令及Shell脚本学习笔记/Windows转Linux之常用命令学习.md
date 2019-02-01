@@ -22,12 +22,14 @@ Linux手动分区：根分区`/`，`/swap`分区，`/boot`分区
 cd ~ [~切换到宿主目录下]，- [-切换到前一个工作目录]，.. [..上一级目录]，/[/根目录]
 #### ls命令
 ```
-ls -R -f [-R是以树的形式遍历输出目录下所有文件，-f输出隐藏文件]
+ls -R -af [-R是以树的形式遍历输出目录下所有文件，-a可以输出隐藏文件，-f不排序]
 ls -lh [-l列出详细信息，h是human人更容易理解的展示]
 ```
 
 ![1546872241318](assets/1546872241318.png)
 
+其他参数：
+> -t:以最后修改时间排序，-r是倒序排序
 #### touch和mkdir命令
 ```
 touch file1
@@ -63,6 +65,11 @@ rm -r folder/   -r是遍历folder目录删除【如果是-ir，可以选择删�
 rm -rf folder/  -f是强制执行，慎用【-f 在很多命令中都可用来强制执行】
 ```
 
+#### ln 创建链接 [-s 创建符号链接(软连接)，相当于快捷方式]
+```
+ln f1 f2 【创建硬链接，实际上f1到f2的镜像，f1和f2在同一分区下才有用，软连接可跨分区】
+ln -s f1 f3 【删除f1，f3就没用了，但f2有用】
+```
 #### cat和more命令
 用来查看文件内容，`cat file`，`-v[表示组合键] -t[显示table制表符，以^I表示] -e[显示ending结束符，以$表示] （简写-vte）`
 
@@ -204,9 +211,14 @@ find用来查找文件，命令格式 `find [指定目录][查找条件][指定�
     -amin  访问时间access
     -cmin  文件属性change
     -mmin  文件内容modify
+    -maxdepth 查找最大层级
 ```
 
 比如说文件名以txt结尾，`-name *.txt`
+
+要是不想进入文件夹内迭代查找，可以指定最大层级，如`find /home/josonlee -maxdepth 2 -iname music`
+
+另外是查找超过多大的文件，如 `find /home/josonlee -size +100M` 查找超过100M的文件（小于是-n，等于是n，大于是+n）
 
 其次，可以多个选项一起添加查询
 
@@ -239,9 +251,43 @@ find ~ -cmin -60 -a -name *conf
 
 [deepin linux下怎么安装使用locate进行文件搜索_百度经验](https://jingyan.baidu.com/article/2a138328f3ebb0074a134ff5.html) 
 
+deepin下有些许不同与其他linux发行版本，比如updatedb的配置文件和数据库不在默认位置
+
+```
+$ dpkg -L locate  //查询一下locate包的相关信息
+/.
+/etc
+/etc/cron.daily
+/etc/cron.daily/locate    //这是配置文件
+/usr
+/usr/bin
+/usr/bin/locate.findutils
+/usr/bin/updatedb.findutils
+/usr/lib
+/usr/lib/x86_64-linux-gnu
+/usr/lib/x86_64-linux-gnu/locate
+/usr/lib/x86_64-linux-gnu/locate/frcode
+/usr/share
+/usr/share/doc
+/usr/share/doc/locate
+/usr/share/doc/locate/README.Debian
+/usr/share/doc/locate/changelog.Debian.gz
+/usr/share/doc/locate/changelog.gz
+/usr/share/doc/locate/copyright
+/usr/share/man
+/usr/share/man/man1
+/usr/share/man/man1/locate.findutils.1.gz
+/usr/share/man/man1/updatedb.findutils.1.gz
+/usr/share/man/man5
+/usr/share/man/man5/locatedb.5.gz
+/var
+/var/cache
+/var/cache/locate       //数据库存放位置
+```
 > locate命令其实是"find -name"的另一种写法，但是要比后者快得多，原因在于它不搜索具体目录，而是搜索一个数据库（/var/lib/locatedb），这个数据库中含有本地所有文件信息。Linux系统自动创建这个数据库，并且每天自动更新一次，所以使用locate命令查不到最新变动过的文件。为了避免这种情况，可以在使用locate之前，先使用**updatedb**命令，手动更新数据库
 
 ```
+#使用前sudo updatedb手动更新数据库
 locate -i ~/py  //搜索用户目录下所有py开头不区分大小写的文件
 locate ~/*.txt
 ```
@@ -351,7 +397,7 @@ rpm -ivh xxx.rpm
 #解压到目录dir
 tar -zxvf xxx.tar.gz -C dir
 
-#压缩为xxx.tar.ga
+#压缩为xxx.tar.gz
 tar -zxcf xxx.tar.gz dir|file  //把目录DIR或文件file压缩成xxx.tar.gz
 ```
 
@@ -449,14 +495,6 @@ scp 文件路径 [主机名]@主机IP:[目的路径]
 
 
 ```
-ln 创建链接 [-s 创建符号链接(软连接)，相当于快捷方式]
-
-ln f1 f2 【创建硬链接，实际上f1到f2的镜像，f1和f2在同一分区下才有用，软连接可跨分区】
-ln -s f1 f3 【删除f1，f3就没用了，但f2有用】
-
-文件访问权限
-chown 把权限赋予给某个用户，一般是root修改文件后把权限给其他用户
-
 通配符
 * 匹配所有字符
 ？匹配任一字符
@@ -545,3 +583,53 @@ chrome一定要装的插件有：oneTab、谷歌访问助手、
 更多常用命令如图：
 【图片来源网络，出处不详】
 ![](assets/vi常用命令.png)
+
+## 2019.1.27更新
+### history命令使用
+
+这个是用来查看历史输入过的命令的，挺有用的，使用方法如下：
+```
+history 10      //查看最近10条命令，不加10就是查看全部
+```
+该命令默认是不显示命令的执行时间，只显示了行号和命令，history 已经记录，只是没有显示。现在将主机名和时间显示出来。在用户目录下的 .bashrc 中添加 HISTTIMEFORMAT 环境变量即可
+```
+export HISTTIMEFORMAT="%F %T `whoami` "
+```
+另外还可以通过行号来再次执行以前的命令，如我上面查询的最近10条命令中想在执行倒数第二条，也就是行号959的，如图
+![](assets/history.png)
+
+默认是把记录保存到用户目录下的.bash_history 中，可以在.bashrc中添加export HISTFILE指定存放在哪里
+其次，可以使用`history -c`清楚该命令行记录
+
+### 压缩和解压缩
+- gzip和gunzip
+
+使用gzip压缩成.gz结尾的文件，不保留原文件；gunzip反之。
+> 注意：gzip不压缩文件夹，只会递归压缩文件夹下的每个文件
+
+参数：
+```
+  -1, --fast        compress faster
+  -9, --best        compress better
+  -d, --decompress  解压，等同于gunzip
+  -r，              对目录递归压缩
+```
+
+- zip和unzip
+
+> zip [选项] XXX.zip 将要压缩的内容(文件和目录)
+unzip [选项] XXX.zip
+> 压缩解压缩依旧保留原文件
+
+zip常和参数-r一起用来压缩文件夹，unzip常和-d指定解压到哪个路径下，如下
+```
+zip -r hadoop.zip ~/hadoop/
+unzip -d ~/Downloads/ hadoop.zip
+```
+
+- tar
+
+上面提过这个命令，常用参数是-zxvf -C 【解压】-zcvf【压缩】
+
+具体参数什么意思间`tar --help`
+

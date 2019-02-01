@@ -137,7 +137,7 @@
   - [竞赛信息-DC竞赛](http://www.dcjingsai.com/)
   - [大数据挑战赛 - Kesci.com](https://www.kesci.com/)
   - [Kaggle: Your Home for Data Science](https://www.kaggle.com/getting-started)
-  - 还有阿里天池大赛，但参加了几次，我还是段位不够啊，太难了
+  - 还有阿里天池大赛，但参加了几次，自我感觉还是段位不够啊，太难了
 
 - 赛事代码学习资源
   - [TianChi_IJCAI17_KouBei: 2017天池口碑商家客流量预测](https://github.com/liangyaorong/TianChi_IJCAI17_KouBei)

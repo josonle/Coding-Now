@@ -22,3 +22,16 @@ dpkg是Debian Package的简写，是为Debian 专门开发的套件管理系统�
 4. 配置文件位置：/etc
 
 5. lib文件位置：/usr/lib
+
+```
+# Written by com.deepin.daemon.Grub2
+DEEPIN_GFXMODE_DETECT=2
+GRUB_CMDLINE_LINUX=""
+GRUB_CMDLINE_LINUX_DEFAULT="splash quiet "
+GRUB_DEFAULT=0
+GRUB_DISTRIBUTOR="`/usr/bin/lsb_release -d -s 2>/dev/null || echo Deepin`"
+GRUB_GFXMODE=1366x768,1360x768,1280x720,1024x768,auto
+GRUB_THEME=/boot/grub/themes/deepin-fallback/theme.txt
+GRUB_TIMEOUT=5
+nouveau.modeset=0
+```

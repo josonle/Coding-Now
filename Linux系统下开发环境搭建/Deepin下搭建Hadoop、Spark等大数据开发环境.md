@@ -259,6 +259,19 @@ export PATH=$SCALA_HOME/bin:$PATH
 
 - scala就这样安装好了，试着命令行下输入scala写两行代码
 
+### eclipse安装scala插件
+**注意：eclipse版本不要太新**
+其实我建议直接下载Scala IDE for Eclipse：http://scala-ide.org/download/sdk.html
+
+如果已安装eclipse的话，可以去安装scala IDE插件，不建议直接在eclipse MarketPlace安装,版本太新可能不适配，如图
+![](assets/安装scala插件.png)
+
+[点击这里下载](http://scala-ide.org/download/prev-stable.html)，选择和你eclipse、scala适配的的版本，下载如下方所示的zipfile
+> This release is only available for Eclipse 4.x and can be retrieved as **zipfile**.
+
+解压zipfile后，将解压文件放到eclipse文件夹下的dropins目录下，重启eclipse，然后按提示安装即可
+
+![](assets/dropins.png)
 
 ### 启动scala报错 java.lang.NumberFormatException: For input string: "0x100" 解决
 
@@ -822,3 +835,147 @@ https://www.cnblogs.com/qingyunzong/p/8710356.html#_label5_0
     4、PARTITION_PARAMS
 
 ```
+
+## Spark本地模式及基于Yarn的分布式集群环境搭建
+
+不要额外安装scala，spark自带了scala环境
+- 上传源码包并解压到用户目录下 `tar -zxvf spark-2.4.0-bin-hadoop2.6.tar.gz -C ~`
+- 编辑用户配置文件`vi ~/.bash_profile`，并追加下列内容
+```
+# Spark环境变量配置
+export SPARK_HOME=/home/hadoop/spark-2.4.0-bin-hadoop2.6
+export PATH=$SPARK_HOME/bin:$SPARK_HOME/sbin:$PATH
+```
+
+如上配置后，`source .bash_profile` 后，命令行输入spark-shell可进入spark的命令行模式
+
+- 编辑spark的conf目录下的spark-env.sh，默认只有模版，复制生成一个
+
+spark-conf所在目录：/home/hadoop/spark-2.4.0-bin-hadoop2.6/conf/
+
+```
+$ cp spark-env.sh.template spark-env.sh
+$ vi spark-env.sh
+
+# 追加如下内容，去掉中文
+# 指定java、hadoop及hadoop-conf所在目录
+export JAVA_HOME=/opt/jdk1.8.0_201      
+export HADOOP_HOME=/home/hadoop/hadoop-2.6.0-cdh5.12.1
+export HADOOP_CONF_DIR=/home/hadoop/hadoop-2.6.0-cdh5.12.1/etc/hadoop
+# 指定spark的Master节点的ip，我这里是映射master为192.168.17.10
+export SPARK_MASTER_HOST=master
+# 指定spark集群worker节点的内存、实例、核，依情况而定吧
+export SPARK_WORKER_MEMORY=1024m
+export SPARK_WORKER_CORES=2
+export SPARK_WORKER_INSTANCES=1
+```
+
+- 编辑conf目录下的slaves文件，默认只有模版，复制生成一个
+
+```
+$ cp slaves.template slaves
+$ vi slaves
+
+# 追加如下内容，我这里slave1、2是另外两台虚拟机ip的映射
+# A Spark Worker will be started on each of the machines listed below.
+slave1
+slave2
+```
+
+- 将配置好的整个目录 `/home/hadoop/spark-2.4.0-bin-hadoop2.6/` 发送给另外两台虚拟机
+
+```
+scp -r ~/spark-2.4.0-bin-hadoop2.6 slave1:/home/hadoop/
+scp -r ~/spark-2.4.0-bin-hadoop2.6 slave2:/home/hadoop/
+```
+
+- 启动spark
+
+首先，spark下sbin目录中启动和结束的命令是start-all.sh，stop-all.sh，和hadoop启动和结束命令重名了，用mv命令修改为start-spark-all.sh，stop-spark-all.sh
+
+如图在Master节点输入所示命令，启动hdfs、yarn、spark
+```
+start-dfs.sh
+start-yarn.sh 
+start-spark-all.sh 
+```
+Master节点上启动的进程
+![](assets/startspark.png)
+
+slave节点上启动的进程
+![](assets/sparkslave.png)
+
+- 测试一下
+
+跑一下spark自带的计算pi的程序
+```
+cd $SPARK_HOME
+./bin/run-example SparkPi 100
+
+# 有输出Pi is roughly 3.1414175141417515的话就OK了
+```
+job运行过程中可以在浏览器通过http://master:4040查看，但任务结束后就看不了了。但考虑后续运行细节，就需要为集群配置Spark History Server了
+
+### 为集群配置Spark History Server
+- 修改spark-defaults.conf配置文件
+```
+$ cp spark-defaults.conf.template spark-defaults.conf
+$ vi spark-defaults.conf
+
+# 追加如下
+spark.eventLog.enabled           true
+spark.eventLog.dir               hdfs://master:9000/eventLogs
+spark.eventLog.compress          true
+```
+- 属性解释
+    - spark.eventLog.enabled：是否记录Spark事件，用于应用程序在完成后使用web界面查看
+    - spark.eventLog.dir：设置spark.eventLog.enabled为true后，该属性为记录spark时间的根目录。在此根目录中，Spark为每个应用程序创建分目录，并将应用程序的时间记录到此目录中。用户可以将此属性设置为HDFS目录，以便History Server读取
+    - spark.eventLog.compress：否压缩记录Spark事件，前提spark.eventLog.enabled为true，默认使用的是snappy
+
+- 修改spark-env.sh配置文件
+
+```
+# 追加
+export SPARK_HISTORY_OPTS="-Dspark.history.ui.port=18080 -Dspark.history.retainedApplications=3 -Dspark.history.fs.logDirectory=hdfs://master:9000/eventLogs"
+```
+- 解释
+    - spark.history.ui.port：WebUI的端口号。默认为18080，也可以自行设置。
+    - spark.history.retainedApplications：设置缓存Cache中保存的应用程序历史记录的个数，默认50，如果超过这个值，旧的将被删除。
+    > 注：缓存文件数不表示实际显示的文件总数。只是表示不在缓存中的文件可能需要从硬盘读取，速度稍有差别。
+    
+    - spark.history.fs.logDirectory:存放历史记录文件的目录。可以是Hadoop API支持的任意文件系统
+        - **我看文档上这个目录和上面哪个目录可以是同一个**
+
+- 在hdfs上新建上述用来存储spark历史记录的文件夹
+
+分别是hdfs://master:9000/eventLogs
+```
+start-dfs.sh
+
+hdfs dfs -mkdir /eventLogs
+```
+
+- 重启集群
+
+```
+start-all.sh
+start-spark-all.sh
+start-history-server.sh     //就是这个进程在记录历史任务
+```
+再次查看进程，出现了HistoryServer进程
+```
+[hadoop@master conf]$ jps
+3696 SecondaryNameNode
+4162 Master
+3515 NameNode
+4283 Jps
+4237 HistoryServer
+```
+
+浏览器下http://master:18080可查看
+
+参考：
+
+- http://spark.apache.org/docs/latest/monitoring.html
+- [SPARK启动历史任务查看](http://blog.51cto.com/beyond3518/1787513)
+
