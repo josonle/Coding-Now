@@ -1,7 +1,18 @@
+# 目录
+
+- [安装java环境](#安装java环境)
+- [eclipse安装](#eclipse安装)
+  - [Deepin Linux下配置eclipse启动图标并添加到桌面](#配置eclipse启动图标并添加到桌面)
+  - [配置maven](#配置maven)
+- [MySQL数据库安装](#MySQL数据库安装)
+- [VMWare安装](#VMWare安装)
+  - [Virtual machine monitor failed导致无法启动VMWare解决](#Virtual machine monitor failed导致无法启动VMWare解决)
+  - [如何卸载VMWare](#如何卸载VMWare)
+
 以下操作都在终端进行，`Ctrl+Alt+t`打开终端，或者随便哪鼠标右键即可打开
 `sudo su`可以切换root用户权限
 
-### 安装java环境
+## 安装java环境
 
 - [官网下载](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)，我这里下的是`jdk-8u191-linux-x64.tar.gz`（我电脑64位的，你看情况选择其他版本也可以）
 - 解压到 `/opt/` 目录下（其他位置也可以，opt下用来安装的），
@@ -17,7 +28,7 @@ tar -zxvf jdk-8u191-linux-x64.tar.gz -C /opt/
 - 使用source命令使之生效 `source /etc/profile`
 - 然后输入 `java -version` 可以看到java版本信息就成功了
 
-### eclipse安装
+## eclipse安装
 [点击这里下载](https://www.eclipse.org/downloads/packages/)
 
 ![](assets/eclipse下载.png)
@@ -106,14 +117,14 @@ export PATH=$PATH:$MAVEN_HOME/bin:
 
 ![](assets/mvnsetting.png)
 
-### MySQL数据库安装
+## MySQL数据库安装
 - [deepin安装MySQL5.7](https://blog.csdn.net/sinat_37064286/article/details/82224562)
 - [在deepin上安装mysql](https://blog.csdn.net/guanripeng/article/details/79626033)
 
 ![](assets/mysql安装.png)
 https://www.jianshu.com/p/de6abe2245fb
 
-### VMWare安装
+## VMWare安装
 首先是下载，Deepin应用商店里有这个可以直接下载。但它默认是安装在opt目录下，我根目录给的空间不够大，所以只好找它的源码包安装了。
 最新的VMWare已经15版本了，版本新未必适合自己，所以就搜索了些旧版本。
 - [点击这里下载最新版本](https://www.vmware.com/products/workstation-pro.html)
@@ -167,7 +178,7 @@ sudo vmware-installer -u vmware-workstation
 还有就是，我从deepin的启动器里看到还有vmware-Networkeditor啥的，也是用`sudo vmware-installer -u 名字 `来卸载
 
 
-### VMware最小化安装centos 搭建集群
+## VMware最小化安装centos 搭建集群
 我这里选择最小化安装，没啥难度，不会网上搜一波吧。
 
 有一点需要注意，最小化安装Centos时，网络配置处要打开网络，否则重启不能上网。如果忘选了的话，如下配置网卡也可以
@@ -226,7 +237,7 @@ wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-
 5、升级yum
 `yum -y update `
 
-###　修改ＶＭＷａｒｅ的网络配置
+###　修改VMWare的网络配置
 
 这一步主要是为了给虚拟机分配一个固定ｉｐ地址，便于集群间通讯
 
@@ -259,7 +270,8 @@ export PATH=$SCALA_HOME/bin:$PATH
 
 - scala就这样安装好了，试着命令行下输入scala写两行代码
 
-### eclipse安装scala插件
+### eclipse安装Scala IDE插件
+
 **注意：eclipse版本不要太新**
 其实我建议直接下载Scala IDE for Eclipse：http://scala-ide.org/download/sdk.html
 
@@ -269,9 +281,13 @@ export PATH=$SCALA_HOME/bin:$PATH
 [点击这里下载](http://scala-ide.org/download/prev-stable.html)，选择和你eclipse、scala适配的的版本，下载如下方所示的zipfile
 > This release is only available for Eclipse 4.x and can be retrieved as **zipfile**.
 
-解压zipfile后，将解压文件放到eclipse文件夹下的dropins目录下，重启eclipse，然后按提示安装即可
+解压zipfile后，将解压文件放到eclipse文件夹下的dropins目录下，重启eclipse，然后按提示默认安装即可
 
 ![](assets/dropins.png)
+
+***
+
+
 
 ### 启动scala报错 java.lang.NumberFormatException: For input string: "0x100" 解决
 
@@ -916,7 +932,7 @@ cd $SPARK_HOME
 ```
 job运行过程中可以在浏览器通过http://master:4040查看，但任务结束后就看不了了。但考虑后续运行细节，就需要为集群配置Spark History Server了
 
-### 为集群配置Spark History Server
+## 为集群配置Spark History Server
 - 修改spark-defaults.conf配置文件
 ```
 $ cp spark-defaults.conf.template spark-defaults.conf
