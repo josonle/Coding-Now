@@ -6,17 +6,17 @@
   - [配置maven](#配置maven)
 - [MySQL数据库安装](#MySQL数据库安装)
 - [VMWare安装](#VMWare安装)
-  - [Virtual machine monitor failed导致无法启动VMWare解决](# Virtual machine monitor failed导致无法启动VMWare解决)
+  - [Virtual machine monitor failed导致无法启动VMWare解决](# Virtual-machine-monitor-failed导致无法启动VMWare解决)
   - [如何卸载VMWare](#如何卸载VMWare)
 - [VMware最小化安装centos 搭建集群](#VMware最小化安装centos 搭建集群)
   - [修改VMWare的网络配置](#修改VMWare的网络配置)
 - [Scala下载及安装](#Scala下载及安装)
-  - [eclipse安装Scala IDE插件](#eclipse安装Scala IDE插件)
-  - [启动scala报错 java.lang.NumberFormatException: For input string: "0x100" 解决](#启动scala报错 java.lang.NumberFormatException: For input string: "0x100" 解决)
+  - [eclipse安装Scala IDE插件](#eclipse安装Scala-IDE插件)
+  - [启动scala报错 java.lang.NumberFormatException: For input string: "0x100" 解决]
 - [hadoop完全分布式集群搭建](#hadoop完全分布式集群搭建)
   - [ssh免密登录](#ssh免密登录)
 - [启动hadoop](#启动hadoop)
-  - 格式化hdfs文件系统
+  - [格式化hdfs文件系统](#[格式化hdfs文件系统)
   - [启动hdfs和yarn](#启动hdfs和yarn)
   - [Master节点无法启动ResourceManager解决](#Master节点无法启动ResourceManager解决)
 
@@ -171,7 +171,7 @@ ZF582-0NW5N-H8D2P-0XZEE-Z22VA
 然后，我就遇到了下图所示的问题
 ![](assets/vm启动失败.png)
 
-#### Virtual machine monitor failed导致无法启动VMWare解决
+#### Virtual-machine-monitor-failed导致无法启动VMWare解决
 
 查了很久，找到解决办法，进入bios里把secure boot关掉就行了
 
@@ -281,7 +281,7 @@ export PATH=$SCALA_HOME/bin:$PATH
 
 - scala就这样安装好了，试着命令行下输入scala写两行代码
 
-### eclipse安装Scala IDE插件
+### eclipse安装Scala-IDE插件
 
 **注意：eclipse版本不要太新**
 其实我建议直接下载Scala IDE for Eclipse：http://scala-ide.org/download/sdk.html
