@@ -6,8 +6,19 @@
   - [配置maven](#配置maven)
 - [MySQL数据库安装](#MySQL数据库安装)
 - [VMWare安装](#VMWare安装)
-  - [Virtual machine monitor failed导致无法启动VMWare解决](#Virtual machine monitor failed导致无法启动VMWare解决)
+  - [Virtual machine monitor failed导致无法启动VMWare解决](# Virtual machine monitor failed导致无法启动VMWare解决)
   - [如何卸载VMWare](#如何卸载VMWare)
+- [VMware最小化安装centos 搭建集群](#VMware最小化安装centos 搭建集群)
+  - [修改VMWare的网络配置](#修改VMWare的网络配置)
+- [Scala下载及安装](#Scala下载及安装)
+  - [eclipse安装Scala IDE插件](#eclipse安装Scala IDE插件)
+  - [启动scala报错 java.lang.NumberFormatException: For input string: "0x100" 解决](#启动scala报错 java.lang.NumberFormatException: For input string: "0x100" 解决)
+- [hadoop完全分布式集群搭建](#hadoop完全分布式集群搭建)
+  - [ssh免密登录](#ssh免密登录)
+- [启动hadoop](#启动hadoop)
+  - 格式化hdfs文件系统
+  - [启动hdfs和yarn](#启动hdfs和yarn)
+  - [Master节点无法启动ResourceManager解决](#Master节点无法启动ResourceManager解决)
 
 以下操作都在终端进行，`Ctrl+Alt+t`打开终端，或者随便哪鼠标右键即可打开
 `sudo su`可以切换root用户权限
