@@ -6,19 +6,24 @@
   - [配置maven](#配置maven)
 - [MySQL数据库安装](#MySQL数据库安装)
 - [VMWare安装](#VMWare安装)
-  - [Virtual machine monitor failed导致无法启动VMWare解决](# Virtual-machine-monitor-failed导致无法启动VMWare解决)
+  - [Virtual-machine-monitor-failed导致无法启动VMWare解决](#Virtual-machine-monitor-failed导致无法启动VMWare解决)
   - [如何卸载VMWare](#如何卸载VMWare)
-- [VMware最小化安装centos 搭建集群](#VMware最小化安装centos 搭建集群)
+- [VMware最小化安装centos搭建集群](#VMware最小化安装centos搭建集群)
   - [修改VMWare的网络配置](#修改VMWare的网络配置)
 - [Scala下载及安装](#Scala下载及安装)
   - [eclipse安装Scala IDE插件](#eclipse安装Scala-IDE插件)
-  - [启动scala报错 java.lang.NumberFormatException: For input string: "0x100" 解决]
+  - 启动scala报错 java.lang.NumberFormatException: For input string: "0x100" 解决
 - [hadoop完全分布式集群搭建](#hadoop完全分布式集群搭建)
   - [ssh免密登录](#ssh免密登录)
 - [启动hadoop](#启动hadoop)
   - [格式化hdfs文件系统](#[格式化hdfs文件系统)
   - [启动hdfs和yarn](#启动hdfs和yarn)
   - [Master节点无法启动ResourceManager解决](#Master节点无法启动ResourceManager解决)
+- [基于Hadoop集群的Hive安装配置](#基于Hadoop集群的Hive安装配置)
+- [Spark本地模式及基于Yarn的分布式集群环境搭建](#Spark本地模式及基于Yarn的分布式集群环境搭建)
+- [为集群配置Spark History Server](#为集群配置Spark History Server)
+
+
 
 以下操作都在终端进行，`Ctrl+Alt+t`打开终端，或者随便哪鼠标右键即可打开
 `sudo su`可以切换root用户权限
@@ -189,7 +194,7 @@ sudo vmware-installer -u vmware-workstation
 还有就是，我从deepin的启动器里看到还有vmware-Networkeditor啥的，也是用`sudo vmware-installer -u 名字 `来卸载
 
 
-## VMware最小化安装centos 搭建集群
+## VMware最小化安装centos搭建集群
 我这里选择最小化安装，没啥难度，不会网上搜一波吧。
 
 有一点需要注意，最小化安装Centos时，网络配置处要打开网络，否则重启不能上网。如果忘选了的话，如下配置网卡也可以
