@@ -13,6 +13,7 @@
 - [Scala下载及安装](#Scala下载及安装)
   - [eclipse安装Scala IDE插件](#eclipse安装Scala-IDE插件)
   - [启动scala报错 java.lang.NumberFormatException: For input string: "0x100" 解决](#启动scala报错-java.lang.NumberFormatException:-For-input-string:-"0x100"-解决)
+  - 使用eclipse编写scala代码时一直弹出An internal error occurred during: "Computing additional info".错误解决
 - [hadoop完全分布式集群搭建](#hadoop完全分布式集群搭建)
   - [ssh免密登录](#ssh免密登录)
 - [启动hadoop](#启动hadoop)
@@ -132,6 +133,14 @@ export PATH=$PATH:$MAVEN_HOME/bin:
 下面这个也要配置一下
 
 ![](assets/mvnsetting.png)
+
+####　配置git
+参考：
+
+- [Eclipse使用Git图解教程](https://jaesonchen.iteye.com/blog/2335755)
+- [Eclipse提交项目到GitHub上](https://blog.csdn.net/u012637358/article/details/80110477)
+- [使用Ecplise git commit时出现"There are no stages files"](https://blog.csdn.net/Evan_Leung/article/details/51589094)
+
 
 ## MySQL数据库安装
 - [deepin安装MySQL5.7](https://blog.csdn.net/sinat_37064286/article/details/82224562)
@@ -288,7 +297,7 @@ export PATH=$SCALA_HOME/bin:$PATH
 
 ### eclipse安装Scala-IDE插件
 
-**注意：eclipse版本不要太新**
+**注意：eclipse版本不要太新，最好是4.7版本**
 其实我建议直接下载Scala IDE for Eclipse：http://scala-ide.org/download/sdk.html
 
 如果已安装eclipse的话，可以去安装scala IDE插件，不建议直接在eclipse MarketPlace安装,版本太新可能不适配，如图
@@ -394,6 +403,26 @@ I filed an issue on the SBT issue tracker: https://github.com/sbt/sbt/issues/324
 参考stackoverflow上的问题：https://stackoverflow.com/questions/44317384/sbt-error-failed-to-construct-terminal-falling-back-to-unsupported
 
 ***
+
+### 编写scala代码时一直弹出An internal error occurred during: "Computing additional info".错误解决
+
+具体来说是写代码时，自动补齐，然后弹窗报如下错误
+> An internal error occurred during: "Computing additional info".
+org.eclipse.jdt.internal.core.SearchableEnvironment.<init>(Lorg/eclipse/jdt/internal/core/JavaProject;Lorg/eclipse/jdt/core/WorkingCopyOwner;)V
+
+我试过不影响编译，但是一直弹影响敲代码。好死不死的，找了一晚上才找到问题解决
+报错的原因是在线搜索源代码导致的，有几篇博客讲了针对java的解决办法。但我尝试过用eclipse编辑java代码不会出这个错，针对scala目前就以下两种解决办法
+
+1、我的eclipse是2018.12最新版本4.10.0（Version: 2018-12 (4.10.0)），和它scala IDE插件不适配，解决方法，下低版本的eclipse，不要上MarketPlace安装，去官网找对应版本。
+> 这个不适配的问题不仅仅是4.10,4.9、4.8版本都有这个问题。我在[eclipse插件市场评论](https://marketplace.eclipse.org/content/scala-ide)和StackOverflow上（https://stackoverflow.com/questions/53563939/ctrl-space-giving-error-saying-computing-additional-info-has-encountered-a-p ）都看到有人提到这个问题。就是版本不适配问题
+
+
+最简单就如上面的直接下Scala IDE for Eclipse。我是安了个氧气版的eclipse 4.7和Scala IDE for Eclipse都OK了
+2、针对scala项目取消自动查找补齐代码功能。window->proference 然后找到如图所示的地方，取消针对scala的两个选项，保存退出即可
+
+![在这里插入图片描述](assets/取消scala.png)
+
+> 这个办法使用后就没有代码提示了，新手还是用上面那个办法：降低eclipse版本，或者直接下载Scala IDE for Eclipse版本就好了
 
 ## hadoop完全分布式集群搭建
 可参考我在csdn上的文章：[【向Linux迁移记录】Deepin Linux下快速Hadoop完全分布式集群搭建](https://mp.csdn.net/postedit/86618345)

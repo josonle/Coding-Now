@@ -35,3 +35,16 @@ GRUB_THEME=/boot/grub/themes/deepin-fallback/theme.txt
 GRUB_TIMEOUT=5
 nouveau.modeset=0
 ```
+
+清理apt下载的软件包缓存和不再需要的软件包、卸载软件后的残留配置文件
+
+```
+#清理旧版本的软件缓存
+sudo apt-get autoclean
+#清理所有软件缓存
+sudo apt-get clean
+#删除系统不再使用的孤立软件
+sudo apt-get autoremove
+#清除所有已删除包的残馀配置文件 
+dpkg -l |grep ^rc|awk '{print $2}' |sudo xargs dpkg -P
+```
