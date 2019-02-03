@@ -135,6 +135,19 @@ export PATH=$PATH:$MAVEN_HOME/bin:
 ![](assets/mvnsetting.png)
 
 ####　配置git
+
+1. 安装EGit插件，一般eclipse都已经安装好了
+2. 配置提交代码时的备注信息，点击菜单Window——Preferences——Team——Git——Configuration
+
+如图点击add Entry两次，分别在Key中输入user.name/user.email，Value中输入用户名/邮箱，然后点击OK
+
+![](assets/gitconfig.png)
+
+3. 然后鼠标右键所选项目，Team——Share Projec——选择git
+
+如图
+![](assets/创建git.png)
+
 参考：
 
 - [Eclipse使用Git图解教程](https://jaesonchen.iteye.com/blog/2335755)
