@@ -910,7 +910,7 @@ https://www.cnblogs.com/qingyunzong/p/8710356.html#_label5_0
 
 ```
 
-## Spark本地模式及基于Yarn的分布式集群环境搭建
+## Spark本地模式及standalone模式集群环境搭建
 
 不要额外安装scala，spark自带了scala环境
 - 上传源码包并解压到用户目录下 `tar -zxvf spark-2.4.0-bin-hadoop2.6.tar.gz -C ~`
@@ -935,6 +935,7 @@ $ vi spark-env.sh
 # 指定java、hadoop及hadoop-conf所在目录
 export JAVA_HOME=/opt/jdk1.8.0_201      
 export HADOOP_HOME=/home/hadoop/hadoop-2.6.0-cdh5.12.1
+# 下面这个的作用是告诉spark程序yarn在哪里，可以使用HADOOP_CONF_DIR或者YARN_CONF_DIR
 export HADOOP_CONF_DIR=/home/hadoop/hadoop-2.6.0-cdh5.12.1/etc/hadoop
 # 指定spark的Master节点的ip，我这里是映射master为192.168.17.10
 export SPARK_MASTER_HOST=master
@@ -1052,4 +1053,29 @@ start-history-server.sh     //就是这个进程在记录历史任务
 
 - http://spark.apache.org/docs/latest/monitoring.html
 - [SPARK启动历史任务查看](http://blog.51cto.com/beyond3518/1787513)
+
+
+## Spark on Yarn模式
+
+上面配置的实际是Spark自带的standalone集群模式，并非on Yarn模式。这几天看别人写的博客才发现自己之前理解错误了。官方文档这方面没有说的太详细，我之前也看了几篇别人写的博客（半吊子文章，害人不浅），搞得我理解有误
+上面启动的master和worker进程实际是standalone模式下的，
+> 如果启动Spark的master和worker服务，这是Spark的 standalone运行模式，不是Spark on YARN运行模式，请不要混淆
+
+Spark on Yarn是把spark作业提交到yarn集群上运行，所以只要在一台可以连接到hdfs和yarn的节点上提交spark作业即可，该节点就是客户端，所以在配置一个节点上配置spark即可。不同于上面standalone的配置区别如下：
+
+配置文件的区别如下：
+- 不需要配置conf/slaves文件
+- 只需要配置conf/spark-env.sh文件
+```
+# 指定java、hadoop及hadoop-conf所在目录
+export JAVA_HOME=/opt/jdk1.8.0_201      
+export HADOOP_HOME=/home/hadoop/hadoop-2.6.0-cdh5.12.1
+# 下面这个的作用是告诉spark程序yarn在哪里，可以使用HADOOP_CONF_DIR或者YARN_CONF_DIR
+export HADOOP_CONF_DIR=/home/hadoop/hadoop-2.6.0-cdh5.12.1/etc/hadoop
+```
+
+集群启动区别：
+- 启动hdfs（如果是需要从hdfs上读取文件的话）
+- 启动yarn
+- 不需要启动spark集群(就是master和worker进程)
 
