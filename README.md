@@ -22,8 +22,8 @@
     - [eBook和视频资源](#eBook和视频资源)
         - [Python](#Python)
         - [Java系列](#Java系列)
-        - [Hadoop系列](#Hadoop系列)
-        - [Spark系列](#Spark系列)
+        - [Hadoop系列资源](#Hadoop系列资源)
+        - [Spark系列资源](#Spark系列资源)
         - [算法系列](#算法系列)
         - [数据库](#数据库)
         - [计算机网络](#计算机网络)
@@ -334,13 +334,13 @@
 
 
 
-### Hadoop系列
+### Hadoop系列资源
 
 - Hadoop大数据视频教程：真实电商数据仓库全流程开发详解(共46讲)视频教程下载：https://pan.baidu.com/s/1bpMzOyr 提取密码：m3yt 
 - 基于Hadoop，Spark大数据技术的推荐系统算法实战教程：https://pan.baidu.com/s/1dFnP9K1	提取密码：djyk
 - Hadoop、Hive、Hbase、Mahout源码解析及项目实战：https://pan.baidu.com/s/1nZuakR3DUJYJBiH0NaA1ZA 提取码: 2uyg 
 
-### Spark系列
+### Spark系列资源
 
 视频资源 点这里--->[eBook/Spark系列](https://github.com/josonle/Coding-Now/tree/master/eBook/Spark系列) 
 
