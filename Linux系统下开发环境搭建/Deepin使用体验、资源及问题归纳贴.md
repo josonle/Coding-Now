@@ -102,6 +102,10 @@ export JAVA_HOME=/opt/jdk1.8.0_191
 # source /etc/profile
 ```
 
+建议是/etc/profile和~/.bashrc下都设置这个
+
+
+
 ### VMware tools安装问题
 
 vmware安装成功，但是启动时显示系统内核和vmware的编译接口不匹配需要更新，但是vmware tools一直安装不成功。
@@ -116,3 +120,17 @@ vmware安装成功，但是启动时显示系统内核和vmware的编译接口�
 报错解决：VMware Tools - There was a problem updating a software component. Try again later and if the problem persists, contact VMware Support
 
 > 参考这个讨论：https://bbs.deepin.org/forum.php?mod=viewthread&tid=167661&extra
+
+
+
+### 如何设置Deepin开机自启动脚本
+
+参考：
+
+- https://bbs.deepin.org/forum.php?mod=viewthread&tid=141107&page=1#pid342463
+-  [deepin中实现开机脚本自启的三种方法](https://www.lolimay.cn/2018/10/14/autostart-in-deepin/)
+
+### 如何自定义鼠标右键新建文件模板，比如说markdown文件
+
+见：[Deepin自定义右键新建文件模版.md](https://github.com/josonle/Coding-Now/blob/master/Linux%E7%B3%BB%E7%BB%9F%E4%B8%8B%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/Deepin%E8%87%AA%E5%AE%9A%E4%B9%89%E5%8F%B3%E9%94%AE%E6%96%B0%E5%BB%BA%E6%96%87%E4%BB%B6%E6%A8%A1%E7%89%88.md)
+
