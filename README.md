@@ -270,6 +270,13 @@
 
 （Github开源地址：https://github.com/JackyAndroid/AndroidInterview-Q-A/blob/master/README-CN.md）
 
+**《技术面试必备基础知识》** <https://cyc2018.github.io/CS-Notes>
+
+​      本项目包含了技术面试必备的基础知识，浅显易懂，你不需要花很长的时间去阅读和理解成堆的技术书籍就可以快速掌握这些知识，从而节省宝贵的面试复习时间。你也可以订阅 [面试进阶专栏]，包含了学习指导和面试技巧，让你更轻松拿到满意的 Offer。
+
+​     (Github开源地址：https://github.com/CyC2018/CS-Notes )
+> `git@github.com:CyC2018/CS-Notes.git`
+
 **《神经网络与深度学习》相关代码 Python 实现**
 
 ​      该开源项目是对《神经网络与深度学习》一书中相关Python代码的实现。建议先弄明白书中所讲的神经网络、反向传播等概念，再结合代码实现，会有更深的理解。
