@@ -117,6 +117,54 @@
 
 - [How to learn data analysis with Python - Quora](https://www.quora.com/How-do-I-learn-data-analysis-with-Python)
 
+- 之前写过的这篇文章，见：[Python数据分析学习文章归纳](https://blog.csdn.net/lzw2016/article/details/80472162)
+  >
+  > #### 数据分析如何入门学习[How do I learn data analysis with Python?](https://top.quora.com/How-do-I-learn-data-analysis-with-Python)
+  >
+  > 虽然是英文的，不过看一遍很大收获（可以用百度翻译看一下）
+  > #### Numpy使用
+  > - [快速入门Numpy](https://docs.scipy.org/doc/numpy/user/quickstart.html)
+  > - [Stack Overflow Numpy问题汇集](https://stackoverflow.com/tags/numpy/info)
+  > - 书籍推荐NumPy Cookbook -第二版 by Ivan Idris（用中文版）
+  > - 8.3 更新，[自己的笔记，凑合看下吧](https://github.com/josonle/datas-processing/blob/master/code/2018007%E5%A4%8F/20180729_%E5%A4%8F_%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90.ipynb)，有些我觉得没太重要的就没记上去（也包括Matplotlib的那一部分）
+  > - 待续
+  > #### Pandas使用
+  > - 入门级神作，没错就是[10 Minutes to pandas](http://pandas.pydata.org/pandas-docs/stable/10min.html#minutes-to-pandas)
+  > - 进阶级神作，没错就是[Stack Overflow Pandas问题汇集](https://stackoverflow.com/questions/tagged/pandas)——>强烈推荐
+  > > Pandas is a Python library for Panel Data manipulation and analysis, e.g. multidimensional time series and cross-sectional data sets commonly found in statistics, experimental science results, econometrics, or finance. IMPORTANT: When asking a question with this tag, please tag your questions: [python]; [pandas]; [dataframe]/[series]; (optional) [groupby]/[merge]/etc., depending on your specific requirements.
+  >
+  >
+  > - Pandas神书[Pandas Cookbook](https://stackoverflow.com/tags/pandas/info)
+  >
+  > - Pandas数据结构之Series：
+  >   - [【pandas】[1] Series 入门(创建和增删改查)](https://blog.csdn.net/zutsoft/article/details/51482573)
+  >   - [Pandas中兼并数组和字典功能的Series](http://blog.chinaunix.net/xmlrpc.php?r=blog/article&uid=23100982&id=3540311)
+  > > Series也就是Numpy的一维数组，很多方法是通用的。以上两篇足以掌握。
+  > >
+  > > > 关键是DateFrame使用
+  > - [pandas分块处理大文件](https://blog.csdn.net/lzw2016/article/details/80471771)
+  > - [drop函数使用](https://www.cnblogs.com/zenan/p/8404964.html)————>强烈推荐
+  > - [Pandas GroupBy对象](https://blog.csdn.net/claroja/article/details/71080293)——>强力推荐，系统的讲了groupby对象创建及一系列函数使用
+  > - Pandas合并与重塑
+  >   - [PANDAS 数据合并与重塑（concat篇）](https://blog.csdn.net/stevenkwong/article/details/52528616)
+  >   - [PANDAS 数据合并与重塑（join/merge篇）](https://blog.csdn.net/stevenkwong/article/details/52540605)
+  > - isin()函数用于构建布尔对象，便于删选dateframe的行，[ pandas中isin()函数及其逆函数使用](https://blog.csdn.net/lzw2016/article/details/80472649)
+  > - 建议用loc和iloc选择行
+  >   - loc以行索引和列索引key来选择元素
+  >   - iloc以行列所在的整数索引来选择元素，不过都从0开始
+  > - 待续
+  > #### matplotlib使用（建议还是学下seaborn）
+  > - [自己的笔记，凑合看下吧](https://github.com/josonle/datas-processing/blob/master/code/2018007%E5%A4%8F/20180729_%E5%A4%8F_%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90.ipynb)，有些我觉得没太重要的就没记上去（也包括Matplotlib的那一部分）
+  > - 推荐B站上的一个up主的视频，[莫烦·Matplotlib中文视频教程——基于python3](https://www.bilibili.com/video/av9448753/)，看完差不多就OK了
+  > #### Scipy
+  > 因为还不怎么用，所以以后再说吧。。。
+  > - [Scipy Doc](https://docs.scipy.org/doc/)
+  > #### 杂文汇集
+  > - [Python读取文件以及读取大文件](http://milletpu.com/2017/07/20/python-read/)
+  > - [gensim之Word2vec使用](https://radimrehurek.com/gensim/models/word2vec.html)
+  >
+  > #### 心得：多动手，别只看
+
 ## 机器学习及深度学习篇
 
 ### 机器学习网站及教程
