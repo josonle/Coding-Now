@@ -34,7 +34,7 @@
         - [翻译](#翻译)
         - [文档编辑](#文档编辑)
         - [制图、图床](#制图、图床)
-        - [插件](#插件)
+        - [Chrome插件](#Chrome插件)
 # Coding Now
 
 ## 初衷
@@ -226,9 +226,22 @@
 
 ### Spark系列
 
-- 
-
-- [Spark1.x和2.x如何读取和写入csv文件](https://blog.csdn.net/lzw2016/article/details/85562172)
+- [Learning Spark项目](https://github.com/josonle/Learning-Spark)
+  - [Spark_With_Scala_Testing](https://github.com/josonle/Learning-Spark/tree/master/Spark_With_Scala_Testing) 存放平时练习代码
+  - notes存放笔记
+    - [LearningSpark(1)数据来源.md](https://github.com/josonle/Learning-Spark/blob/master/notes/LearningSpark(1)%E6%95%B0%E6%8D%AE%E6%9D%A5%E6%BA%90.md)
+    - [LearningSpark(2)spark-submit可选参数.md](https://github.com/josonle/Learning-Spark/blob/master/notes/LearningSpark(2)spark-submit%E5%8F%AF%E9%80%89%E5%8F%82%E6%95%B0.md)
+    - [LearningSpark(3)RDD操作.md](https://github.com/josonle/Learning-Spark/blob/master/notes/LearningSpark(3)RDD%E6%93%8D%E4%BD%9C.md)
+    - [LearningSpark(4)Spark持久化操作](https://github.com/josonle/Learning-Spark/blob/master/notes/LearningSpark(4)Spark%E6%8C%81%E4%B9%85%E5%8C%96%E6%93%8D%E4%BD%9C.md)
+    - [LearningSpark(5)Spark共享变量.md](https://github.com/josonle/Learning-Spark/blob/master/notes/LearningSpark(5)Spark%E5%85%B1%E4%BA%AB%E5%8F%98%E9%87%8F.md)
+    - [LearningSpark(6)Spark内核架构剖析.md](https://github.com/josonle/Learning-Spark/blob/master/notes/LearningSpark(6)Spark%E5%86%85%E6%A0%B8%E6%9E%B6%E6%9E%84%E5%89%96%E6%9E%90.md)
+    - [RDD如何作为参数传给函数.md](https://github.com/josonle/Learning-Spark/blob/master/notes/RDD%E5%A6%82%E4%BD%95%E4%BD%9C%E4%B8%BA%E5%8F%82%E6%95%B0%E4%BC%A0%E7%BB%99%E5%87%BD%E6%95%B0.md)
+    - [判断RDD是否为空](https://github.com/josonle/Learning-Spark/blob/master/notes/%E5%88%A4%E6%96%ADRDD%E6%98%AF%E5%90%A6%E4%B8%BA%E7%A9%BA)
+    - [高级排序和topN问题.md](https://github.com/josonle/Learning-Spark/blob/master/notes/%E9%AB%98%E7%BA%A7%E6%8E%92%E5%BA%8F%E5%92%8CtopN%E9%97%AE%E9%A2%98.md)
+    - [Spark1.x和2.x如何读取和写入csv文件](https://blog.csdn.net/lzw2016/article/details/85562172)
+    - Scala 语法糖
+      - [Scala排序函数使用.md](https://github.com/josonle/Learning-Spark/blob/master/notes/Scala%E6%8E%92%E5%BA%8F%E5%87%BD%E6%95%B0%E4%BD%BF%E7%94%A8.md)
+    - [报错和问题归纳.md](https://github.com/josonle/Learning-Spark/blob/master/notes/%E6%8A%A5%E9%94%99%E5%92%8C%E9%97%AE%E9%A2%98%E5%BD%92%E7%BA%B3.md)
 - 视频资源见下方
 
 ### 实战项目
@@ -450,10 +463,26 @@
 - [百度脑图](http://naotu.baidu.com/)
 - 路过图床
 
-#### 插件
+#### Chrome插件
 
 - [Chrome Extension Downloader](https://chrome-extension-downloader.com/)——可以通过此网站来下载因为某些原因无法在线安装 Chrome 插件
+> 现在最新版chrome不支持直接离线安装插件了，但还是有办法的，见：[Linux（Deepin）下解决最新版Chrome无法离线安装插件问题](https://blog.csdn.net/lzw2016/article/details/86374870)
+>
+> 离线安装谷歌插件方法：
+> 1、打开谷歌浏览器输入：chrome://extensions/
+> 2、勾选开发者模式
+> 3、把下载的后缀为crx的文件拖进来即可
 
-
+- 插件推荐
+  - OneTab：合并页面，用了就知道
+  - Adblock Plus：去广告
+  - LastPass：密码管理
+  - 新浪微博图床
+  - Imagus：放大页面中的图片
+  - Json View：方便查看 Json 结构的插件
+  - GitNote：一款基于git的笔记插件
+  - github插件
+    - OctTree：以树形结构展示github项目
+    - GitZip：下载github项目中单个文件
 
 
