@@ -16,7 +16,9 @@
 - [Deepin下搭建(java)Hadoop、Spark等大数据开发环境.md](https://github.com/josonle/Coding-Now/blob/master/Linux%E7%B3%BB%E7%BB%9F%E4%B8%8B%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/Deepin%E4%B8%8B%E6%90%AD%E5%BB%BAHadoop%E3%80%81Spark%E7%AD%89%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83.md)
   - 含有如何在Deepin Linux下安装java、scala、VMware虚拟机、eclipse
 
-  > Alt+F11可以全屏显示
+  > Eclipse中Alt+F11可以全屏显示，IDEA、Pycharm啥的要自己配置全屏显示快捷键（我设置成了Alt+Shift+F11）
+  >
+  > ![](assets/深度截图_选择区域_20190219225738.png)
 
   - 如何搭建centos集群
 
