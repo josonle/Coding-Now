@@ -14,6 +14,7 @@
     - [大数据篇](#大数据篇)
         - [大数据开发环境安装配置](#大数据开发环境安装配置)
         - [Hadoop系列](#Hadoop系列)
+            - 涉及MapReduce、Hdfs、Hive、HBase等hadoop生态圈组件
         - [Spark系列](#Spark系列)
         - [实战项目](#实战项目)
             - [推荐系统](#推荐系统)
@@ -24,6 +25,8 @@
         - [Java系列](#Java系列)
         - [Hadoop系列资源](#Hadoop系列资源)
         - [Spark系列资源](#Spark系列资源)
+        - [HBase系列资源](#HBase系列资源)
+        - [业内大数据技术ebook分享](#业内大数据技术ebook分享 )
         - [算法系列](#算法系列)
         - [数据库](#数据库)
         - [计算机网络](#计算机网络)
@@ -251,7 +254,8 @@
 - [Apache Pig](http://pig.apache.org/): 是一个基于Hadoop的大规模数据分析工具，它提供的SQL-LIKE语言叫Pig Latin，该语言的编译器会把类SQL的数据分析请求转换为一系列经过优化处理的MapReduce运算 【**不准备学，计划Hive代替Pig**】
 
 - [Apache HBase](http://hbase.apache.org/): 是一个高可靠性、高性能、面向列、可伸缩的分布式存储系统，利用HBase技术可在廉价PC Server上搭建起大规模结构化存储集群
-
+    - HBase入门————[《HBase不睡觉》](http://kittyandpuppy.coolplayer.net/HBase.pdf)
+    - 《HBase实战》见下方ebook
 - [Apache Sqoop](http://sqoop.apache.org/): 是一个用来将Hadoop和关系型数据库中的数据相互转移的工具，可以将一个关系型数据库（MySQL ,Oracle ,Postgres等）中的数据导进到Hadoop的HDFS中，也可以将HDFS的数据导进到关系型数据库中
 
 - [Apache Mahout](http://mahout.apache.org/):是基于Hadoop的机器学习和数据挖掘的一个分布式框架。【**不打算学，计划利用SparkMLLib代替**】
@@ -261,7 +265,6 @@
 - [Apache Flume](http://flume.apache.org/): 是一个分布的、可靠的、高可用的海量日志聚合的系统，可用于日志数据收集，日志数据处理，日志数据传输
 
 - 等等，当然不可能全学的
-
 
 
 - 视频资源见下方 
@@ -437,6 +440,19 @@
 - Spark面试宝典 链接: https://pan.baidu.com/s/143GneWVcH4tmrK1gdwuc5w 提取码: 95b2
 
 > 以上来源于大数据学习资源群的分享
+
+### HBase系列资源
+
+[eBook/HBase系列](https://github.com/josonle/Coding-Now/tree/master/eBook/HBase系列)
+- 《HBase实战》
+- [《HBase不睡觉》](http://kittyandpuppy.coolplayer.net/HBase.pdf)
+
+### 业内大数据技术ebook分享 
+
+[见这里](https://github.com/josonle/Coding-Now/tree/master/%E5%A4%A7%E6%95%B0%E6%8D%AE)
+- 增加 用户画像相关资料
+- 18年京东大数据白皮书
+- DataFun社区技术年货分享
 
 ### 算法系列
 
