@@ -453,7 +453,7 @@
 - 增加 用户画像相关资料
 - 18年京东大数据白皮书
 - DataFun社区技术年货分享
-
+- 今日头条推荐系统架构设计
 ### 算法系列
 
 - [牛客网算法](https://github.com/josonle/Coding-Now/tree/master/eBook/%E7%AE%97%E6%B3%95%E5%8F%8A%E5%85%B6%E4%BD%99%E5%9F%BA%E7%A1%80%E4%B9%A6%E7%B1%8D)
