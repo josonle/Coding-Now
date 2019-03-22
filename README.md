@@ -16,6 +16,7 @@
         - [Hadoop系列](#Hadoop系列)
             - 涉及MapReduce、Hdfs、Hive、HBase等hadoop生态圈组件
         - [Spark系列](#Spark系列)
+        - [Flink系列](#Flink系列)
         - [实战项目](#实战项目)
             - [推荐系统](#推荐系统)
     - [算法篇](#算法篇)
@@ -253,12 +254,19 @@
   - 推荐几个博客分类[博主LanceToBigData：Hadoop](https://www.cnblogs.com/zhangyinhua/category/1093575.html) ，[小小默’s Blog](https://blog.xiaoxiaomo.com/categories/%E6%8A%80%E6%9C%AF/)，分类很乱但是内容确实不错
 
 - [Apache Hive](http://hive.apache.org/): 是基于Hadoop的一个数据仓库工具，可以将结构化的数据文件映射为一张数据库表，通过类SQL语句快速实现简单的MapReduce统计，不必开发专门的MapReduce应用，十分适合数据仓库的统计分析
+    - 博文
+        - [Hive 性能优化](https://mp.weixin.qq.com/s?__biz=MzA3MDY0NTMxOQ==&mid=2247486550&idx=1&sn=8151680a70613fb7a06d019acfb390b7&chksm=9f38ef7ea84f66688cdeb8666d2c16d4da8bae1bab385eafacb9e7b085c673507c93d8bc3eca&mpshare=1&scene=1&srcid=&pass_ticket=igsIEGXM1UhrBkCT3yw8Er2%2B%2B8Xo7vGvVpXlMxnW0rQ%3D#rd)
 
 - [Apache Pig](http://pig.apache.org/): 是一个基于Hadoop的大规模数据分析工具，它提供的SQL-LIKE语言叫Pig Latin，该语言的编译器会把类SQL的数据分析请求转换为一系列经过优化处理的MapReduce运算 【**不准备学，计划Hive代替Pig**】
 
 - [Apache HBase](http://hbase.apache.org/): 是一个高可靠性、高性能、面向列、可伸缩的分布式存储系统，利用HBase技术可在廉价PC Server上搭建起大规模结构化存储集群
     - HBase入门————[《HBase不睡觉》](http://kittyandpuppy.coolplayer.net/HBase.pdf)
     - 《HBase实战》见下方ebook
+    - 博文
+        - [基于HBase实时数仓探索实践](https://mp.weixin.qq.com/s?__biz=MzU1NTMyOTI4Mw==&mid=2247486259&idx=1&sn=1264cf5f59a8b8474ed0e876d95f37b7&chksm=fbd4b95fcca33049a39fa564a2514d45298b1747dbb876b0157365cb3303136701eb0b814fff&mpshare=1&scene=1&srcid=1014LExoNkCOEVNHyl08oH52&pass_ticket=igsIEGXM1UhrBkCT3yw8Er2%2B%2B8Xo7vGvVpXlMxnW0rQ%3D#rd)
+        - [HBase 读流程解析与优化的最佳实践](https://mp.weixin.qq.com/s?__biz=MzI4OTY3MTUyNg==&mid=2247496587&idx=1&sn=fa62a4ab7e69b7500408350a2f395650&chksm=ec292382db5eaa94906d50af44c9ef03e28e21a37f92ecb44eb9715586272a2f98bb2127b6a2&mpshare=1&scene=1&srcid=&pass_ticket=igsIEGXM1UhrBkCT3yw8Er2%2B%2B8Xo7vGvVpXlMxnW0rQ%3D#rd)
+        - [HBase优化 | 探索regionserver参数优化](https://mp.weixin.qq.com/s?__biz=MzU5OTQ1MDEzMA==&mid=2247485913&idx=1&sn=2cf84ff9bbef4fd5216777543025fb5b&chksm=feb5fea4c9c277b215dc76dcbcc8436c7b053255d2e063ce55109931be709db66799c43945e4&mpshare=1&scene=1&srcid=&pass_ticket=igsIEGXM1UhrBkCT3yw8Er2%2B%2B8Xo7vGvVpXlMxnW0rQ%3D#rd)
+
 - [Apache Sqoop](http://sqoop.apache.org/): 是一个用来将Hadoop和关系型数据库中的数据相互转移的工具，可以将一个关系型数据库（MySQL ,Oracle ,Postgres等）中的数据导进到Hadoop的HDFS中，也可以将HDFS的数据导进到关系型数据库中
 
 - [Apache Mahout](http://mahout.apache.org/):是基于Hadoop的机器学习和数据挖掘的一个分布式框架。【**不打算学，计划利用SparkMLLib代替**】
@@ -280,6 +288,8 @@
 
 ### Spark系列
 
+- [使用 Alluxio 加速 Spark DataFrame 计算速度](https://mp.weixin.qq.com/s?__biz=MzA5MTc0NTMwNQ==&mid=2650716511&idx=1&sn=a5e42d50a7961f80e39bc52fa6411ad0&chksm=887da429bf0a2d3f9f477bb4d4f8a5ffed688df5a0dbc6d0bfccdd059b2722794013ceab1295&mpshare=1&scene=1&srcid=&pass_ticket=igsIEGXM1UhrBkCT3yw8Er2%2B%2B8Xo7vGvVpXlMxnW0rQ%3D#rd)
+- []()
 - [Learning Spark项目](https://github.com/josonle/Learning-Spark)
   - [Spark_With_Scala_Testing](https://github.com/josonle/Learning-Spark/tree/master/Spark_With_Scala_Testing) 存放平时练习代码
   - notes存放笔记
@@ -297,6 +307,12 @@
       - [Scala排序函数使用.md](https://github.com/josonle/Learning-Spark/blob/master/notes/Scala%E6%8E%92%E5%BA%8F%E5%87%BD%E6%95%B0%E4%BD%BF%E7%94%A8.md)
     - [报错和问题归纳.md](https://github.com/josonle/Learning-Spark/blob/master/notes/%E6%8A%A5%E9%94%99%E5%92%8C%E9%97%AE%E9%A2%98%E5%BD%92%E7%BA%B3.md)
 - 视频资源见下方
+
+### Flink系列
+阿里强推的flink，取而代之二次开发的流计算和批处理引擎blink，spark的强势竞争对手
+
+- [用Flink取代Spark Streaming！知乎实时数仓架构演进](https://mp.weixin.qq.com/s?__biz=MzU1NDA4NjU2MA==&mid=2247495210&idx=1&sn=64a97593442d8746230604b54a65a1a1&chksm=fbea57e5cc9ddef3b634595f8bc9d7faf59754b8fb63e10ed8293c4b12ef42c8e95adfb304fe&mpshare=1&scene=1&srcid=03068M6lWxlMKwklX4DfJJJ3&pass_ticket=igsIEGXM1UhrBkCT3yw8Er2%2B%2B8Xo7vGvVpXlMxnW0rQ%3D#rd)
+- [美团点评基于 Flink 的实时数仓建设实践](https://mp.weixin.qq.com/s?__biz=MjM5NjQ5MTI5OA==&mid=2651749037&idx=1&sn=4a448647b3dae50779bc9ec0e9c10275&chksm=bd12a3e08a652af6ed8b305b0523716e08a81cf99296425cdaf2bbee1e9d8a6aca06c81cdcc1&mpshare=1&scene=1&srcid=1018u6hMl6XlaVFqqnbJdX5g&pass_ticket=igsIEGXM1UhrBkCT3yw8Er2%2B%2B8Xo7vGvVpXlMxnW0rQ%3D#rd)
 
 ### 实战项目
 
