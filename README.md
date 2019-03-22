@@ -19,6 +19,7 @@
         - [Flink系列](#Flink系列)
         - [实战项目](#实战项目)
             - [推荐系统](#推荐系统)
+        - [大数据相关面试](#大数据相关面试)
     - [算法篇](#算法篇)
     - [GitHub上一些技术书籍、翻译书籍、面试题库推荐](#GitHub上一些技术书籍、翻译书籍、面试题库推荐)
     - [eBook和视频资源](#eBook和视频资源)
@@ -284,10 +285,6 @@
 
 
 
-- 面试篇
-
-  - [Hadoop和Hive一些面试题](https://github.com/josonle/Coding-Now/blob/master/%E5%A4%A7%E6%95%B0%E6%8D%AE/hadoop%E7%B3%BB%E5%88%97/hadoop%E5%92%8Chive%E7%9A%84%E4%B8%80%E4%BA%9B%E9%9D%A2%E8%AF%95%E9%A2%98.zip)
-
 ### Spark系列
 
 - [使用 Alluxio 加速 Spark DataFrame 计算速度](https://mp.weixin.qq.com/s?__biz=MzA5MTc0NTMwNQ==&mid=2650716511&idx=1&sn=a5e42d50a7961f80e39bc52fa6411ad0&chksm=887da429bf0a2d3f9f477bb4d4f8a5ffed688df5a0dbc6d0bfccdd059b2722794013ceab1295&mpshare=1&scene=1&srcid=&pass_ticket=igsIEGXM1UhrBkCT3yw8Er2%2B%2B8Xo7vGvVpXlMxnW0rQ%3D#rd)
@@ -329,7 +326,11 @@
 ### 大数据相关面试
 
 - [面试大数据分析师，你需要掌握的基础技术栈](https://mp.weixin.qq.com/s?__biz=MzI1NjM1ODEyMg==&mid=2247483793&idx=1&sn=949a02c0068ec323281a75a647ac74dc&chksm=ea26a214dd512b0259799849553282275fb8835c024decb15511ceb954a0b05a50882f61a7df&mpshare=1&scene=1&srcid=0308aaAXVGx00PyJue8gqc4D&pass_ticket=igsIEGXM1UhrBkCT3yw8Er2%2B%2B8Xo7vGvVpXlMxnW0rQ%3D#rd)
+
 - [Hadoop/Spark相关面试问题总结](https://mp.weixin.qq.com/s?__biz=MzU3NDgzNDExNw==&mid=2247483823&idx=1&sn=03d56b1ea6d806f0753e315e06f9268f&chksm=fd2d1505ca5a9c138d7d932eafb9aeffaea62110991af03a8b58fe5c4be70b5b64e12029f8fb&mpshare=1&scene=1&srcid=0310SO7WacvSUmIgh0MC7hvW&pass_ticket=igsIEGXM1UhrBkCT3yw8Er2%2B%2B8Xo7vGvVpXlMxnW0rQ%3D#rd)
+
+- [Hadoop和Hive一些面试题](https://github.com/josonle/Coding-Now/blob/master/%E5%A4%A7%E6%95%B0%E6%8D%AE/hadoop%E7%B3%BB%E5%88%97/hadoop%E5%92%8Chive%E7%9A%84%E4%B8%80%E4%BA%9B%E9%9D%A2%E8%AF%95%E9%A2%98.zip)
+
 - [数据分析/hadoop/机器学习面试题集锦](https://mp.weixin.qq.com/s?__biz=MjM5MzM4Mjc4MQ==&mid=2652424061&idx=1&sn=2476b8f3f5ebcb450c51ebb78a45c386&chksm=bd7b8f6f8a0c0679fa3e23f4940f9330fdf4beb76a3b9e4c680d6753a8c8631520ff04727026&mpshare=1&scene=1&srcid=03103PWKotw3YDAX0eXDKQQT&pass_ticket=igsIEGXM1UhrBkCT3yw8Er2%2B%2B8Xo7vGvVpXlMxnW0rQ%3D#rd)
 
 ## 算法篇
