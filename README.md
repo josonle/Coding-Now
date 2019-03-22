@@ -97,6 +97,8 @@
 - [终端常用快捷键.md](https://github.com/josonle/Coding-Now/blob/master/Linux%E5%91%BD%E4%BB%A4%E5%8F%8AShell%E8%84%9A%E6%9C%AC%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E7%BB%88%E7%AB%AF%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE.md)
 - 附一份linux学习课程的课件：[PDF](https://github.com/josonle/Coding-Now/tree/master/Linux命令及Shell脚本学习笔记)
 
+- [超全整理 - Linux性能分析工具汇总合集](https://mp.weixin.qq.com/s?__biz=MzU0MzQ5MDA0Mw==&mid=2247484990&idx=1&sn=e9682a51d8d9f90cd9a58423fc241b03&chksm=fb0becaacc7c65bcfe3383af47ea0ff67e3f1d937b529e64315fd6bf412f41840cd2126ffcd3&mpshare=1&scene=1&srcid=0309IVq6twbjH7g89X9S8hMS&pass_ticket=igsIEGXM1UhrBkCT3yw8Er2%2B%2B8Xo7vGvVpXlMxnW0rQ%3D#rd)
+
 
 
 
@@ -289,7 +291,8 @@
 ### Spark系列
 
 - [使用 Alluxio 加速 Spark DataFrame 计算速度](https://mp.weixin.qq.com/s?__biz=MzA5MTc0NTMwNQ==&mid=2650716511&idx=1&sn=a5e42d50a7961f80e39bc52fa6411ad0&chksm=887da429bf0a2d3f9f477bb4d4f8a5ffed688df5a0dbc6d0bfccdd059b2722794013ceab1295&mpshare=1&scene=1&srcid=&pass_ticket=igsIEGXM1UhrBkCT3yw8Er2%2B%2B8Xo7vGvVpXlMxnW0rQ%3D#rd)
-- []()
+- [谈谈Spark join](https://mp.weixin.qq.com/s?__biz=MzI1NDc5MzIxMw==&mid=2247485030&idx=1&sn=65319c4a055faba8df35fd6f4b28990f&chksm=ea3e82f4dd490be24741f302f4de56a9fe56df3b006bfb1b65d8013b44e6d05ca7499ed87e09&mpshare=1&scene=1&srcid=0315avfUHDjEEkhbi9s1xcq2&pass_ticket=igsIEGXM1UhrBkCT3yw8Er2%2B%2B8Xo7vGvVpXlMxnW0rQ%3D#rd)
+- [SparkSQL—用之惜之](https://mp.weixin.qq.com/s?__biz=MzU0Mjc0NDk2OQ==&mid=2247483718&idx=1&sn=2813b852d5082d3154158713e4ecd053&chksm=fb1749a0cc60c0b6c5c099912b59cdeff8f42e66a02ee4f1f1d49d13e2d4fc1c578722d9f892&mpshare=1&scene=1&srcid=0312miupZ1rDEMWztY9TswWN&pass_ticket=igsIEGXM1UhrBkCT3yw8Er2%2B%2B8Xo7vGvVpXlMxnW0rQ%3D#rd)
 - [Learning Spark项目](https://github.com/josonle/Learning-Spark)
   - [Spark_With_Scala_Testing](https://github.com/josonle/Learning-Spark/tree/master/Spark_With_Scala_Testing) 存放平时练习代码
   - notes存放笔记
@@ -322,6 +325,12 @@
 - [itemcf](https://github.com/josonle/MapReduce-Demo/tree/master/src/main/java/ssdut/training/mapreduce/itemcf)——ItemCF算法的MapReduce实现代码
 
 - 待续
+
+### 大数据相关面试
+
+- [面试大数据分析师，你需要掌握的基础技术栈](https://mp.weixin.qq.com/s?__biz=MzI1NjM1ODEyMg==&mid=2247483793&idx=1&sn=949a02c0068ec323281a75a647ac74dc&chksm=ea26a214dd512b0259799849553282275fb8835c024decb15511ceb954a0b05a50882f61a7df&mpshare=1&scene=1&srcid=0308aaAXVGx00PyJue8gqc4D&pass_ticket=igsIEGXM1UhrBkCT3yw8Er2%2B%2B8Xo7vGvVpXlMxnW0rQ%3D#rd)
+- [Hadoop/Spark相关面试问题总结](https://mp.weixin.qq.com/s?__biz=MzU3NDgzNDExNw==&mid=2247483823&idx=1&sn=03d56b1ea6d806f0753e315e06f9268f&chksm=fd2d1505ca5a9c138d7d932eafb9aeffaea62110991af03a8b58fe5c4be70b5b64e12029f8fb&mpshare=1&scene=1&srcid=0310SO7WacvSUmIgh0MC7hvW&pass_ticket=igsIEGXM1UhrBkCT3yw8Er2%2B%2B8Xo7vGvVpXlMxnW0rQ%3D#rd)
+- [数据分析/hadoop/机器学习面试题集锦](https://mp.weixin.qq.com/s?__biz=MjM5MzM4Mjc4MQ==&mid=2652424061&idx=1&sn=2476b8f3f5ebcb450c51ebb78a45c386&chksm=bd7b8f6f8a0c0679fa3e23f4940f9330fdf4beb76a3b9e4c680d6753a8c8631520ff04727026&mpshare=1&scene=1&srcid=03103PWKotw3YDAX0eXDKQQT&pass_ticket=igsIEGXM1UhrBkCT3yw8Er2%2B%2B8Xo7vGvVpXlMxnW0rQ%3D#rd)
 
 ## 算法篇
 
