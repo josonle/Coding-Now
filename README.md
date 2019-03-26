@@ -492,11 +492,18 @@
 
 - [牛客网算法](https://github.com/josonle/Coding-Now/tree/master/eBook/%E7%AE%97%E6%B3%95%E5%8F%8A%E5%85%B6%E4%BD%99%E5%9F%BA%E7%A1%80%E4%B9%A6%E7%B1%8D)
 
-
+- 《算法 第四版》
 
 ### 数据库
 
+- 《SQL 基础教程》（日）
+
+- 《深入浅出MySQL》
+
 ### 计算机网络
+
+- 《计算机网络 自顶向下方法》
+- 《TCP/IP卷》
 
 ### 基础书籍
 
@@ -515,6 +522,8 @@
 
 - [All IT eBooks - Free IT eBooks Download](http://www.allitebooks.com/)——电子书下载【English】
 
+- [LiveBook](https://livebook.manning.com/)——最新IT电子书在线阅读 【English】
+
 - [门户 Linux公社论坛 ](http://www.linuxidc.net/portal.php)
 
 - #### Java各大开发者网站
@@ -523,6 +532,7 @@
   - [Learn Java information, news, and how-to advice | JavaWorld](https://www.javaworld.com/category/learn-java/)
   - [DZone Open Source](https://dzone.com/open-source-news-tutorials-tools) 
   - [Java Platform SE 8帮助文档](http://blog.fondme.cn:8000/apidoc//jdk-1.8-baidu/)
+
 - #### Python各大开发者网站
 
   - [PythonTab：Python中文开发者社区门户](http://www.pythontab.com/)
@@ -583,4 +593,5 @@
     - OctTree：以树形结构展示github项目
     - GitZip：下载github项目中单个文件
 
+  - Listen 1插件：汇集网易云、虾米、qq音乐、酷我等音乐，github上搜索
 

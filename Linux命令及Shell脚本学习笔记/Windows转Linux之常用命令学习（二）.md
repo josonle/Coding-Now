@@ -173,3 +173,310 @@ kill -9 \`ps aux | grep cloud-music | grep -v grep | awk '{print $2}'\`
   - Change time 上一次文件 inode meta 信息被修改的时间，`-ctime  -cmin`
 - `-user/group`通过用户/组查找
 - `-mindepth/maxdepth` 限定查找深度
+
+## 2019/3/26 记录
+
+### lsof命令妙用
+
+> 摘自：<https://blog.51cto.com/xjsunjie/1255661>
+
+lsof（list open files）是一个列出当前系统打开文件的工具。在linux环境下，任何事物都以文件的形式存在，通过文件不仅仅可以访问常规数据，还可以访问网络连接和硬件。
+
+可以被打开的文件可以是：1.普通的文件，2.目录  3.网络文件系统的文件，4.字符设备文件  5.(函数)共享库  6.管道，命名管道 7.符号链接 8.底层的socket字流，网络socket，unix域名........还有其他很多.
+
+
+在终端下输入lsof命令即可显示系统打开的文件，因为 lsof 需要访问核心内存和各种文件，所以必须以 root 用户的身份运行它才能够充分地发挥其功能。 
+
+
+
+一、查看某端口被什么进程占用
+
+
+
+一次在客户现场，帮客户调TOMCAT，启动TOMCAT的时候报8080端口被占用
+
+查看某端口被某个进程占用
+
+\#lsof  -i  :8080
+
+COMMAND   PID USER   FD   TYPE   DEVICE SIZE NODE NAME
+
+httpd    13017 root  490u  IPv4 23881972       TCP *:8080 (LISTEN)
+
+从这里看出是被HTTPD进程占用，之前客户说是IBM的IHS软件已停止，看来并没有真正停止导致端口被占用
+
+\#kill -9  13017
+
+杀掉这个进程后，再启TOMCAT后正常了
+
+
+
+二、查看所属用户进程所打开的某种类型的文件
+
+
+
+比如查看root用户进程所打开的文件类型为txt的文件
+
+\# lsof -a -u root -d txt
+
+auditd     2639 root txt       REG    3,2  102136  44536 /sbin/auditd
+
+owcimomd   2643 root txt       REG    3,2   24560  90676 /usr/sbin/owcimomd
+
+irqbalanc  2737 root txt       REG    3,2   25880  62557 /usr/sbin/irqbalance
+
+nscd       2771 root txt       REG    3,2  129908  44802 /usr/sbin/nscd
+
+vsftpd     2809 root txt       REG    3,2  129792 132934 /usr/sbin/vsftpd
+
+xinetd     2812 root txt       REG    3,2  165952  60679 /usr/sbin/xinetd
+
+smpppd     2825 root txt       REG    3,2  193752  99524 /usr/sbin/smpppd
+
+sshd       2827 root txt       REG    3,2  376768  98762 /usr/sbin/sshd
+
+zmd        2847 root txt       REG    3,2 1895856  86524 /usr/bin/mono
+
+gdm        2893 root txt       REG    3,2  268424 126353 /opt/gnome/sbin/gdm
+
+
+
+三、查找谁在使用某个文件系统
+
+在卸载文件系统时，如果该文件系统中有任何打开的文件，操作通常将会失败。那么通过lsof可以找出那些进程在使用当前要卸载的文件系统。
+
+\# lsof  /testdata/
+
+COMMAND  PID USER   FD   TYPE DEVICE SIZE NODE NAME
+
+bash    4208 root  cwd    DIR    3,1 4096    2 /testdata/
+
+vim     4230 root  cwd    DIR    3,1 4096    2 /testdata/
+
+在这个示例中，用户root正在其/testdata目录中进行一些操作。一个 bash是实例正在运行，并且它当前的目录为/testdata，另一个则显示的是vim正在编辑/testdata下的文件。如果要成功地卸载/testdata，应该在通知用户以确保情况正常之后，中止这些进程。 这个示例说明了应用程序的当前工作目录非常重要，因为它仍保持着文件资源，并且可以防止文件系统被卸载。这就是为什么大部分守护进程（后台进程）将它们的目录更改为根目录、或服务特定的目录（如 sendmail 示例中的 /var/spool/mqueue）的原因，以避免该守护进程阻止卸载不相关的文件系统。
+
+
+
+四、列出相关信息
+
+1. 列出某个用户打开的文件信息
+
+
+
+lsof  -u username
+
+
+
+备注: -u 选项，u其实是user的缩写
+
+如 # lsof -u db2inst1
+
+COMMAND  PID     USER   FD   TYPE   DEVICE       SIZE       NODE NAME
+
+db2sysc 4390 db2inst1  DEL    REG      0,8                294917 /SYSV33984761
+
+db2sysc 4390 db2inst1  DEL    REG      0,8                327686 /SYSV00000000
+
+db2sysc 4390 db2inst1  mem    REG      3,2     132847      19074 /lib64/ld-2.4.so
+
+db2sysc 4390 db2inst1  mem    REG      3,2     217016     158186 /var/run/nscd/passwd
+
+db2sysc 4390 db2inst1  mem    REG      3,2     123722      19107 /lib64/libpthread-2.4.so
+
+db2sysc 4390 db2inst1  mem    REG      3,2  102866497     137967 /opt/ibm/db2/V9.7/lib64/libdb2e.so.1
+
+db2sysc 4390 db2inst1  mem    REG      3,2    7889612     135807 /opt/ibm/db2/V9.7/lib64/libdb2osse.so.1
+
+db2sysc 4390 db2inst1  mem    REG      3,2     399985      19089 /lib64/libm-2.4.so
+
+
+
+2. 列出某个程序所打开的文件信息
+
+
+
+\#lsof -c mysql
+
+
+
+备注: -c 选项将会列出所有以mysql开头的程序的文件，其实你也可以写成 lsof | grep mysql, 但是第一种方法明显比第二种方法要少打几个字符了
+
+
+
+3. 列出多个程序多打开的文件信息
+
+
+
+\#lsof -c mysql -c apache
+
+
+
+4. 列出某个用户以及某个程序所打开的文件信息
+
+
+
+\#lsof -u test -c mysql
+
+
+
+5. 列出除了某个用户外的被打开的文件信息
+
+
+
+\#lsof   -u ^root
+
+
+
+备注：^这个符号在用户名之前，将会把是root用户打开的进程不让显示
+
+
+
+6. 通过某个进程号显示该进程打开的文件
+
+
+
+\#lsof -p 19552
+
+COMMAND     PID USER   FD   TYPE             DEVICE    SIZE       NODE NAME
+
+rpc.mount 19552 root  cwd    DIR                3,2     256      91560 /var/lib/nfs
+
+rpc.mount 19552 root  rtd    DIR                3,2     584          2 /
+
+rpc.mount 19552 root  txt    REG                3,2   77304      98667 /usr/sbin/rpc.mountd
+
+rpc.mount 19552 root  mem    REG                3,2  132847      19074 /lib64/ld-2.4.so
+
+rpc.mount 19552 root  DEL    REG                3,2             132550 /var/run/nscd/db5BU1wW
+
+
+
+7. 列出多个进程号对应的文件信息
+
+
+
+\#lsof -p 123,456,789
+
+
+
+8. 列出除了某个进程号，其他进程号所打开的文件信息
+
+
+
+\#lsof -p ^1523
+
+
+
+9. 列出所有的网络连接
+
+
+
+\#lsof -i
+
+
+
+10. 列出所有tcp 网络连接信息
+
+
+
+\#lsof  -i tcp
+
+
+
+11. 列出所有udp网络连接信息
+
+
+
+\#lsof  -i udp
+
+
+
+12. 列出谁在使用某个端口
+
+
+
+\#lsof -i :3306
+
+
+
+13. 列出谁在使用某个特定的udp、tcp端口
+
+
+
+\#lsof -i udp:55
+
+
+
+特定的tcp端口
+
+
+
+\#lsof -i tcp:80
+
+
+
+14. 列出某个用户的所有活跃的网络端口
+
+
+
+\#lsof  -a -u test -i
+
+15. 查看谁正在使用某个文件
+
+
+
+\#lsof   /filepath/file
+
+
+
+16. 递归查看某个目录的文件信息
+
+
+
+\#lsof +D /filepath/filepath2/
+
+
+
+备注: 使用了+D，对应目录下的所有子目录和文件都会被列出
+
+
+
+五、恢复删除的文件
+
+当Linux计算机受到入侵时，常见的情况是日志文件被删除，以掩盖攻击者的踪迹。管理错误也可能导致意外删除重要的文件，比如在清理旧日志时，意外地删除了数据库的活动事务日志。有时可以通过lsof来恢复这些文件。 
+
+当进程打开了某个文件时，只要该进程保持打开该文件，即使将其删除，它依然存在于磁盘中。这意味着，进程并不知道文件已经被删除，它仍然可以向打开该文件时提供给它的文件描述符进行读取和写入。除了该进程之外，这个文件是不可见的，因为已经删除了其相应的目录索引节点。 
+
+在/proc 目录下，其中包含了反映内核和进程树的各种文件。/proc目录挂载的是在内存中所映射的一块区域，所以这些文件和目录并不存在于磁盘中，因此当我们对这些文件进行读取和写入时，实际上是在从内存中获取相关信息。大多数与 lsof 相关的信息都存储于以进程的 PID 命名的目录中，即 /proc/1234 中包含的是 PID 为 1234 的进程的信息。每个进程目录中存在着各种文件，它们可以使得应用程序简单地了解进程的内存空间、文件描述符列表、指向磁盘上的文件的符号链接和其他系统信息。lsof 程序使用该信息和其他关于内核内部状态的信息来产生其输出。所以lsof 可以显示进程的文件描述符和相关的文件名等信息。也就是我们通过访问进程的文件描述符可以找到该文件的相关信息。 
+
+当系统中的某个文件被意外地删除了，只要这个时候系统中还有进程正在访问该文件，那么我们就可以通过lsof从/proc目录下恢复该文件的内容。 假如由于误操作将/var/log/messages文件删除掉了，那么这时要将/var/log/messages文件恢复的方法如下： 
+
+首先使用lsof来查看当前是否有进程打开/var/logmessages文件，如下：
+
+\# lsof |grep /var/log/messages
+
+syslogd   1283      root    2w      REG        3,3  5381017    1773647 /var/log/messages (deleted)
+
+从上面的信息可以看到 PID 1283（syslogd）打开文件的文件描述符为 2。同时还可以看到/var/log/messages已经标记被删除了。因此我们可以在 /proc/1283/fd/2 （fd下的每个以数字命名的文件表示进程对应的文件描述符）中查看相应的信息，如下： 
+
+
+
+> \# head -n 10 /proc/1283/fd/2
+> Aug  4 13:50:15 holmes86 syslogd 1.4.1: restart.
+> Aug  4 13:50:15 holmes86 kernel: klogd 1.4.1, log source = /proc/kmsg started.
+> Aug  4 13:50:15 holmes86 kernel: Linux version 2.6.22.1-8 ([root@everestbuilder.linux-ren.org](mailto:root@everestbuilder.linux-ren.org)) (gcc version 4.2.0) #1 SMP Wed Jul 18 11:18:32 EDT 2007
+> Aug  4 13:50:15 holmes86 kernel: BIOS-provided physical RAM map:
+> Aug  4 13:50:15 holmes86 kernel:  BIOS-e820: 0000000000000000 - 000000000009f000 (usable)
+> Aug  4 13:50:15 holmes86 kernel:  BIOS-e820: 000000000009f000 - 00000000000a0000 (reserved)
+> Aug  4 13:50:15 holmes86 kernel:  BIOS-e820: 0000000000100000 - 000000001f7d3800 (usable)
+> Aug  4 13:50:15 holmes86 kernel:  BIOS-e820: 000000001f7d3800 - 0000000020000000 (reserved)
+> Aug  4 13:50:15 holmes86 kernel:  BIOS-e820: 00000000e0000000 - 00000000f0007000 (reserved)
+> Aug  4 13:50:15 holmes86 kernel:  BIOS-e820: 00000000f0008000 - 00000000f000c000 (reserved)
+
+
+
+从上面的信息可以看出，查看 /proc/8663/fd/15 就可以得到所要恢复的数据。如果可以通过文件描述符查看相应的数据，那么就可以使用 I/O 重定向将其复制到文件中，如:
+
+\#cat /proc/1283/fd/2 > /var/log/messages
+
+对于许多应用程序，尤其是日志文件和数据库，这种恢复删除文件的方法非常有用。
