@@ -14,7 +14,7 @@
     - [大数据篇](#大数据篇)
         - [大数据开发环境安装配置](#大数据开发环境安装配置)
         - [Hadoop系列](#Hadoop系列)
-            - 涉及MapReduce、Hdfs、Hive、HBase等hadoop生态圈组件
+            - 涉及MapReduce、Hdfs、Hive、等hadoop生态圈组件
         - [Spark系列](#Spark系列)
         - [Flink系列](#Flink系列)
         - [实战项目](#实战项目)
@@ -27,7 +27,7 @@
         - [Java系列](#Java系列)
         - [Hadoop系列资源](#Hadoop系列资源)
         - [Spark系列资源](#Spark系列资源)
-        - [HBase系列资源](#HBase系列资源)
+        - [系列资源](#系列资源)
         - [业内大数据技术ebook分享](#业内大数据技术ebook分享 )
         - [算法系列](#算法系列)
         - [数据库](#数据库)
@@ -73,7 +73,7 @@
 - [Deepin下搭建Hadoop、Spark等大数据开发环境.md](https://github.com/josonle/Coding-Now/blob/master/Linux%E7%B3%BB%E7%BB%9F%E4%B8%8B%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/Deepin%E4%B8%8B%E6%90%AD%E5%BB%BAHadoop%E3%80%81Spark%E7%AD%89%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83.md)
   - 含有如何在Deepin Linux下安装java、scala、VMware虚拟机、eclipse
   - 如何搭建centos集群
-  - 搭建hadoop、hive、hbase
+  - 搭建hadoop、hive、
   - 搭建Spark
   - 待续
 
@@ -271,13 +271,15 @@
 
 - [Apache Pig](http://pig.apache.org/): 是一个基于Hadoop的大规模数据分析工具，它提供的SQL-LIKE语言叫Pig Latin，该语言的编译器会把类SQL的数据分析请求转换为一系列经过优化处理的MapReduce运算 【**不准备学，计划Hive代替Pig**】
 
-- [Apache HBase](http://hbase.apache.org/): 是一个高可靠性、高性能、面向列、可伸缩的分布式存储系统，利用HBase技术可在廉价PC Server上搭建起大规模结构化存储集群
+- [Apache ](http://.apache.org/): 是一个高可靠性、高性能、面向列、可伸缩的分布式存储系统，利用HBase技术可在廉价PC Server上搭建起大规模结构化存储集群
     - HBase入门————[《HBase不睡觉》](http://kittyandpuppy.coolplayer.net/HBase.pdf)
     - 《HBase实战》见下方ebook
     - 博文
         - [基于HBase实时数仓探索实践](https://mp.weixin.qq.com/s?__biz=MzU1NTMyOTI4Mw==&mid=2247486259&idx=1&sn=1264cf5f59a8b8474ed0e876d95f37b7&chksm=fbd4b95fcca33049a39fa564a2514d45298b1747dbb876b0157365cb3303136701eb0b814fff&mpshare=1&scene=1&srcid=1014LExoNkCOEVNHyl08oH52&pass_ticket=igsIEGXM1UhrBkCT3yw8Er2%2B%2B8Xo7vGvVpXlMxnW0rQ%3D#rd)
         - [HBase 读流程解析与优化的最佳实践](https://mp.weixin.qq.com/s?__biz=MzI4OTY3MTUyNg==&mid=2247496587&idx=1&sn=fa62a4ab7e69b7500408350a2f395650&chksm=ec292382db5eaa94906d50af44c9ef03e28e21a37f92ecb44eb9715586272a2f98bb2127b6a2&mpshare=1&scene=1&srcid=&pass_ticket=igsIEGXM1UhrBkCT3yw8Er2%2B%2B8Xo7vGvVpXlMxnW0rQ%3D#rd)
         - [HBase优化 | 探索regionserver参数优化](https://mp.weixin.qq.com/s?__biz=MzU5OTQ1MDEzMA==&mid=2247485913&idx=1&sn=2cf84ff9bbef4fd5216777543025fb5b&chksm=feb5fea4c9c277b215dc76dcbcc8436c7b053255d2e063ce55109931be709db66799c43945e4&mpshare=1&scene=1&srcid=&pass_ticket=igsIEGXM1UhrBkCT3yw8Er2%2B%2B8Xo7vGvVpXlMxnW0rQ%3D#rd)
+        - [服务平台化，知乎 HBase 实践](https://www.infoq.cn/article/oZCcFAC7J4-01yFTG5r3?utm_source=rss&utm_medium=article)
+        - [HBase 八大应用场景](https://mp.weixin.qq.com/s?__biz=MzUzMTA2NTU2Ng==&mid=2247485514&idx=1&sn=349acddbaf78f14ecebd2a30582b9f74&chksm=fa4977fbcd3efeed3ce65a13f08698a9a16a3718ad218f6579ab19b46c6268ff36c633445dde&scene=27#wechat_redirect)
 
 - [Apache Sqoop](http://sqoop.apache.org/): 是一个用来将Hadoop和关系型数据库中的数据相互转移的工具，可以将一个关系型数据库（MySQL ,Oracle ,Postgres等）中的数据导进到Hadoop的HDFS中，也可以将HDFS的数据导进到关系型数据库中
 
