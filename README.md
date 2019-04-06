@@ -247,6 +247,8 @@
     - HDFS 架构学习总结.pdf [-->放这里了](https://github.com/josonle/Coding-Now/tree/master/%E5%A4%A7%E6%95%B0%E6%8D%AE/hadoop%E7%B3%BB%E5%88%97/%E8%BD%AC%E8%BD%BD)
     - YARN 架构学习总结.pdf
 
+  - [唯品会 HDFS 性能挑战和优化实践](https://github.com/josonle/Coding-Now/tree/master/%E5%A4%A7%E6%95%B0%E6%8D%AE/hadoop%E7%B3%BB%E5%88%97/%E8%BD%AC%E8%BD%BD)
+
   - [使用Java API对HDFS进行系列操作](https://github.com/josonle/Coding-Now/blob/master/%E5%A4%A7%E6%95%B0%E6%8D%AE/hadoop%E7%B3%BB%E5%88%97/%E4%BD%BF%E7%94%A8Java%20API%E5%AF%B9HDFS%E8%BF%9B%E8%A1%8C%E7%B3%BB%E5%88%97%E6%93%8D%E4%BD%9C.md)
 
   - 掌握MapReduce编程
@@ -280,6 +282,7 @@
         - [HBase优化 | 探索regionserver参数优化](https://mp.weixin.qq.com/s?__biz=MzU5OTQ1MDEzMA==&mid=2247485913&idx=1&sn=2cf84ff9bbef4fd5216777543025fb5b&chksm=feb5fea4c9c277b215dc76dcbcc8436c7b053255d2e063ce55109931be709db66799c43945e4&mpshare=1&scene=1&srcid=&pass_ticket=igsIEGXM1UhrBkCT3yw8Er2%2B%2B8Xo7vGvVpXlMxnW0rQ%3D#rd)
         - [服务平台化，知乎 HBase 实践](https://www.infoq.cn/article/oZCcFAC7J4-01yFTG5r3?utm_source=rss&utm_medium=article)
         - [HBase 八大应用场景](https://mp.weixin.qq.com/s?__biz=MzUzMTA2NTU2Ng==&mid=2247485514&idx=1&sn=349acddbaf78f14ecebd2a30582b9f74&chksm=fa4977fbcd3efeed3ce65a13f08698a9a16a3718ad218f6579ab19b46c6268ff36c633445dde&scene=27#wechat_redirect)
+        - [Apache HBase 的现状和发展](https://www.infoq.cn/article/yETztPsQPWgLK-dRyOtk)
 
 - [Apache Sqoop](http://sqoop.apache.org/): 是一个用来将Hadoop和关系型数据库中的数据相互转移的工具，可以将一个关系型数据库（MySQL ,Oracle ,Postgres等）中的数据导进到Hadoop的HDFS中，也可以将HDFS的数据导进到关系型数据库中
 
