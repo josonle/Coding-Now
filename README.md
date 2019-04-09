@@ -373,6 +373,10 @@
   - [文档记录：LeetCode刷题心得.md](https://github.com/josonle/Coding-Now/blob/master/LeetCode/LeetCode刷题心得/LeetCode刷题心得.md)
   - 代码驱动：【待补充】
 
+- GitHub项目推荐
+
+  - [**LeetCodeAnimation** 用动画的形式呈现解LeetCode题目的思路](https://github.com/MisterBooo/LeetCodeAnimation) 
+
 ## 数据库和分布式篇
 数据库主要面向MySQL。pdf中附有转载自相关博客的引用链接，脑图是自己总结的，参考《深入浅出mysql》及相关博客。
 
@@ -396,10 +400,6 @@
 - 推荐博客
     - [何登成的技术博客](http://hedengcheng.com/)————MySQL相关的大佬
 
-- GitHub项目推荐
-
-  - [**LeetCodeAnimation** 用动画的形式呈现解LeetCode题目的思路](https://github.com/MisterBooo/LeetCodeAnimation) 
-
 ## GitHub上一些技术书籍、翻译书籍、面试题库推荐
 
 **《Python最佳实践指南！》**
@@ -413,6 +413,15 @@
 ​      该开源项目在Github上已有6000多Star，主要是来自国内一线互联网公司的面试题集锦，涉及Java和Android两大方向，涉及的公司有百度、小米、美团、58、猎豹、360、新浪、搜狐等。据说，掌握这些知识点可以大大增加前两轮技术面试的通过概率。
 
 （Github开源地址：https://github.com/JackyAndroid/AndroidInterview-Q-A/blob/master/README-CN.md）
+
+**《Java学习+面试指南》** <https://github.com/Snailclimb/JavaGuide>
+【Java学习+面试指南】 一份涵盖大部分Java程序员所需要掌握的核心知识。
+
+      推荐使用 https://snailclimb.top/JavaGuide/ 在线阅读(访问速度慢的话，请使用 https://snailclimb.gitee.io/javaguide )，在线阅读内容本仓库同步一致。这种方式阅读的优势在于：有侧边栏阅读体验更好，Gitee pages 的访问速度相对来说也比较快。
+> 我面试时看的就是这个，自己也归纳了面试过程中遇到的笔试、面试题和看到的文章
+
+      (Github开源地址：https://github.com/Snailclimb/JavaGuide）
+> git@github.com:Snailclimb/JavaGuide.git
 
 **《技术面试必备基础知识》** <https://cyc2018.github.io/CS-Notes>
 
