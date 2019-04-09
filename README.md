@@ -21,6 +21,7 @@
             - [推荐系统](#推荐系统)
         - [大数据相关面试](#大数据相关面试)
     - [算法篇](#算法篇)
+    - [数据库和分布式篇](#数据库和分布式篇)
     - [GitHub上一些技术书籍、翻译书籍、面试题库推荐](#GitHub上一些技术书籍、翻译书籍、面试题库推荐)
     - [eBook和视频资源](#eBook和视频资源)
         - [Python](#Python)
@@ -372,6 +373,14 @@
   - [文档记录：LeetCode刷题心得.md](https://github.com/josonle/Coding-Now/blob/master/LeetCode/LeetCode刷题心得/LeetCode刷题心得.md)
   - 代码驱动：【待补充】
 
+## 数据库和分布式篇
+数据库主要面向MySQL
+
+- 博文
+    - 数据库两大神器【索引和锁】
+    - 20个数据库常见面试题讲解 - 搜云库技术团队
+    - 分布式系统一致性（ACID、CAP、BASE、二段提交、三段提交、TCC、幂等性）原理详解 
+    - 理解分布式事务 -贝聊科技
 - GitHub项目推荐
 
   - [**LeetCodeAnimation** 用动画的形式呈现解LeetCode题目的思路](https://github.com/MisterBooo/LeetCodeAnimation) 
