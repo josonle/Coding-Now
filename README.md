@@ -271,12 +271,14 @@
 - [Apache Hive](http://hive.apache.org/): 是基于Hadoop的一个数据仓库工具，可以将结构化的数据文件映射为一张数据库表，通过类SQL语句快速实现简单的MapReduce统计，不必开发专门的MapReduce应用，十分适合数据仓库的统计分析
     - 博文
         - [Hive 性能优化](https://mp.weixin.qq.com/s?__biz=MzA3MDY0NTMxOQ==&mid=2247486550&idx=1&sn=8151680a70613fb7a06d019acfb390b7&chksm=9f38ef7ea84f66688cdeb8666d2c16d4da8bae1bab385eafacb9e7b085c673507c93d8bc3eca&mpshare=1&scene=1&srcid=&pass_ticket=igsIEGXM1UhrBkCT3yw8Er2%2B%2B8Xo7vGvVpXlMxnW0rQ%3D#rd)
+        - [实时离线融合在唯品会的进展](https://www.infoq.cn/article/progress-of-real-time-offline-fusion-in-vip)
+        - [数据仓库系列篇——唯品会大数据架构](https://zhuanlan.zhihu.com/p/45123018)
 
 - [Apache Pig](http://pig.apache.org/): 是一个基于Hadoop的大规模数据分析工具，它提供的SQL-LIKE语言叫Pig Latin，该语言的编译器会把类SQL的数据分析请求转换为一系列经过优化处理的MapReduce运算 【**不准备学，计划Hive代替Pig**】
 
 - [Apache HBase](http://hbase.apache.org/): 是一个高可靠性、高性能、面向列、可伸缩的分布式存储系统，利用HBase技术可在廉价PC Server上搭建起大规模结构化存储集群
     - HBase入门————[《HBase不睡觉》](http://kittyandpuppy.coolplayer.net/HBase.pdf)
-    - 《HBase实战》见下方ebook
+    - 《HBase实战》见下方[ebook](#eBook和视频资源)
     - 博文
         - [基于HBase实时数仓探索实践](https://mp.weixin.qq.com/s?__biz=MzU1NTMyOTI4Mw==&mid=2247486259&idx=1&sn=1264cf5f59a8b8474ed0e876d95f37b7&chksm=fbd4b95fcca33049a39fa564a2514d45298b1747dbb876b0157365cb3303136701eb0b814fff&mpshare=1&scene=1&srcid=1014LExoNkCOEVNHyl08oH52&pass_ticket=igsIEGXM1UhrBkCT3yw8Er2%2B%2B8Xo7vGvVpXlMxnW0rQ%3D#rd)
         - [HBase 读流程解析与优化的最佳实践](https://mp.weixin.qq.com/s?__biz=MzI4OTY3MTUyNg==&mid=2247496587&idx=1&sn=fa62a4ab7e69b7500408350a2f395650&chksm=ec292382db5eaa94906d50af44c9ef03e28e21a37f92ecb44eb9715586272a2f98bb2127b6a2&mpshare=1&scene=1&srcid=&pass_ticket=igsIEGXM1UhrBkCT3yw8Er2%2B%2B8Xo7vGvVpXlMxnW0rQ%3D#rd)
