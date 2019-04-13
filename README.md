@@ -330,6 +330,10 @@
     - Scala 语法糖
       - [Scala排序函数使用.md](https://github.com/josonle/Learning-Spark/blob/master/notes/Scala%E6%8E%92%E5%BA%8F%E5%87%BD%E6%95%B0%E4%BD%BF%E7%94%A8.md)
     - [报错和问题归纳.md](https://github.com/josonle/Learning-Spark/blob/master/notes/%E6%8A%A5%E9%94%99%E5%92%8C%E9%97%AE%E9%A2%98%E5%BD%92%E7%BA%B3.md)
+- [Spark性能优化之道——解决Spark数据倾斜（Data Skew）的N种姿势](<http://www.jasongj.com/spark/skew/?hmsr=toutiao.io&utm_medium=toutiao.io&utm_source=toutiao.io>)
+- [Spark性能优化：数据倾斜调优](<https://www.iteblog.com/archives/1671.html>)
+- [Spark性能优化指南——基础篇](https://tech.meituan.com/2016/04/29/spark-tuning-basic.html)
+- [Spark性能优化指南——高级篇](https://tech.meituan.com/2016/05/12/spark-tuning-pro.html)
 - 视频资源见下方
 
 ### Flink系列
@@ -402,6 +406,7 @@
         > 分布式锁可基于数据库、zookeeper、缓存(像redis、tair)实现
         > http://www.hollischuang.com/archives/1716
 - 推荐博客
+
     - [何登成的技术博客](http://hedengcheng.com/)————MySQL相关的大佬
 
 ## GitHub上一些技术书籍、翻译书籍、面试题库推荐
