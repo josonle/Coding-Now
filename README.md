@@ -338,7 +338,7 @@
 - [Spark性能优化指南——基础篇](https://tech.meituan.com/2016/04/29/spark-tuning-basic.html)
 - [Spark性能优化指南——高级篇](https://tech.meituan.com/2016/05/12/spark-tuning-pro.html)
 - [hive on spark 调优点](<https://blog.csdn.net/rlnLo2pNEfx9c/article/details/89117446>)
-- 视频资源见下方
+- 视频和书籍资源见下方
 
 ### Flink系列
 阿里强推的flink，取而代之二次开发的流计算和批处理引擎blink，spark的强势竞争对手
@@ -534,6 +534,14 @@ Arthas支持JDK 6+，支持Linux/Mac/Windows，采用命令行交互模式，同
 - Hadoop、Hive、Hbase、Mahout源码解析及项目实战：https://pan.baidu.com/s/1nZuakR3DUJYJBiH0NaA1ZA 提取码: 2uyg 
 
 ### Spark系列资源
+
+书籍资源
+
+- [《深入解析Spark内核架构设计与实现原理》](https://mega.nz/#!X41lSAJK!-OT3owGN0_05l2Q1xkKt66WinEdYMEiotxZe7bmr7Bs)
+- [《深入理解Spark核心思想与源码分析》](https://mega.nz/#!LxkDwKCT!Yy5LKaUY9wX56tEOzOqX4oJhz8TDMfH9Ag54568GInE)
+- [《快学Scala》和代码](https://mega.nz/#F!GslxxS6A!sn6-YpeRQiNHIyS90ZwoSg)  【推荐】
+- 《Spark 内核设计的艺术 架构设计与实现》【推荐】
+- 《Spark SQL内核解析》【推荐】
 
 视频资源 点这里--->[eBook/Spark系列](https://github.com/josonle/Coding-Now/tree/master/eBook/Spark系列) 
 
