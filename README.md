@@ -252,6 +252,8 @@
 
   - [漫谈千亿级数据优化实践：数据倾斜（纯干货）](https://segmentfault.com/a/1190000009166436)
 
+  - [MapReduce、Hive、Spark中数据倾斜问题解决归纳总结](https://blog.csdn.net/lzw2016/article/details/89284124)
+
   - [使用Java API对HDFS进行系列操作](https://github.com/josonle/Coding-Now/blob/master/%E5%A4%A7%E6%95%B0%E6%8D%AE/hadoop%E7%B3%BB%E5%88%97/%E4%BD%BF%E7%94%A8Java%20API%E5%AF%B9HDFS%E8%BF%9B%E8%A1%8C%E7%B3%BB%E5%88%97%E6%93%8D%E4%BD%9C.md)
 
   - 掌握MapReduce编程
@@ -281,6 +283,7 @@
 - [Apache HBase](http://hbase.apache.org/): 是一个高可靠性、高性能、面向列、可伸缩的分布式存储系统，利用HBase技术可在廉价PC Server上搭建起大规模结构化存储集群
     - HBase入门————[《HBase不睡觉》](http://kittyandpuppy.coolplayer.net/HBase.pdf)
     - 《HBase实战》见下方[ebook](#eBook和视频资源)
+    - [一条数据的HBase之旅，简明HBase入门教程](http://www.nosqlnotes.com/technotes/hbase/hbase-overview-concepts/)————推荐一个HBase入门系列博客
     - 博文
         - [基于HBase实时数仓探索实践](https://mp.weixin.qq.com/s?__biz=MzU1NTMyOTI4Mw==&mid=2247486259&idx=1&sn=1264cf5f59a8b8474ed0e876d95f37b7&chksm=fbd4b95fcca33049a39fa564a2514d45298b1747dbb876b0157365cb3303136701eb0b814fff&mpshare=1&scene=1&srcid=1014LExoNkCOEVNHyl08oH52&pass_ticket=igsIEGXM1UhrBkCT3yw8Er2%2B%2B8Xo7vGvVpXlMxnW0rQ%3D#rd)
         - [HBase 读流程解析与优化的最佳实践](https://mp.weixin.qq.com/s?__biz=MzI4OTY3MTUyNg==&mid=2247496587&idx=1&sn=fa62a4ab7e69b7500408350a2f395650&chksm=ec292382db5eaa94906d50af44c9ef03e28e21a37f92ecb44eb9715586272a2f98bb2127b6a2&mpshare=1&scene=1&srcid=&pass_ticket=igsIEGXM1UhrBkCT3yw8Er2%2B%2B8Xo7vGvVpXlMxnW0rQ%3D#rd)
@@ -334,6 +337,7 @@
 - [Spark性能优化：数据倾斜调优](<https://www.iteblog.com/archives/1671.html>)
 - [Spark性能优化指南——基础篇](https://tech.meituan.com/2016/04/29/spark-tuning-basic.html)
 - [Spark性能优化指南——高级篇](https://tech.meituan.com/2016/05/12/spark-tuning-pro.html)
+- [hive on spark 调优点](<https://blog.csdn.net/rlnLo2pNEfx9c/article/details/89117446>)
 - 视频资源见下方
 
 ### Flink系列
@@ -518,7 +522,10 @@ Arthas支持JDK 6+，支持Linux/Mac/Windows，采用命令行交互模式，同
 
 ### Java系列
 
+- 《Java核心编程卷一》
 
+- 《深入理解Java虚拟机》周志明老师著
+- 《Java并发编程的艺术》方腾飞 魏鹏 程晓明著
 
 ### Hadoop系列资源
 
@@ -557,10 +564,13 @@ Arthas支持JDK 6+，支持Linux/Mac/Windows，采用命令行交互模式，同
 ### 业内大数据技术ebook分享 
 
 [见这里](https://github.com/josonle/Coding-Now/tree/master/%E5%A4%A7%E6%95%B0%E6%8D%AE)
+
 - 增加 用户画像相关资料
 - 18年京东大数据白皮书
 - DataFun社区技术年货分享
 - 今日头条推荐系统架构设计
+- 快看漫画大数据平台的模型思维与用户增长实践
+- 有赞百亿级日志系统架构设计
 ### 算法系列
 
 - [牛客网算法](https://github.com/josonle/Coding-Now/tree/master/eBook/%E7%AE%97%E6%B3%95%E5%8F%8A%E5%85%B6%E4%BD%99%E5%9F%BA%E7%A1%80%E4%B9%A6%E7%B1%8D)
@@ -644,6 +654,10 @@ Arthas支持JDK 6+，支持Linux/Mac/Windows，采用命令行交互模式，同
 - [百度脑图](http://naotu.baidu.com/)
 - 路过图床
 
+#### 存储
+
+- MEGA网盘，	https://mega.nz/
+
 #### Chrome插件
 
 - [Chrome Extension Downloader](https://chrome-extension-downloader.com/)——可以通过此网站来下载因为某些原因无法在线安装 Chrome 插件
@@ -667,4 +681,4 @@ Arthas支持JDK 6+，支持Linux/Mac/Windows，采用命令行交互模式，同
     - GitZip：下载github项目中单个文件
 
   - Listen 1插件：汇集网易云、虾米、qq音乐、酷我等音乐，github上搜索
-
+- 今天逛github时发现一个Chrome插件英雄榜的项目，分享一下，[Chrome插件英雄榜, 为优秀的Chrome插件写一本中文说明书, 让Chrome插件英雄们造福人类](https://github.com/zhaoolee/ChromeAppHeroes)
