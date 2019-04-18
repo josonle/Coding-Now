@@ -161,3 +161,7 @@ vmware安装成功，但是启动时显示系统内核和vmware的编译接口�
 - [AppImage官网](https://www.appimage.org/)
 - [已有AppImage应用归纳](https://appimage.github.io/)
 
+### Deepin wifi密码存储在哪里？
+`/etc/NetworkManager/system-connections`，密码是明文存储的
+
+`/etc/network/interfaces`，这里是deepin网络相关配置的文件，像ip、网关、路由等
