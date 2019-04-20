@@ -401,16 +401,28 @@
     - sql相关脑图我就不放了，最好还是自己总结下
 - 博文    【[相关PDF收录于此](https://github.com/josonle/Coding-Now/tree/master/eBook/%E7%AE%97%E6%B3%95%E5%8F%8A%E5%85%B6%E4%BD%99%E5%9F%BA%E7%A1%80%E4%B9%A6%E7%B1%8D/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%92%8C%E5%88%86%E5%B8%83%E5%BC%8F)】
     - 数据库两大神器【索引和锁】.pdf
+
     - 20个数据库常见面试题讲解 - 搜云库技术团队.pdf
+
     - [深入理解Mysql——锁、事务与并发控制](https://juejin.im/entry/5aa9ed73518825558b3da65e)
+
     - [MySQL中的行级锁,表级锁,页级锁](https://www.hollischuang.com/archives/914)
+
     - 『浅入深出』MySQL 中事务的实现.pdf————【讲的确实不错】
+
     - 分布式系统一致性（ACID、CAP、BASE、二段提交、三段提交、TCC、幂等性）原理详解 .pdf
+
     - 理解分布式事务 -贝聊科技.pdf
+
     - 分布式锁实现（基于redis-mysql）.pdf
         > 分布式锁可基于数据库、zookeeper、缓存(像redis、tair)实现
         > http://www.hollischuang.com/archives/1716
+
     - [MYSQL解密：INNODB存储引擎重做日志漫游](https://www.qiancheng.me/post/coding/mysql-001)
+
+    - [MySQL事务日志undo log和redo log分析](https://blog.csdn.net/lzw2016/article/details/89420391) 
+
+    - [MySQL索引背后的数据结构及算法原理](https://blog.csdn.net/lzw2016/article/details/89421065) 
 - 推荐博客
 
     - [何登成的技术博客](http://hedengcheng.com/)————MySQL相关的大佬
