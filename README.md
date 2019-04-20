@@ -394,9 +394,10 @@
 
 - 脑图归纳
     - MySQL掌握.km [在线打开](http://naotu.baidu.com/file/397f5be4bd76f152ceaba6b705b036cf?token=6c3c7a81d6f16f5b)
-        - 涉及InnoDB、MyISAM特点和区别
-        - 各大索引分类、区别、优化、使用
-        - 行锁、表锁
+        - 涉及存储引擎InnoDB、MyISAM特点和区别
+        - 各大索引分类、底层、区别、优化、使用
+        - 数据库锁（行锁、页锁、表锁）
+        - 事务ACID如何实现
     - sql相关脑图我就不放了，最好还是自己总结下
 - 博文    【[相关PDF收录于此](https://github.com/josonle/Coding-Now/tree/master/eBook/%E7%AE%97%E6%B3%95%E5%8F%8A%E5%85%B6%E4%BD%99%E5%9F%BA%E7%A1%80%E4%B9%A6%E7%B1%8D/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%92%8C%E5%88%86%E5%B8%83%E5%BC%8F)】
     - 数据库两大神器【索引和锁】.pdf
@@ -409,9 +410,11 @@
     - 分布式锁实现（基于redis-mysql）.pdf
         > 分布式锁可基于数据库、zookeeper、缓存(像redis、tair)实现
         > http://www.hollischuang.com/archives/1716
+    - [MYSQL解密：INNODB存储引擎重做日志漫游](https://www.qiancheng.me/post/coding/mysql-001)
 - 推荐博客
 
     - [何登成的技术博客](http://hedengcheng.com/)————MySQL相关的大佬
+    - [面向信仰编程-Draveness’s Blog](https://draveness.me/tag/%E6%95%B0%E6%8D%AE%E5%BA%93)———大佬图画的很好看
 
 ## GitHub上一些技术书籍、翻译书籍、面试题库推荐
 
