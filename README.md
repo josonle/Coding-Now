@@ -338,6 +338,7 @@
 - [Spark性能优化指南——基础篇](https://tech.meituan.com/2016/04/29/spark-tuning-basic.html)
 - [Spark性能优化指南——高级篇](https://tech.meituan.com/2016/05/12/spark-tuning-pro.html)
 - [hive on spark 调优点](<https://blog.csdn.net/rlnLo2pNEfx9c/article/details/89117446>)
+- [Koalas：让 pandas 轻松切换 Apache Spark，在大数据中规模应用]()
 - 视频和书籍资源见下方
 
 ### Flink系列
