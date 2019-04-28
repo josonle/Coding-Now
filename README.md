@@ -338,7 +338,8 @@
 - [Spark性能优化指南——基础篇](https://tech.meituan.com/2016/04/29/spark-tuning-basic.html)
 - [Spark性能优化指南——高级篇](https://tech.meituan.com/2016/05/12/spark-tuning-pro.html)
 - [hive on spark 调优点](<https://blog.csdn.net/rlnLo2pNEfx9c/article/details/89117446>)
-- [Koalas：让 pandas 轻松切换 Apache Spark，在大数据中规模应用]()
+- [Koalas：让 pandas 轻松切换 Apache Spark，在大数据中规模应用](https://github.com/josonle/Coding-Now/tree/master/%E5%A4%A7%E6%95%B0%E6%8D%AE/spark%E7%B3%BB%E5%88%97)
+
 - 视频和书籍资源见下方
 
 ### Flink系列
@@ -633,14 +634,14 @@ Arthas支持JDK 6+，支持Linux/Mac/Windows，采用命令行交互模式，同
 
 - [门户 Linux公社论坛 ](http://www.linuxidc.net/portal.php)
 
-- #### Java各大开发者网站
+#### Java各大开发者网站
   - [Java知音-一个专注于技术分享的网站](https://www.javazhiyin.com/)
   - [并发编程网](http://ifeve.com/)——有很多不错的Java文章及外文翻译文章
   - [Learn Java information, news, and how-to advice | JavaWorld](https://www.javaworld.com/category/learn-java/)
   - [DZone Open Source](https://dzone.com/open-source-news-tutorials-tools) 
   - [Java Platform SE 8帮助文档](http://blog.fondme.cn:8000/apidoc//jdk-1.8-baidu/)
 
-- #### Python各大开发者网站
+#### Python各大开发者网站
 
   - [PythonTab：Python中文开发者社区门户](http://www.pythontab.com/)
   - [Planet Python](http://planetpython.org/)
@@ -649,6 +650,42 @@ Arthas支持JDK 6+，支持Linux/Mac/Windows，采用命令行交互模式，同
   - [Ricequant & 课程 - RiceQuant米筐量化交易平台](https://www.ricequant.com/courses)
   - [量化课堂 - JoinQuant](https://www.joinquant.com/study#math)
   - [集智俱乐部](https://mp.weixin.qq.com/s?__biz=MzIzMjQyNzQ5MA==&mid=2247483667&idx=1&sn=658da85489324e125dbd2941cca50bd6&scene=0#wechat_redirect)
+
+#### 我订阅的一些RSS
+
+
+```
+<?xml version="1.0" encoding="ISO-8859-1"?><opml version="2.0"><head><title>Slick RSS OPML Export</title></head>
+<body>
+
+<outline type="rss" text="阮一峰网络分享" xmlUrl="http://www.ruanyifeng.com/blog/atom.xml"/>
+
+<outline type="rss" text="ImportNew---Java" xmlUrl="http://www.importnew.com/feed"/>
+
+<outline type="rss" text="InfoQ" xmlUrl="https://www.infoq.cn/feed"/><outline type="rss" text="掘金AI" xmlUrl="https://rsshub.app/juejin/category/ai"/>
+
+<outline type="rss" text="掘金后端" xmlUrl="https://rsshub.app/juejin/category/backend"/>
+
+<outline type="rss" text="掘金架构" xmlUrl="https://rsshub.app/juejin/tag/%E6%9E%B6%E6%9E%84"/>
+
+<outline type="rss" text="Comic" xmlUrl="https://xkcd.com/atom.xml"/>
+
+<outline type="rss" text="郭俊 Jason的博客" xmlUrl="http://www.jasongj.com/atom.xml"/>
+
+<outline type="rss" text="浪尖BigData" xmlUrl="https://blog.csdn.net/rlnlo2pnefx9c/rss/list"/>
+
+<outline type="rss" text=" 彷徨的博客" xmlUrl="https://blog.csdn.net/weixin_35353187/rss/list"/>
+
+<outline type="rss" text="彷徨的面试题收集" xmlUrl="https://blog.csdn.net/weixin_35353187/rss/list"/>
+
+<outline type="rss" text="推酷" xmlUrl="https://rsshub.app/tuicool/mags/design"/>
+
+<outline type="rss" text="开发者头条" xmlUrl="https://rsshub.app/toutiao/today"/>
+
+<outline type="rss" text="技术头条" xmlUrl="https://rsshub.app/blogread/newest"/>
+
+</body></opml>
+```
 
 ## 工具
 
