@@ -425,10 +425,15 @@
     - [MySQL事务日志undo log和redo log分析](https://blog.csdn.net/lzw2016/article/details/89420391) 
 
     - [MySQL索引背后的数据结构及算法原理](https://blog.csdn.net/lzw2016/article/details/89421065) 
+
+    - [MySQL-InnoDB-MVCC多版本并发控制](https://segmentfault.com/a/1190000012650596)
+
+    - [MySQL · 引擎特性 · InnoDB 事务子系统介绍](http://mysql.taobao.org/monthly/2015/12/01/)
 - 推荐博客
 
     - [何登成的技术博客](http://hedengcheng.com/)————MySQL相关的大佬
     - [面向信仰编程-Draveness’s Blog](https://draveness.me/tag/%E6%95%B0%E6%8D%AE%E5%BA%93)———大佬图画的很好看
+    - [淘宝mysql月报](http://mysql.taobao.org/monthly/)
 
 ## GitHub上一些技术书籍、翻译书籍、面试题库推荐
 
