@@ -399,7 +399,7 @@
 ## Java篇
 - [高并发编程知识体系](https://mp.weixin.qq.com/s/qaj37YYxz7afD-WfAZeN8Q)
 - [JVM核心知识体系](https://mp.weixin.qq.com/s/3_DEPdZTnGmdGBd5iTrVjQ)
-
+- [Java笔记](https://github.com/josonle/Coding-Now/tree/master/Java%E7%AC%94%E8%AE%B0)
 ## 数据库和分布式篇
 数据库主要面向MySQL。pdf中附有转载自相关博客的引用链接，脑图是自己总结的，参考《深入浅出mysql》及相关博客。
 
