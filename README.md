@@ -21,6 +21,7 @@
             - [推荐系统](#推荐系统)
         - [大数据相关面试](#大数据相关面试)
     - [算法篇](#算法篇)
+    - [Java篇](#Java篇)
     - [数据库和分布式篇](#数据库和分布式篇)
     - [GitHub上一些技术书籍、翻译书籍、面试题库推荐](#GitHub上一些技术书籍、翻译书籍、面试题库推荐)
     - [eBook和视频资源](#eBook和视频资源)
@@ -292,6 +293,7 @@
         - [服务平台化，知乎 HBase 实践](https://www.infoq.cn/article/oZCcFAC7J4-01yFTG5r3?utm_source=rss&utm_medium=article)
         - [HBase 八大应用场景](https://mp.weixin.qq.com/s?__biz=MzUzMTA2NTU2Ng==&mid=2247485514&idx=1&sn=349acddbaf78f14ecebd2a30582b9f74&chksm=fa4977fbcd3efeed3ce65a13f08698a9a16a3718ad218f6579ab19b46c6268ff36c633445dde&scene=27#wechat_redirect)
         - [Apache HBase 的现状和发展](https://www.infoq.cn/article/yETztPsQPWgLK-dRyOtk)
+        - [InfoQ 百度智能监控场景下的 HBase 实践](https://www.infoq.cn/article/cFqcz5q*Amg68Bs9iPtC)
 
 - [Apache Sqoop](http://sqoop.apache.org/): 是一个用来将Hadoop和关系型数据库中的数据相互转移的工具，可以将一个关系型数据库（MySQL ,Oracle ,Postgres等）中的数据导进到Hadoop的HDFS中，也可以将HDFS的数据导进到关系型数据库中
 
@@ -393,6 +395,10 @@
 - GitHub项目推荐
 
   - [**LeetCodeAnimation** 用动画的形式呈现解LeetCode题目的思路](https://github.com/MisterBooo/LeetCodeAnimation) 
+
+## Java篇
+- [高并发编程知识体系](https://mp.weixin.qq.com/s/qaj37YYxz7afD-WfAZeN8Q)
+- [JVM核心知识体系](https://mp.weixin.qq.com/s/3_DEPdZTnGmdGBd5iTrVjQ)
 
 ## 数据库和分布式篇
 数据库主要面向MySQL。pdf中附有转载自相关博客的引用链接，脑图是自己总结的，参考《深入浅出mysql》及相关博客。
