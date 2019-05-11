@@ -235,6 +235,8 @@
 
 ## 大数据篇
 
+- 我的学习记录：[BigData-Learning](https://github.com/josonle/BigData-Learning)
+
 ### 大数据开发环境安装配置
 
 以下出自我在csdn上的一些文章，https://blog.csdn.net/lzw2016/
@@ -292,6 +294,7 @@
 - [Apache Pig](http://pig.apache.org/): 是一个基于Hadoop的大规模数据分析工具，它提供的SQL-LIKE语言叫Pig Latin，该语言的编译器会把类SQL的数据分析请求转换为一系列经过优化处理的MapReduce运算 【**不准备学，计划Hive代替Pig**】
 
 - [Apache HBase](http://hbase.apache.org/): 是一个高可靠性、高性能、面向列、可伸缩的分布式存储系统，利用HBase技术可在廉价PC Server上搭建起大规模结构化存储集群
+
     - HBase入门————[《HBase不睡觉》](http://kittyandpuppy.coolplayer.net/HBase.pdf)
     - 《HBase实战》见下方[ebook](#eBook和视频资源)
     - [一条数据的HBase之旅，简明HBase入门教程](http://www.nosqlnotes.com/technotes/hbase/hbase-overview-concepts/)————推荐一个HBase入门系列博客
@@ -322,7 +325,7 @@
 
 - [Apache Kafka](kafka.apache.org)
 
-    - 链接：https://pan.baidu.com/s/1RyD_R0LXSVGIc4D6VXJfmQ 提取码：759q    Kafka 朱忠华
+    - [Kafka资源和记录](https://github.com/josonle/BigData-Learning#kafka%E7%AF%87) 
 
 - 等等，当然不可能全学的
 
