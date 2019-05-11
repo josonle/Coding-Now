@@ -108,7 +108,12 @@
     - [5 个针对有经验用户的 Vim 技巧](https://linux.cn/article-8148-1.html)
     - [3 个针对高级用户的 Vim 编辑器有用技巧](https://linux.cn/article-8149-1.html)
 
+- [ctolib的Linux开发社区](https://www.ctolib.com/linux.html)
+  - 上面有很多小玩意挺有意思的
 
+- 分享两个学习Linux命令的
+  - [Linux-command](https://wangchujiang.com/linux-command/)，linux命令搜索引擎
+  - [cheat.sh](https://cheat.sh/)，不仅仅是linux命令，还包括一些语言像java、scala脚本的使用
 
 
 ## 爬虫篇（Python）
@@ -257,7 +262,7 @@
   - [MapReduce、Hive、Spark中数据倾斜问题解决归纳总结](https://blog.csdn.net/lzw2016/article/details/89284124)
 
   - [百 PB 级 Hadoop 集群存储空间治理](https://mp.weixin.qq.com/s?__biz=MzU2MzY1MjQwNg==&mid=2247483741&idx=1&sn=1c2c46ee447f2e38488d83002289463c&chksm=fc57b304cb203a123434ac842e0fd97d448c434f35faa41022718eee428805f9f11ddcba5417&mpshare=1&scene=1&srcid=0505MJXy1wWOu2kvTcMC84Ax&pass_ticket=vPMuI9TAnmzdbyz0qcM4OQqDvmete3IBSHcVmBeVTYs%3D#rd)
-  
+
   - [使用Java API对HDFS进行系列操作](https://github.com/josonle/Coding-Now/blob/master/%E5%A4%A7%E6%95%B0%E6%8D%AE/hadoop%E7%B3%BB%E5%88%97/%E4%BD%BF%E7%94%A8Java%20API%E5%AF%B9HDFS%E8%BF%9B%E8%A1%8C%E7%B3%BB%E5%88%97%E6%93%8D%E4%BD%9C.md)
 
   - 掌握MapReduce编程
@@ -283,6 +288,7 @@
         - [实时离线融合在唯品会的进展](https://www.infoq.cn/article/progress-of-real-time-offline-fusion-in-vip)
         - [数据仓库系列篇——唯品会大数据架构](https://zhuanlan.zhihu.com/p/45123018)
         - [数据仓库系统|框架结构](https://www.jianshu.com/p/397c9f45d0f2)
+
 - [Apache Pig](http://pig.apache.org/): 是一个基于Hadoop的大规模数据分析工具，它提供的SQL-LIKE语言叫Pig Latin，该语言的编译器会把类SQL的数据分析请求转换为一系列经过优化处理的MapReduce运算 【**不准备学，计划Hive代替Pig**】
 
 - [Apache HBase](http://hbase.apache.org/): 是一个高可靠性、高性能、面向列、可伸缩的分布式存储系统，利用HBase技术可在廉价PC Server上搭建起大规模结构化存储集群
@@ -298,17 +304,26 @@
         - [Apache HBase 的现状和发展](https://www.infoq.cn/article/yETztPsQPWgLK-dRyOtk)
         - [InfoQ 百度智能监控场景下的 HBase 实践](https://www.infoq.cn/article/cFqcz5q*Amg68Bs9iPtC)
         - [NoSQL 数据库不应该放弃 Consistency](https://www.infoq.cn/article/rhzs0KI2G*Y2r9PMdeNv)
+
 - [Apache Sqoop](http://sqoop.apache.org/): 是一个用来将Hadoop和关系型数据库中的数据相互转移的工具，可以将一个关系型数据库（MySQL ,Oracle ,Postgres等）中的数据导进到Hadoop的HDFS中，也可以将HDFS的数据导进到关系型数据库中
 
 - [Apache Mahout](http://mahout.apache.org/):是基于Hadoop的机器学习和数据挖掘的一个分布式框架。【**不打算学，计划利用SparkMLLib代替**】
 
 - [Apache Zookeeper](http://zookeeper.apache.org/): 是一个为分布式应用所设计的分布的、开源的协调服务，它主要是用来解决分布式应用中经常遇到的一些数据管理问题，简化分布式应用协调及其管理的难度，提供高性能的分布式服务
+
     - [什么是ZooKeeper？](https://mp.weixin.qq.com/s?__biz=MzI4Njg5MDA5NA==&mid=2247485115&idx=1&sn=5d269f40f820c82b460993669ca6242e&chksm=ebd747badca0ceac9953f82e08b1d1a49498ebd4af77ec5d628a0682bb9f0ac5ab347411f654&mpshare=1&scene=1&srcid=0420JmkBjUJVKdyGAr3iJRAA&pass_ticket=vPMuI9TAnmzdbyz0qcM4OQqDvmete3IBSHcVmBeVTYs%3D#rd)
+
+    - [ZooKeeper从入门到专家](https://blog.csdn.net/wo541075754/column/info/14599)
+    - [跟着实例学习ZooKeeper的用法](https://colobu.com/2014/12/16/zookeeper-recipes-by-example-summary/)
+    - [ZooKeeper八期学习-博客园-Sunddenly(⊙_⊙)](https://www.cnblogs.com/sunddenly/category/620563.html)
+    - 找到的[ZooKeeper教程资源收集（简介/原理/示例/解决方案）](http://www.cnblogs.com/EasonJim/p/7481825.html)
+
 - [Apache Flume](http://flume.apache.org/): 是一个分布的、可靠的、高可用的海量日志聚合的系统，可用于日志数据收集，日志数据处理，日志数据传输
 
 - [Apache Kafka](kafka.apache.org)
+
     - 链接：https://pan.baidu.com/s/1RyD_R0LXSVGIc4D6VXJfmQ 提取码：759q    Kafka 朱忠华
-    
+
 - 等等，当然不可能全学的
 
 
