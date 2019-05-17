@@ -1,0 +1,56 @@
+{
+    "created_time": "2019-05-17T09:44:08Z",
+    "files": [
+        {
+            "attachment_folder": "",
+            "attachments": [
+            ],
+            "created_time": "2019-05-17T09:44:08Z",
+            "modified_time": "2019-05-17T09:44:08Z",
+            "name": "Git使用教程：最详细、最傻瓜、最浅显、真正手把手教.md",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "attachments": [
+            ],
+            "created_time": "2019-05-17T09:44:08Z",
+            "modified_time": "2019-05-17T09:44:08Z",
+            "name": "git团队协作项目操作说明.md",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "attachments": [
+            ],
+            "created_time": "2019-05-17T09:44:08Z",
+            "modified_time": "2019-05-17T10:27:33Z",
+            "name": "README.md",
+            "tags": [
+            ]
+        }
+    ],
+    "sub_directories": [
+        {
+            "name": "eBook"
+        },
+        {
+            "name": "Java笔记"
+        },
+        {
+            "name": "Linux命令及Shell脚本学习笔记"
+        },
+        {
+            "name": "Linux系统下开发环境搭建"
+        },
+        {
+            "name": "大数据"
+        },
+        {
+            "name": "算法和数据结构"
+        }
+    ],
+    "version": "1"
+}

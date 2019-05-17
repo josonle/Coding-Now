@@ -115,6 +115,7 @@
   - [Linux-command](https://wangchujiang.com/linux-command/)，linux命令搜索引擎
   - [cheat.sh](https://cheat.sh/)，不仅仅是linux命令，还包括一些语言像java、scala脚本的使用
 
+- [打造高效的工作环境 – SHELL 篇](https://coolshell.cn/articles/19219.html)
 
 ## 爬虫篇（Python）
 
@@ -236,6 +237,9 @@
 ## 大数据篇
 
 - 我的学习记录：[BigData-Learning](https://github.com/josonle/BigData-Learning)
+- 推荐一个国外的 Big Data 入门学习网站：[Simple and Easy Learning for Big Data & Analytics](https://www.tutorialspoint.com/big_data_tutorials.htm)（要好好学English( ⊙ o ⊙ )啊！）
+
+其实，不管是大数据还是其他知识的学习，我认为最好的方法无非是先找个视频快速过一遍，总体上了解这门技术干嘛的，是否适合自己。然后结合官网文档细致地过一遍，学习过程中最好结合前人大牛的博客，都是经验之得你说要不要看。最后就是项目了，实际就是在工作中应用，这个我也说不好，每个人都有自己的方法吧。
 
 ### 大数据开发环境安装配置
 
@@ -266,6 +270,8 @@
   - [百 PB 级 Hadoop 集群存储空间治理](https://mp.weixin.qq.com/s?__biz=MzU2MzY1MjQwNg==&mid=2247483741&idx=1&sn=1c2c46ee447f2e38488d83002289463c&chksm=fc57b304cb203a123434ac842e0fd97d448c434f35faa41022718eee428805f9f11ddcba5417&mpshare=1&scene=1&srcid=0505MJXy1wWOu2kvTcMC84Ax&pass_ticket=vPMuI9TAnmzdbyz0qcM4OQqDvmete3IBSHcVmBeVTYs%3D#rd)
 
   - [使用Java API对HDFS进行系列操作](https://github.com/josonle/Coding-Now/blob/master/%E5%A4%A7%E6%95%B0%E6%8D%AE/hadoop%E7%B3%BB%E5%88%97/%E4%BD%BF%E7%94%A8Java%20API%E5%AF%B9HDFS%E8%BF%9B%E8%A1%8C%E7%B3%BB%E5%88%97%E6%93%8D%E4%BD%9C.md)
+
+  - [Hadoop NameNode 高可用 (High Availability) 实现解析](https://www.ibm.com/developerworks/cn/opensource/os-cn-hadoop-name-node/index.html)
 
   - 掌握MapReduce编程
 
@@ -379,7 +385,7 @@
 - [用Flink取代Spark Streaming！知乎实时数仓架构演进](https://mp.weixin.qq.com/s?__biz=MzU1NDA4NjU2MA==&mid=2247495210&idx=1&sn=64a97593442d8746230604b54a65a1a1&chksm=fbea57e5cc9ddef3b634595f8bc9d7faf59754b8fb63e10ed8293c4b12ef42c8e95adfb304fe&mpshare=1&scene=1&srcid=03068M6lWxlMKwklX4DfJJJ3&pass_ticket=igsIEGXM1UhrBkCT3yw8Er2%2B%2B8Xo7vGvVpXlMxnW0rQ%3D#rd)
 - [美团点评基于 Flink 的实时数仓建设实践](https://mp.weixin.qq.com/s?__biz=MjM5NjQ5MTI5OA==&mid=2651749037&idx=1&sn=4a448647b3dae50779bc9ec0e9c10275&chksm=bd12a3e08a652af6ed8b305b0523716e08a81cf99296425cdaf2bbee1e9d8a6aca06c81cdcc1&mpshare=1&scene=1&srcid=1018u6hMl6XlaVFqqnbJdX5g&pass_ticket=igsIEGXM1UhrBkCT3yw8Er2%2B%2B8Xo7vGvVpXlMxnW0rQ%3D#rd)
 - [推荐两个不错的flink项目](<https://cloud.tencent.com/developer/article/1358487>)
-
+- [OPPO数据中台之基石：基于Flink SQL构建实数据仓库](https://mp.weixin.qq.com/s/JsoMgIW6bKEFDGvq_KI6hg?comefrom=https://blogread.cn/news/)
 ### 实战项目
 
 #### 推荐系统
@@ -675,6 +681,10 @@ Arthas支持JDK 6+，支持Linux/Mac/Windows，采用命令行交互模式，同
 
 - [门户 Linux公社论坛 ](http://www.linuxidc.net/portal.php)
 
+- 在线SQL练习：<https://sqlbolt.com>
+
+- 推荐一个国外的 Big Data 入门学习网站：[Simple and Easy Learning for Big Data & Analytics](https://www.tutorialspoint.com/big_data_tutorials.htm)（要好好学English( ⊙ o ⊙ )啊！）
+
 #### Java各大开发者网站
   - [Java知音-一个专注于技术分享的网站](https://www.javazhiyin.com/)
   - [并发编程网](http://ifeve.com/)——有很多不错的Java文章及外文翻译文章
@@ -717,8 +727,6 @@ Arthas支持JDK 6+，支持Linux/Mac/Windows，采用命令行交互模式，同
 
 <outline type="rss" text=" 彷徨的博客" xmlUrl="https://blog.csdn.net/weixin_35353187/rss/list"/>
 
-<outline type="rss" text="彷徨的面试题收集" xmlUrl="https://blog.csdn.net/weixin_35353187/rss/list"/>
-
 <outline type="rss" text="推酷" xmlUrl="https://rsshub.app/tuicool/mags/design"/>
 
 <outline type="rss" text="开发者头条" xmlUrl="https://rsshub.app/toutiao/today"/>
@@ -759,6 +767,11 @@ Arthas支持JDK 6+，支持Linux/Mac/Windows，采用命令行交互模式，同
 #### 存储
 
 - MEGA网盘，	https://mega.nz/
+
+#### 应用软件
+- Typora——markdown笔记应用
+- Vnote——markdown笔记应用，我觉得可以完全代替Typora
+- Go For it！时间管理
 
 #### Chrome插件
 
