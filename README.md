@@ -14,7 +14,7 @@
     - [大数据篇](#大数据篇)
         - [大数据开发环境安装配置](#大数据开发环境安装配置)
         - [Hadoop系列](#Hadoop系列)
-            - 涉及MapReduce、Hdfs、Hive、等hadoop生态圈组件
+            - 涉及MapReduce、Hdfs、Hive、Kafka、ZooKeeper等hadoop生态圈组件
         - [Spark系列](#Spark系列)
         - [Flink系列](#Flink系列)
         - [实战项目](#实战项目)
@@ -320,12 +320,15 @@
 - [Apache Mahout](http://mahout.apache.org/):是基于Hadoop的机器学习和数据挖掘的一个分布式框架。【**不打算学，计划利用SparkMLLib代替**】
 
 - [Apache Zookeeper](http://zookeeper.apache.org/): 是一个为分布式应用所设计的分布的、开源的协调服务，它主要是用来解决分布式应用中经常遇到的一些数据管理问题，简化分布式应用协调及其管理的难度，提供高性能的分布式服务
-
+    - 我的笔记
+      - [初窥门径ZooKeeper](https://github.com/josonle/BigData-Learning/tree/master/ZooKeeper)
+      - [渐入佳境ZooKeeper](https://github.com/josonle/BigData-Learning/tree/master/ZooKeeper)
+      - 登堂入室ZooKeeper
     - [什么是ZooKeeper？](https://mp.weixin.qq.com/s?__biz=MzI4Njg5MDA5NA==&mid=2247485115&idx=1&sn=5d269f40f820c82b460993669ca6242e&chksm=ebd747badca0ceac9953f82e08b1d1a49498ebd4af77ec5d628a0682bb9f0ac5ab347411f654&mpshare=1&scene=1&srcid=0420JmkBjUJVKdyGAr3iJRAA&pass_ticket=vPMuI9TAnmzdbyz0qcM4OQqDvmete3IBSHcVmBeVTYs%3D#rd)
 
     - [ZooKeeper从入门到专家](https://blog.csdn.net/wo541075754/column/info/14599)
     - [跟着实例学习ZooKeeper的用法](https://colobu.com/2014/12/16/zookeeper-recipes-by-example-summary/)
-    - [ZooKeeper八期学习-博客园-Sunddenly(⊙_⊙)](https://www.cnblogs.com/sunddenly/category/620563.html)
+    - [ZooKeeper八期学习-博客园-Sunddenly(⊙_⊙)](https://www.cnblogs.com/sunddenly/category/620563.html)  【**墙推**】
     - 找到的[ZooKeeper教程资源收集（简介/原理/示例/解决方案）](http://www.cnblogs.com/EasonJim/p/7481825.html)
 
 - [Apache Flume](http://flume.apache.org/): 是一个分布的、可靠的、高可用的海量日志聚合的系统，可用于日志数据收集，日志数据处理，日志数据传输
@@ -461,6 +464,7 @@
 
     - 『浅入深出』MySQL 中事务的实现.pdf————【讲的确实不错】
 
+    - [分布式一致性原理](https://github.com/josonle/BigData-Learning/tree/master/ZooKeeper)，涉及CAP理论，2PC、3PC、Paxos、Raft、ZAB协议
     - 分布式系统一致性（ACID、CAP、BASE、二段提交、三段提交、TCC、幂等性）原理详解 .pdf
         > 原文出自<https://www.jianshu.com/p/1156151e20c8>
     - 理解分布式事务 -贝聊科技.pdf
