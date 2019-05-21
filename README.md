@@ -290,6 +290,8 @@
   - 推荐几个博客分类[博主LanceToBigData：Hadoop](https://www.cnblogs.com/zhangyinhua/category/1093575.html) ，[小小默’s Blog](https://blog.xiaoxiaomo.com/categories/%E6%8A%80%E6%9C%AF/)，分类很乱但是内容确实不错
 
 - [Apache Hive](http://hive.apache.org/): 是基于Hadoop的一个数据仓库工具，可以将结构化的数据文件映射为一张数据库表，通过类SQL语句快速实现简单的MapReduce统计，不必开发专门的MapReduce应用，十分适合数据仓库的统计分析
+    - 笔记
+        - [Hive篇](https://github.com/josonle/BigData-Learning/tree/master/Hive)
     - 博文
         - [Hive 性能优化](https://mp.weixin.qq.com/s?__biz=MzA3MDY0NTMxOQ==&mid=2247486550&idx=1&sn=8151680a70613fb7a06d019acfb390b7&chksm=9f38ef7ea84f66688cdeb8666d2c16d4da8bae1bab385eafacb9e7b085c673507c93d8bc3eca&mpshare=1&scene=1&srcid=&pass_ticket=igsIEGXM1UhrBkCT3yw8Er2%2B%2B8Xo7vGvVpXlMxnW0rQ%3D#rd)
         - [戳破 | hive on spark 调优点](https://mp.weixin.qq.com/s?__biz=MzA3MDY0NTMxOQ==&mid=2247486657&idx=1&sn=3b480c42f9743b6a8a97f37e4263a3a7&chksm=9f38efe9a84f66ff665d47e5b3fffaf06cb7cd18e3355f8491d1340eb92fe46ea954d967beff&mpshare=1&scene=1&srcid=0409bFXgGdTpiTqR0asiTqX0&pass_ticket=vPMuI9TAnmzdbyz0qcM4OQqDvmete3IBSHcVmBeVTYs%3D#rd)
