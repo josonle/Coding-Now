@@ -2,6 +2,7 @@
 
 - [Coding Now](#Coding-Now)
     - [初衷](#初衷)
+    - [每周推荐](#每周推荐)
     - [GitHub及Git使用](#GitHub及Git使用)
     - [Linux系统下开发环境搭建](#Linux系统下开发环境搭建)
     - [Linux命令及Shell脚本学习笔记](#Linux命令及Shell脚本学习笔记)
@@ -51,6 +52,12 @@
 ## 每周推荐
 - [如何阅读源码？](https://github.com/josonle/Interview-Summary/tree/master/EveryDay-Reading/2019-05-28#%E5%A6%82%E4%BD%95%E9%98%85%E8%AF%BB%E6%BA%90%E7%A0%81)
 > 没办法，要深入学习必须要看源码。身为小菜鸟的我，每逢看源码时就找不到个准头，看着看着就迷糊了。恰巧今天逛知识星球时，看一个球友的回答觉得非常好，特此转录一下
+
+- 如何写好注释
+  - [请停止代码注释](https://juejin.im/post/5cf60bc8f265da1baa1e609e)
+  - [如何写Java文档注释(Java Doc Comments)](https://www.cnblogs.com/boring09/p/4274893.html)
+> 注释也很重要啊，菜的抠脚的我，每次都是写完代码后再补充注释，哈哈哈。。。
+
 
 ## GitHub及Git使用
 
@@ -323,6 +330,9 @@
         - [InfoQ 百度智能监控场景下的 HBase 实践](https://www.infoq.cn/article/cFqcz5q*Amg68Bs9iPtC)
         - [NoSQL 数据库不应该放弃 Consistency](https://www.infoq.cn/article/rhzs0KI2G*Y2r9PMdeNv)
         - [HBase优化 | 合理的使用编码压缩](https://mp.weixin.qq.com/s?__biz=MzU5OTQ1MDEzMA==&mid=2247486295&idx=1&sn=d09ea57635d69eff0d019bc0932683ac&chksm=feb5fc2ac9c2753c11b3b16f8f46b7d25d7417f26e33c4a826ecfed30704698f3adcbc8f72ae&mpshare=1&scene=1&srcid=&pass_ticket=g47IpqbBUy279OZCQ48ENy0Ldd2cAi0OcIQyk9%2BzTlU%3D#rd)
+        - [Phoenix重磅 | Phoenix(云HBase SQL)核心功能原理及应用场景介绍](https://mp.weixin.qq.com/s?__biz=MzU5OTQ1MDEzMA==&mid=2247486436&idx=1&sn=e588c3909a22a49a39169992bf5c788c&chksm=feb5fc99c9c2758fb9d974cf2e05081ff3abafe8848cb7a3ae6a421f8bf4ca2e54632443a491)
+        - [HBase解读 | 阿里云HBase SQL(Phoenix)服务深度解读](https://mp.weixin.qq.com/s?__biz=MzU5OTQ1MDEzMA==&mid=2247486361&idx=1&sn=0a5b4000c07040c5795e00fe1a73eb88&chksm=feb5fce4c9c275f2b93c5d1cf4cf672d072c03cb7ed1afd5363b39e8b5ead0a5941229ad6b64)
+        - [BigData NoSQL：ApsaraDB HBase数据存储与分析平台概览](https://mp.weixin.qq.com/s?__biz=MzIxNTQ0MDQxNg==&mid=2247485179&idx=1&sn=a1f2d64476162d9606a4a9d881db0c46&chksm=97990bb4a0ee82a2ac8123b8bb6c92ca0694438a6b4cb006f954a503cd5f64360f58fd6cc78d)
 
 - [Apache Sqoop](http://sqoop.apache.org/): 是一个用来将Hadoop和关系型数据库中的数据相互转移的工具，可以将一个关系型数据库（MySQL ,Oracle ,Postgres等）中的数据导进到Hadoop的HDFS中，也可以将HDFS的数据导进到关系型数据库中
 
@@ -394,6 +404,8 @@
 - [SparkSQL性能分析与优化及相关工具小结](https://blog.csdn.net/kisimple/article/details/79426826)
 - [使用 Spark SQL 高效地读写 HBase](https://mp.weixin.qq.com/s?__biz=MzA5MTc0NTMwNQ==&mid=2650716619&idx=1&sn=0745298922471c9a90b561e6661a3ad1&chksm=887da4bdbf0a2dab9f846518e18a5cc99974483f09af5523e6ffa0451fac4caee77d6141902c&mpshare=1&scene=1&srcid=&pass_ticket=vPMuI9TAnmzdbyz0qcM4OQqDvmete3IBSHcVmBeVTYs%3D#rd)
 - Intel-Spark SQL优化实践.pdf
+- [Spark Shuffle在网易的优化](https://mp.weixin.qq.com/s?__biz=MzU5OTQ1MDEzMA==&mid=2247486455&idx=1&sn=b9896d9763df33a1624929ebd128dba0&chksm=feb5fc8ac9c2759ce596fbaa0c5977a9ec90a38d4e12449d4abc7a236389005de094769b37d6&mpshare=1&scene=1&srcid=&pass_ticket=UH54DeEP7T2eQkMQOxZLYgsAEOXnrb7XYWWvrlqptTk%3D#rd)
+- 
 - 视频和书籍资源见下方
 
 ### Flink系列
