@@ -21,6 +21,8 @@
 
 > 补充一点，用户目录下的.local/share/applications 也可以配置，有些应用会自动安装启动图标在此位置
 
+> 再补充一点，一般应用图标最好是放在`/usr/share/Icons/`下，这样的话应用打开时省的dock栏上没有图标显示
+
 ### Deepin Linux 安装启动scala报错 java.lang.NumberFormatException: For input string: "0x100" 解决
 
 java版本是jdk1.8.0_191，scala是2.11.12版本，该错误不影响scala运行

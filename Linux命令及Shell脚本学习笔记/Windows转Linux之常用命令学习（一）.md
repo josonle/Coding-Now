@@ -630,6 +630,10 @@ zip常和参数-r一起用来压缩文件夹，unzip常和-d指定解压到哪�
 zip -r hadoop.zip ~/hadoop/
 unzip -d ~/Downloads/ hadoop.zip
 ```
+- rar和unrar
+
+> 很少在linux上打成rar包，但还是了解一下，`rar a abc.rar file1 file2`，不加file1的话会把当前目录下的文件打进rar包（还有用m替换a的话会删除源文件打包）
+> `unrar e abc.rar /xxx`，将abc.rar解压到/xxx
 
 - tar
 

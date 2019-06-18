@@ -2,6 +2,7 @@
 
 - [Coding Now](#Coding-Now)
     - [初衷](#初衷)
+    - [每周推荐](#每周推荐)
     - [GitHub及Git使用](#GitHub及Git使用)
     - [Linux系统下开发环境搭建](#Linux系统下开发环境搭建)
     - [Linux命令及Shell脚本学习笔记](#Linux命令及Shell脚本学习笔记)
@@ -14,13 +15,14 @@
     - [大数据篇](#大数据篇)
         - [大数据开发环境安装配置](#大数据开发环境安装配置)
         - [Hadoop系列](#Hadoop系列)
-            - 涉及MapReduce、Hdfs、Hive、等hadoop生态圈组件
+            - 涉及MapReduce、Hdfs、Hive、Kafka、ZooKeeper等hadoop生态圈组件
         - [Spark系列](#Spark系列)
         - [Flink系列](#Flink系列)
         - [实战项目](#实战项目)
             - [推荐系统](#推荐系统)
         - [大数据相关面试](#大数据相关面试)
     - [算法篇](#算法篇)
+    - [Java篇](#Java篇)
     - [数据库和分布式篇](#数据库和分布式篇)
     - [GitHub上一些技术书籍、翻译书籍、面试题库推荐](#GitHub上一些技术书籍、翻译书籍、面试题库推荐)
     - [eBook和视频资源](#eBook和视频资源)
@@ -47,6 +49,16 @@
 
 一是平时看的一些自己认为不错的文章总是很难整理，所以打算开一个项目管理这些，也可以分享给大家；二是记录自己平时所学的一些笔记，一些经历，以供将来翻阅；三是想系统地进阶学习一番，记录这个项目也是想激励自己；四是分享一些平时看的电子书啊、视频等等
 
+## 每周推荐
+- [如何阅读源码？](https://github.com/josonle/Interview-Summary/tree/master/EveryDay-Reading/2019-05-28#%E5%A6%82%E4%BD%95%E9%98%85%E8%AF%BB%E6%BA%90%E7%A0%81)
+> 没办法，要深入学习必须要看源码。身为小菜鸟的我，每逢看源码时就找不到个准头，看着看着就迷糊了。恰巧今天逛知识星球时，看一个球友的回答觉得非常好，特此转录一下
+
+- 如何写好注释
+  - [请停止代码注释](https://juejin.im/post/5cf60bc8f265da1baa1e609e)
+  - [如何写Java文档注释(Java Doc Comments)](https://www.cnblogs.com/boring09/p/4274893.html)
+> 注释也很重要啊，菜的抠脚的我，每次都是写完代码后再补充注释，哈哈哈。。。
+
+
 ## GitHub及Git使用
 
 - [如何选择开源许可证？ from 阮一峰的网络日志](http://www.ruanyifeng.com/blog/2011/05/how_to_choose_free_software_licenses.html) 
@@ -63,6 +75,7 @@
 
   - [ghtoc Github地址（pyhon）](https://link.jianshu.com/?t=https%3A%2F%2Fgithub.com%2Fsk1418%2Fghtoc) 见toc.py，（python2.7，使用方法·：`python toc.py MDFile`，会生成一个.bak备份文件）【推荐这个可以用，也不用装其他工具】
   - [gh-md-toc Github地址](https://link.jianshu.com/?t=https%3A%2F%2Fgithub.com%2Fekalinin%2Fgithub-markdown-toc)
+- git团队协作项目操作说明.md [放在博客上的外链](https://blog.csdn.net/lzw2016/article/details/89791579)
 
 ## Linux系统下开发环境搭建
 
@@ -106,8 +119,14 @@
     - [5 个针对有经验用户的 Vim 技巧](https://linux.cn/article-8148-1.html)
     - [3 个针对高级用户的 Vim 编辑器有用技巧](https://linux.cn/article-8149-1.html)
 
+- [ctolib的Linux开发社区](https://www.ctolib.com/linux.html)
+  - 上面有很多小玩意挺有意思的
 
+- 分享两个学习Linux命令的
+  - [Linux-command](https://wangchujiang.com/linux-command/)，linux命令搜索引擎
+  - [cheat.sh](https://cheat.sh/)，不仅仅是linux命令，还包括一些语言像java、scala脚本的使用
 
+- [打造高效的工作环境 – SHELL 篇](https://coolshell.cn/articles/19219.html)
 
 ## 爬虫篇（Python）
 
@@ -227,6 +246,14 @@
   - [机器学习：数据预处理之独热编码（One-Hot）_慕课手记](http://www.imooc.com/article/35900)
 
 ## 大数据篇
+### 学习大数据的一点感悟
+- 我的学习记录：[BigData-Learning](https://github.com/josonle/BigData-Learning)
+- 我阅读《Spark 权威指南》的笔记和心得：
+  - github上 [Spark-The-Definitive-Guide-Learning](https://github.com/josonle/Spark-The-Definitive-Guide-Learning)
+  - [更好的阅读体验，同步于掘金](https://juejin.im/post/5cd3dc06e51d456e2d69a83e)
+- 推荐一个国外的 Big Data 入门学习网站：[Simple and Easy Learning for Big Data & Analytics](https://www.tutorialspoint.com/big_data_tutorials.htm)（要好好学English( ⊙ o ⊙ )啊！）
+
+其实，不管是大数据还是其他知识的学习，我认为最好的方法无非是先找个视频快速过一遍，总体上了解这门技术干嘛的，是否适合自己。然后结合官网文档细致地过一遍，学习过程中最好结合前人大牛的博客，都是经验之得你说要不要看。最后就是项目了，实际就是在工作中应用，这个我也说不好，每个人都有自己的方法吧。当然，深入看源码是躲不过的，[分享一个如何阅读Flink源码的回答](https://github.com/josonle/Interview-Summary/tree/master/EveryDay-Reading/2019-05-28#%E5%A6%82%E4%BD%95%E9%98%85%E8%AF%BB%E6%BA%90%E7%A0%81)，我自以为是有很大的帮助的
 
 ### 大数据开发环境安装配置
 
@@ -254,7 +281,11 @@
 
   - [MapReduce、Hive、Spark中数据倾斜问题解决归纳总结](https://blog.csdn.net/lzw2016/article/details/89284124)
 
+  - [百 PB 级 Hadoop 集群存储空间治理](https://mp.weixin.qq.com/s?__biz=MzU2MzY1MjQwNg==&mid=2247483741&idx=1&sn=1c2c46ee447f2e38488d83002289463c&chksm=fc57b304cb203a123434ac842e0fd97d448c434f35faa41022718eee428805f9f11ddcba5417&mpshare=1&scene=1&srcid=0505MJXy1wWOu2kvTcMC84Ax&pass_ticket=vPMuI9TAnmzdbyz0qcM4OQqDvmete3IBSHcVmBeVTYs%3D#rd)
+
   - [使用Java API对HDFS进行系列操作](https://github.com/josonle/Coding-Now/blob/master/%E5%A4%A7%E6%95%B0%E6%8D%AE/hadoop%E7%B3%BB%E5%88%97/%E4%BD%BF%E7%94%A8Java%20API%E5%AF%B9HDFS%E8%BF%9B%E8%A1%8C%E7%B3%BB%E5%88%97%E6%93%8D%E4%BD%9C.md)
+
+  - [Hadoop NameNode 高可用 (High Availability) 实现解析](https://www.ibm.com/developerworks/cn/opensource/os-cn-hadoop-name-node/index.html)
 
   - 掌握MapReduce编程
 
@@ -273,14 +304,19 @@
   - 推荐几个博客分类[博主LanceToBigData：Hadoop](https://www.cnblogs.com/zhangyinhua/category/1093575.html) ，[小小默’s Blog](https://blog.xiaoxiaomo.com/categories/%E6%8A%80%E6%9C%AF/)，分类很乱但是内容确实不错
 
 - [Apache Hive](http://hive.apache.org/): 是基于Hadoop的一个数据仓库工具，可以将结构化的数据文件映射为一张数据库表，通过类SQL语句快速实现简单的MapReduce统计，不必开发专门的MapReduce应用，十分适合数据仓库的统计分析
+    - 笔记
+        - [Hive篇](https://github.com/josonle/BigData-Learning/tree/master/Hive)
     - 博文
         - [Hive 性能优化](https://mp.weixin.qq.com/s?__biz=MzA3MDY0NTMxOQ==&mid=2247486550&idx=1&sn=8151680a70613fb7a06d019acfb390b7&chksm=9f38ef7ea84f66688cdeb8666d2c16d4da8bae1bab385eafacb9e7b085c673507c93d8bc3eca&mpshare=1&scene=1&srcid=&pass_ticket=igsIEGXM1UhrBkCT3yw8Er2%2B%2B8Xo7vGvVpXlMxnW0rQ%3D#rd)
+        - [戳破 | hive on spark 调优点](https://mp.weixin.qq.com/s?__biz=MzA3MDY0NTMxOQ==&mid=2247486657&idx=1&sn=3b480c42f9743b6a8a97f37e4263a3a7&chksm=9f38efe9a84f66ff665d47e5b3fffaf06cb7cd18e3355f8491d1340eb92fe46ea954d967beff&mpshare=1&scene=1&srcid=0409bFXgGdTpiTqR0asiTqX0&pass_ticket=vPMuI9TAnmzdbyz0qcM4OQqDvmete3IBSHcVmBeVTYs%3D#rd)
         - [实时离线融合在唯品会的进展](https://www.infoq.cn/article/progress-of-real-time-offline-fusion-in-vip)
         - [数据仓库系列篇——唯品会大数据架构](https://zhuanlan.zhihu.com/p/45123018)
+        - [数据仓库系统|框架结构](https://www.jianshu.com/p/397c9f45d0f2)
 
 - [Apache Pig](http://pig.apache.org/): 是一个基于Hadoop的大规模数据分析工具，它提供的SQL-LIKE语言叫Pig Latin，该语言的编译器会把类SQL的数据分析请求转换为一系列经过优化处理的MapReduce运算 【**不准备学，计划Hive代替Pig**】
 
 - [Apache HBase](http://hbase.apache.org/): 是一个高可靠性、高性能、面向列、可伸缩的分布式存储系统，利用HBase技术可在廉价PC Server上搭建起大规模结构化存储集群
+
     - HBase入门————[《HBase不睡觉》](http://kittyandpuppy.coolplayer.net/HBase.pdf)
     - 《HBase实战》见下方[ebook](#eBook和视频资源)
     - [一条数据的HBase之旅，简明HBase入门教程](http://www.nosqlnotes.com/technotes/hbase/hbase-overview-concepts/)————推荐一个HBase入门系列博客
@@ -291,14 +327,38 @@
         - [服务平台化，知乎 HBase 实践](https://www.infoq.cn/article/oZCcFAC7J4-01yFTG5r3?utm_source=rss&utm_medium=article)
         - [HBase 八大应用场景](https://mp.weixin.qq.com/s?__biz=MzUzMTA2NTU2Ng==&mid=2247485514&idx=1&sn=349acddbaf78f14ecebd2a30582b9f74&chksm=fa4977fbcd3efeed3ce65a13f08698a9a16a3718ad218f6579ab19b46c6268ff36c633445dde&scene=27#wechat_redirect)
         - [Apache HBase 的现状和发展](https://www.infoq.cn/article/yETztPsQPWgLK-dRyOtk)
+        - [InfoQ 百度智能监控场景下的 HBase 实践](https://www.infoq.cn/article/cFqcz5q*Amg68Bs9iPtC)
+        - [NoSQL 数据库不应该放弃 Consistency](https://www.infoq.cn/article/rhzs0KI2G*Y2r9PMdeNv)
+        - [HBase优化 | 合理的使用编码压缩](https://mp.weixin.qq.com/s?__biz=MzU5OTQ1MDEzMA==&mid=2247486295&idx=1&sn=d09ea57635d69eff0d019bc0932683ac&chksm=feb5fc2ac9c2753c11b3b16f8f46b7d25d7417f26e33c4a826ecfed30704698f3adcbc8f72ae&mpshare=1&scene=1&srcid=&pass_ticket=g47IpqbBUy279OZCQ48ENy0Ldd2cAi0OcIQyk9%2BzTlU%3D#rd)
+        - [Phoenix重磅 | Phoenix(云HBase SQL)核心功能原理及应用场景介绍](https://mp.weixin.qq.com/s?__biz=MzU5OTQ1MDEzMA==&mid=2247486436&idx=1&sn=e588c3909a22a49a39169992bf5c788c&chksm=feb5fc99c9c2758fb9d974cf2e05081ff3abafe8848cb7a3ae6a421f8bf4ca2e54632443a491)
+        - [HBase解读 | 阿里云HBase SQL(Phoenix)服务深度解读](https://mp.weixin.qq.com/s?__biz=MzU5OTQ1MDEzMA==&mid=2247486361&idx=1&sn=0a5b4000c07040c5795e00fe1a73eb88&chksm=feb5fce4c9c275f2b93c5d1cf4cf672d072c03cb7ed1afd5363b39e8b5ead0a5941229ad6b64)
+        - [BigData NoSQL：ApsaraDB HBase数据存储与分析平台概览](https://mp.weixin.qq.com/s?__biz=MzIxNTQ0MDQxNg==&mid=2247485179&idx=1&sn=a1f2d64476162d9606a4a9d881db0c46&chksm=97990bb4a0ee82a2ac8123b8bb6c92ca0694438a6b4cb006f954a503cd5f64360f58fd6cc78d)
 
 - [Apache Sqoop](http://sqoop.apache.org/): 是一个用来将Hadoop和关系型数据库中的数据相互转移的工具，可以将一个关系型数据库（MySQL ,Oracle ,Postgres等）中的数据导进到Hadoop的HDFS中，也可以将HDFS的数据导进到关系型数据库中
 
 - [Apache Mahout](http://mahout.apache.org/):是基于Hadoop的机器学习和数据挖掘的一个分布式框架。【**不打算学，计划利用SparkMLLib代替**】
 
 - [Apache Zookeeper](http://zookeeper.apache.org/): 是一个为分布式应用所设计的分布的、开源的协调服务，它主要是用来解决分布式应用中经常遇到的一些数据管理问题，简化分布式应用协调及其管理的难度，提供高性能的分布式服务
+    - 我的笔记
+      - [初窥门径ZooKeeper](https://github.com/josonle/BigData-Learning/tree/master/ZooKeeper)
+      - [渐入佳境ZooKeeper](https://github.com/josonle/BigData-Learning/tree/master/ZooKeeper)
+      - 登堂入室ZooKeeper
+    - [什么是ZooKeeper？](https://mp.weixin.qq.com/s?__biz=MzI4Njg5MDA5NA==&mid=2247485115&idx=1&sn=5d269f40f820c82b460993669ca6242e&chksm=ebd747badca0ceac9953f82e08b1d1a49498ebd4af77ec5d628a0682bb9f0ac5ab347411f654&mpshare=1&scene=1&srcid=0420JmkBjUJVKdyGAr3iJRAA&pass_ticket=vPMuI9TAnmzdbyz0qcM4OQqDvmete3IBSHcVmBeVTYs%3D#rd)
+
+    - [ZooKeeper从入门到专家](https://blog.csdn.net/wo541075754/column/info/14599)
+    - [跟着实例学习ZooKeeper的用法](https://colobu.com/2014/12/16/zookeeper-recipes-by-example-summary/)
+    - [ZooKeeper八期学习-博客园-Sunddenly(⊙_⊙)](https://www.cnblogs.com/sunddenly/category/620563.html)  【**墙推**】
+    - 找到的[ZooKeeper教程资源收集（简介/原理/示例/解决方案）](http://www.cnblogs.com/EasonJim/p/7481825.html)
 
 - [Apache Flume](http://flume.apache.org/): 是一个分布的、可靠的、高可用的海量日志聚合的系统，可用于日志数据收集，日志数据处理，日志数据传输
+
+- [Apache Kafka](kafka.apache.org)
+
+    - [Kafka资源和记录](https://github.com/josonle/BigData-Learning#kafka%E7%AF%87) 
+    - 阅读
+      - [Kafka在字节跳动的实践和灾备方案](https://mp.weixin.qq.com/s?__biz=MzU3MzgwNTU2Mg==&mid=2247484788&idx=1&sn=5ca9db609918d04b156231b88744c2d6&chksm=fd3d43e1ca4acaf745acd281477e4f72024174add70f9f46d5c179637f31a6eeb373fc576520&mpshare=1&scene=1&srcid=&pass_ticket=g47IpqbBUy279OZCQ48ENy0Ldd2cAi0OcIQyk9%2BzTlU%3D#rd)
+      - [快手万亿级别Kafka集群应用实践与技术演进之路](https://mp.weixin.qq.com/s?__biz=MzU1NDA4NjU2MA==&mid=2247496484&idx=1&sn=4238cc7f88860559861178a083e5b475&chksm=fbea4aebcc9dc3fdb370a413e38daace82cbfb431108b1348bd20b13dc896c31eff39978a525&mpshare=1&scene=1&srcid=&pass_ticket=g47IpqbBUy279OZCQ48ENy0Ldd2cAi0OcIQyk9%2BzTlU%3D#rd)
+      - [基于磁盘的Kafka为什么这么快](https://mp.weixin.qq.com/s/Hy3npWsrJg6w9gvgkRD89Q)
 
 - 等等，当然不可能全学的
 
@@ -339,15 +399,25 @@
 - [Spark性能优化指南——高级篇](https://tech.meituan.com/2016/05/12/spark-tuning-pro.html)
 - [hive on spark 调优点](<https://blog.csdn.net/rlnLo2pNEfx9c/article/details/89117446>)
 - [Koalas：让 pandas 轻松切换 Apache Spark，在大数据中规模应用](https://github.com/josonle/Coding-Now/tree/master/%E5%A4%A7%E6%95%B0%E6%8D%AE/spark%E7%B3%BB%E5%88%97)
-
+- [不可不知的spark shuffle](<https://cloud.tencent.com/developer/article/1346661>)
+- [SparkSQL的两种UDAF的讲解](<https://cloud.tencent.com/developer/article/1172850>)
+- [SparkSQL性能分析与优化及相关工具小结](https://blog.csdn.net/kisimple/article/details/79426826)
+- [使用 Spark SQL 高效地读写 HBase](https://mp.weixin.qq.com/s?__biz=MzA5MTc0NTMwNQ==&mid=2650716619&idx=1&sn=0745298922471c9a90b561e6661a3ad1&chksm=887da4bdbf0a2dab9f846518e18a5cc99974483f09af5523e6ffa0451fac4caee77d6141902c&mpshare=1&scene=1&srcid=&pass_ticket=vPMuI9TAnmzdbyz0qcM4OQqDvmete3IBSHcVmBeVTYs%3D#rd)
+- Intel-Spark SQL优化实践.pdf
+- [Spark Shuffle在网易的优化](https://mp.weixin.qq.com/s?__biz=MzU5OTQ1MDEzMA==&mid=2247486455&idx=1&sn=b9896d9763df33a1624929ebd128dba0&chksm=feb5fc8ac9c2759ce596fbaa0c5977a9ec90a38d4e12449d4abc7a236389005de094769b37d6&mpshare=1&scene=1&srcid=&pass_ticket=UH54DeEP7T2eQkMQOxZLYgsAEOXnrb7XYWWvrlqptTk%3D#rd)
+- 
 - 视频和书籍资源见下方
 
 ### Flink系列
 阿里强推的flink，取而代之二次开发的流计算和批处理引擎blink，spark的强势竞争对手
 
+- [Apache Flink 中文学习官方网站](https://zh.ververica.com)
+- [云栖社区-Apache Flink漫谈系列](https://yq.aliyun.com/album/206)
+- [精通Apache Flink必读系列文章](https://blog.csdn.net/ffjl1985/article/details/81775019)
 - [用Flink取代Spark Streaming！知乎实时数仓架构演进](https://mp.weixin.qq.com/s?__biz=MzU1NDA4NjU2MA==&mid=2247495210&idx=1&sn=64a97593442d8746230604b54a65a1a1&chksm=fbea57e5cc9ddef3b634595f8bc9d7faf59754b8fb63e10ed8293c4b12ef42c8e95adfb304fe&mpshare=1&scene=1&srcid=03068M6lWxlMKwklX4DfJJJ3&pass_ticket=igsIEGXM1UhrBkCT3yw8Er2%2B%2B8Xo7vGvVpXlMxnW0rQ%3D#rd)
 - [美团点评基于 Flink 的实时数仓建设实践](https://mp.weixin.qq.com/s?__biz=MjM5NjQ5MTI5OA==&mid=2651749037&idx=1&sn=4a448647b3dae50779bc9ec0e9c10275&chksm=bd12a3e08a652af6ed8b305b0523716e08a81cf99296425cdaf2bbee1e9d8a6aca06c81cdcc1&mpshare=1&scene=1&srcid=1018u6hMl6XlaVFqqnbJdX5g&pass_ticket=igsIEGXM1UhrBkCT3yw8Er2%2B%2B8Xo7vGvVpXlMxnW0rQ%3D#rd)
-
+- [推荐两个不错的flink项目](<https://cloud.tencent.com/developer/article/1358487>)
+- [OPPO数据中台之基石：基于Flink SQL构建实数据仓库](https://mp.weixin.qq.com/s/JsoMgIW6bKEFDGvq_KI6hg?comefrom=https://blogread.cn/news/)
 ### 实战项目
 
 #### 推荐系统
@@ -391,6 +461,10 @@
 
   - [**LeetCodeAnimation** 用动画的形式呈现解LeetCode题目的思路](https://github.com/MisterBooo/LeetCodeAnimation) 
 
+## Java篇
+- [高并发编程知识体系](https://mp.weixin.qq.com/s/qaj37YYxz7afD-WfAZeN8Q)
+- [JVM核心知识体系](https://mp.weixin.qq.com/s/3_DEPdZTnGmdGBd5iTrVjQ)
+- [Java笔记](https://github.com/josonle/Coding-Now/tree/master/Java%E7%AC%94%E8%AE%B0)
 ## 数据库和分布式篇
 数据库主要面向MySQL。pdf中附有转载自相关博客的引用链接，脑图是自己总结的，参考《深入浅出mysql》及相关博客。
 
@@ -412,8 +486,9 @@
 
     - 『浅入深出』MySQL 中事务的实现.pdf————【讲的确实不错】
 
+    - [分布式一致性原理](https://github.com/josonle/BigData-Learning/tree/master/ZooKeeper)，涉及CAP理论，2PC、3PC、Paxos、Raft、ZAB协议
     - 分布式系统一致性（ACID、CAP、BASE、二段提交、三段提交、TCC、幂等性）原理详解 .pdf
-
+        > 原文出自<https://www.jianshu.com/p/1156151e20c8>
     - 理解分布式事务 -贝聊科技.pdf
 
     - 分布式锁实现（基于redis-mysql）.pdf
@@ -585,6 +660,10 @@ Arthas支持JDK 6+，支持Linux/Mac/Windows，采用命令行交互模式，同
 
 > 以上来源于大数据学习资源群的分享
 
+- 知识星球上球友分享的资源
+  - Spark SQL最佳实践.pdf
+  - RDD完整.pdf
+  - SparkSQL子查询源码阅读.pdf
 ### HBase系列资源
 
 [eBook/HBase系列](https://github.com/josonle/Coding-Now/tree/master/eBook/HBase系列)
@@ -637,7 +716,13 @@ Arthas支持JDK 6+，支持Linux/Mac/Windows，采用命令行交互模式，同
 
 - [LiveBook](https://livebook.manning.com/)——最新IT电子书在线阅读 【English】
 
+- [Kindle 电子书下载](https://kindle.51nazhun.pub/)
+
 - [门户 Linux公社论坛 ](http://www.linuxidc.net/portal.php)
+
+- 在线SQL练习：<https://sqlbolt.com>
+
+- 推荐一个国外的 Big Data 入门学习网站：[Simple and Easy Learning for Big Data & Analytics](https://www.tutorialspoint.com/big_data_tutorials.htm)（要好好学English( ⊙ o ⊙ )啊！）
 
 #### Java各大开发者网站
   - [Java知音-一个专注于技术分享的网站](https://www.javazhiyin.com/)
@@ -681,8 +766,6 @@ Arthas支持JDK 6+，支持Linux/Mac/Windows，采用命令行交互模式，同
 
 <outline type="rss" text=" 彷徨的博客" xmlUrl="https://blog.csdn.net/weixin_35353187/rss/list"/>
 
-<outline type="rss" text="彷徨的面试题收集" xmlUrl="https://blog.csdn.net/weixin_35353187/rss/list"/>
-
 <outline type="rss" text="推酷" xmlUrl="https://rsshub.app/tuicool/mags/design"/>
 
 <outline type="rss" text="开发者头条" xmlUrl="https://rsshub.app/toutiao/today"/>
@@ -724,6 +807,11 @@ Arthas支持JDK 6+，支持Linux/Mac/Windows，采用命令行交互模式，同
 
 - MEGA网盘，	https://mega.nz/
 
+#### 应用软件
+- Typora——markdown笔记应用
+- Vnote——markdown笔记应用，我觉得可以完全代替Typora
+- Go For it！时间管理
+
 #### Chrome插件
 
 - [Chrome Extension Downloader](https://chrome-extension-downloader.com/)——可以通过此网站来下载因为某些原因无法在线安装 Chrome 插件
@@ -748,3 +836,4 @@ Arthas支持JDK 6+，支持Linux/Mac/Windows，采用命令行交互模式，同
 
   - Listen 1插件：汇集网易云、虾米、qq音乐、酷我等音乐，github上搜索
 - 今天逛github时发现一个Chrome插件英雄榜的项目，分享一下，[Chrome插件英雄榜, 为优秀的Chrome插件写一本中文说明书, 让Chrome插件英雄们造福人类](https://github.com/zhaoolee/ChromeAppHeroes)
+- 今天又看到一个通过链接下载github项目文件的网站，分享一下，[DownGit](https://minhaskamal.github.io/DownGit/#/home)
