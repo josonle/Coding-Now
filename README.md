@@ -20,6 +20,7 @@
         - [Flink系列](#Flink系列)
         - [实战项目](#实战项目)
             - [推荐系统](#推荐系统)
+            - [实时数据仓库搭建](#实时数据仓库搭建)
         - [大数据相关面试](#大数据相关面试)
     - [算法篇](#算法篇)
     - [Java篇](#Java篇)
@@ -248,7 +249,7 @@
 ## 大数据篇
 ### 学习大数据的一点感悟
 - 我的学习记录：[BigData-Learning](https://github.com/josonle/BigData-Learning)
-- 我阅读《Spark 权威指南》的笔记和心得：
+- 我阅读《Spark: The Definitive Guide Big Data Processing Made Simple》（Spark权威指南）的笔记和心得：
   - github上 [Spark-The-Definitive-Guide-Learning](https://github.com/josonle/Spark-The-Definitive-Guide-Learning)
   - [更好的阅读体验，同步于掘金](https://juejin.im/post/5cd3dc06e51d456e2d69a83e)
 - 推荐一个国外的 Big Data 入门学习网站：[Simple and Easy Learning for Big Data & Analytics](https://www.tutorialspoint.com/big_data_tutorials.htm)（要好好学English( ⊙ o ⊙ )啊！）
@@ -306,6 +307,8 @@
 - [Apache Hive](http://hive.apache.org/): 是基于Hadoop的一个数据仓库工具，可以将结构化的数据文件映射为一张数据库表，通过类SQL语句快速实现简单的MapReduce统计，不必开发专门的MapReduce应用，十分适合数据仓库的统计分析
     - 笔记
         - [Hive篇](https://github.com/josonle/BigData-Learning/tree/master/Hive)
+        - [Hive 插入动态分区表时遇到的一些坑](https://blog.csdn.net/lzw2016/article/details/97818080)
+        - [Hive中Create table... as 和 Create table ... like 的区别和使用注意](https://blog.csdn.net/lzw2016/article/details/97811799)
     - 博文
         - [Hive 性能优化](https://mp.weixin.qq.com/s?__biz=MzA3MDY0NTMxOQ==&mid=2247486550&idx=1&sn=8151680a70613fb7a06d019acfb390b7&chksm=9f38ef7ea84f66688cdeb8666d2c16d4da8bae1bab385eafacb9e7b085c673507c93d8bc3eca&mpshare=1&scene=1&srcid=&pass_ticket=igsIEGXM1UhrBkCT3yw8Er2%2B%2B8Xo7vGvVpXlMxnW0rQ%3D#rd)
         - [戳破 | hive on spark 调优点](https://mp.weixin.qq.com/s?__biz=MzA3MDY0NTMxOQ==&mid=2247486657&idx=1&sn=3b480c42f9743b6a8a97f37e4263a3a7&chksm=9f38efe9a84f66ff665d47e5b3fffaf06cb7cd18e3355f8491d1340eb92fe46ea954d967beff&mpshare=1&scene=1&srcid=0409bFXgGdTpiTqR0asiTqX0&pass_ticket=vPMuI9TAnmzdbyz0qcM4OQqDvmete3IBSHcVmBeVTYs%3D#rd)
@@ -405,7 +408,11 @@
 - [使用 Spark SQL 高效地读写 HBase](https://mp.weixin.qq.com/s?__biz=MzA5MTc0NTMwNQ==&mid=2650716619&idx=1&sn=0745298922471c9a90b561e6661a3ad1&chksm=887da4bdbf0a2dab9f846518e18a5cc99974483f09af5523e6ffa0451fac4caee77d6141902c&mpshare=1&scene=1&srcid=&pass_ticket=vPMuI9TAnmzdbyz0qcM4OQqDvmete3IBSHcVmBeVTYs%3D#rd)
 - Intel-Spark SQL优化实践.pdf
 - [Spark Shuffle在网易的优化](https://mp.weixin.qq.com/s?__biz=MzU5OTQ1MDEzMA==&mid=2247486455&idx=1&sn=b9896d9763df33a1624929ebd128dba0&chksm=feb5fc8ac9c2759ce596fbaa0c5977a9ec90a38d4e12449d4abc7a236389005de094769b37d6&mpshare=1&scene=1&srcid=&pass_ticket=UH54DeEP7T2eQkMQOxZLYgsAEOXnrb7XYWWvrlqptTk%3D#rd)
-- 
+- [Spark中如何向已存在Schema新增StructFields](https://blog.csdn.net/lzw2016/article/details/98877235)
+- [Structured Streaming中如何通过schema_of_json方法动态解析Kafka传入的JSON数据的Schema](https://blog.csdn.net/lzw2016/article/details/98958016)
+- [《Spark: The Definitive Guide 》Spark权威指南学习计划](https://blog.csdn.net/lzw2016/article/details/94655429)
+- [Spark2.4.0和Scala2.11集成Kudu1.8.0遇到的坑](https://blog.csdn.net/lzw2016/article/details/98762277)
+
 - 视频和书籍资源见下方
 
 ### Flink系列
@@ -418,6 +425,14 @@
 - [美团点评基于 Flink 的实时数仓建设实践](https://mp.weixin.qq.com/s?__biz=MjM5NjQ5MTI5OA==&mid=2651749037&idx=1&sn=4a448647b3dae50779bc9ec0e9c10275&chksm=bd12a3e08a652af6ed8b305b0523716e08a81cf99296425cdaf2bbee1e9d8a6aca06c81cdcc1&mpshare=1&scene=1&srcid=1018u6hMl6XlaVFqqnbJdX5g&pass_ticket=igsIEGXM1UhrBkCT3yw8Er2%2B%2B8Xo7vGvVpXlMxnW0rQ%3D#rd)
 - [推荐两个不错的flink项目](<https://cloud.tencent.com/developer/article/1358487>)
 - [OPPO数据中台之基石：基于Flink SQL构建实数据仓库](https://mp.weixin.qq.com/s/JsoMgIW6bKEFDGvq_KI6hg?comefrom=https://blogread.cn/news/)
+
+### Kudu + Impala 系列
+- 教程
+  - [Kudu 入门](https://github.com/josonle/BigData-Learning/blob/master/Kudu%2BImpala/Kudu%E5%85%A5%E9%97%A8.md)
+- 博文
+  - [网易数据基础平台建设经验谈](https://www.infoq.cn/article/uT2hOw7fUDxx1jHgN-3e)
+  - [SparkStreaming读Kafka数据写Kudu](https://cloud.tencent.com/developer/article/1158193)
+  - [Spark2.4.0和Scala2.11集成Kudu1.8.0遇到的坑](https://blog.csdn.net/lzw2016/article/details/98762277)
 ### 实战项目
 
 #### 推荐系统
@@ -425,7 +440,14 @@
 - [【推荐系统入门】推荐系统理论初探 及 豆瓣推荐应用举例分析](https://blog.csdn.net/lzw2016/article/details/85140764)
 - [itemcf](https://github.com/josonle/MapReduce-Demo/tree/master/src/main/java/ssdut/training/mapreduce/itemcf)——ItemCF算法的MapReduce实现代码
 
-- 待续
+#### 实时数据仓库搭建
+链接：https://github.com/josonle/Realtime-Data-Warehouse
+> 涉及离线数仓和实时数仓两部分，涉及大数据组件包括Sqoop、Kafka、Flume、Spark Streaming、Hive、Spark SQL、Kudu、Impala
+> ![](assets/20190822110758971_764642917.png)
+> Kafka+Flume+HDFS 构建消息采集系统
+> ![](assets/20190822110937662_1548052493.png)
+> 实时消息处理流程
+> ![](assets/20190822110907672_847619643.png)
 
 ### 大数据相关面试
 
@@ -634,6 +656,9 @@ Arthas支持JDK 6+，支持Linux/Mac/Windows，采用命令行交互模式，同
 
 书籍资源
 
+- 《Spark: The Definitive Guide Big Data Processing Made Simple》Spark权威指南，Spark框架开发者所写，入门必读
+    - 我这里翻译了下————[josonle/Spark-The-Definitive-Guide-Learning](https://github.com/josonle/Spark-The-Definitive-Guide-Learning)
+
 - [《深入解析Spark内核架构设计与实现原理》](https://mega.nz/#!X41lSAJK!-OT3owGN0_05l2Q1xkKt66WinEdYMEiotxZe7bmr7Bs)
 - [《深入理解Spark核心思想与源码分析》](https://mega.nz/#!LxkDwKCT!Yy5LKaUY9wX56tEOzOqX4oJhz8TDMfH9Ag54568GInE)
 - [《快学Scala》和代码](https://mega.nz/#F!GslxxS6A!sn6-YpeRQiNHIyS90ZwoSg)  【推荐】
@@ -680,6 +705,7 @@ Arthas支持JDK 6+，支持Linux/Mac/Windows，采用命令行交互模式，同
 - 今日头条推荐系统架构设计
 - 快看漫画大数据平台的模型思维与用户增长实践
 - 有赞百亿级日志系统架构设计
+- [SQL on Hadoop 在快手大数据平台的实践与优化](https://www.infoq.cn/article/BN9cJjg1t-QSWE6fqkoR)
 ### 算法系列
 
 - [牛客网算法](https://github.com/josonle/Coding-Now/tree/master/eBook/%E7%AE%97%E6%B3%95%E5%8F%8A%E5%85%B6%E4%BD%99%E5%9F%BA%E7%A1%80%E4%B9%A6%E7%B1%8D)
