@@ -24,6 +24,7 @@
         - [大数据相关面试](#大数据相关面试)
     - [算法篇](#算法篇)
     - [Java篇](#Java篇)
+      - [Java Web](#Java-Web)
     - [数据库和分布式篇](#数据库和分布式篇)
     - [GitHub上一些技术书籍、翻译书籍、面试题库推荐](#GitHub上一些技术书籍、翻译书籍、面试题库推荐)
     - [eBook和视频资源](#eBook和视频资源)
@@ -412,6 +413,10 @@
 - [Structured Streaming中如何通过schema_of_json方法动态解析Kafka传入的JSON数据的Schema](https://blog.csdn.net/lzw2016/article/details/98958016)
 - [《Spark: The Definitive Guide 》Spark权威指南学习计划](https://blog.csdn.net/lzw2016/article/details/94655429)
 - [Spark2.4.0和Scala2.11集成Kudu1.8.0遇到的坑](https://blog.csdn.net/lzw2016/article/details/98762277)
+- Spark SQL 的自适应执行（Adaptive Execution）优化设置
+  - [Adaptive Execution 让 Spark SQL 更高效更智能](http://www.jasongj.com/spark/adaptive_execution/)
+  - [SparkSQL自适应执行](https://yq.aliyun.com/articles/642598?spm=a2c4e.11153940.0.0.29771896kVHTtf)
+  > 如何自动调整Shuffle Partition个数，BroadcastJoin使用，Join过程数据倾斜的skewedJoin设置
 
 - 视频和书籍资源见下方
 
@@ -487,6 +492,15 @@
 - [高并发编程知识体系](https://mp.weixin.qq.com/s/qaj37YYxz7afD-WfAZeN8Q)
 - [JVM核心知识体系](https://mp.weixin.qq.com/s/3_DEPdZTnGmdGBd5iTrVjQ)
 - [Java笔记](https://github.com/josonle/Coding-Now/tree/master/Java%E7%AC%94%E8%AE%B0)
+
+### Java-Web
+秋招已经结束有一段时间了，闲来无事，想着学点新的东西。刚好在B站上看到一个SSM到Spring boot的教程，所以打算学习一下Java Web相关的内容。
+***
+- 博文
+  - [CDN是什么鬼](https://www.jianshu.com/p/57433bc34659)
+- 视频 
+  - [Java进阶SSM分布式项目实战视频教程](https://wistbean.github.io/java-ssm-video.html)
+  - 
 ## 数据库和分布式篇
 数据库主要面向MySQL。pdf中附有转载自相关博客的引用链接，脑图是自己总结的，参考《深入浅出mysql》及相关博客。
 
@@ -805,9 +819,12 @@ Arthas支持JDK 6+，支持Linux/Mac/Windows，采用命令行交互模式，同
 
 #### 搜索
 
-- [Bird.so 小众搜索引擎](http://caup.cn/)
+- [Bird.so 小众搜索引擎](http://caup.cn/)——已经无法使用
+  - 更新为：[萌搜 为小众搜索](https://mengso.com/)
 - [Google 镜像站](http://scholar.hedasudi.com/)
 - [GF导航_想你所想](http://www.gatherfind.com/)——网址收纳导航
+- [百度盘提取码查询](https://pnote.net/pan/)
+  - [github上的一个项目: baidupankey](https://github.com/wu-dada/baidupankey)
 
 #### 翻译
 
