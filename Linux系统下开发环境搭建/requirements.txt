@@ -34,7 +34,7 @@ pandocfilters==1.4.2
 parso==0.3.1
 pexpect==4.6.0
 pickleshare==0.7.5
-Pillow==5.1.0
+Pillow==6.2.0
 prometheus-client==0.5.0
 prompt-toolkit==2.0.7
 ptyprocess==0.6.0
@@ -43,7 +43,7 @@ Pygments==2.3.1
 pyparsing==2.3.1
 python-dateutil==2.7.5
 pytz==2018.9
-pyxdg==0.25
+pyxdg==0.26
 pyzmq==17.1.2
 qtconsole==4.4.3
 requests==2.18.4
