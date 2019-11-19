@@ -100,8 +100,8 @@
 - [Deepin设置开机自启动脚本问题.md](https://github.com/josonle/Coding-Now/blob/master/Linux%E7%B3%BB%E7%BB%9F%E4%B8%8B%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/Deepin%E8%AE%BE%E7%BD%AE%E5%BC%80%E6%9C%BA%E8%87%AA%E5%90%AF%E5%8A%A8%E8%84%9A%E6%9C%AC%E9%97%AE%E9%A2%98.md)
 - [AppImage打包方式、相关应用、相关Linux游戏站推荐](https://github.com/josonle/Coding-Now/blob/master/Linux%E7%B3%BB%E7%BB%9F%E4%B8%8B%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/AppImage%E6%89%93%E5%8C%85%E6%96%B9%E5%BC%8F%E5%8F%8A%E7%9B%B8%E5%85%B3Linux%E6%B8%B8%E6%88%8F%E7%AB%99%E6%8E%A8%E8%8D%90.md)
 - [【Deepin】最新XMind for Linux 破解版安装](https://blog.csdn.net/lzw2016/article/details/88622874)
-
-
+- [【Deepin】Deepin 15.11 由unstable版本重装过渡到stable版本]()
+    - 保存原有/home分区下的用户数据，避免重新安装各种环境
 
 ## Linux命令及Shell脚本学习笔记
 
