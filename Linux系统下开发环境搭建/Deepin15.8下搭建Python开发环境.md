@@ -63,14 +63,17 @@ ls /usr/share/applications  //看下有没有一个jetbrains-pycharm.desktop
 没有的话，你可以在新建一个pycharm.desktop，然后`sudo vi pycharm.desktop`
 ```
 [Desktop Entry]
+Version=1.0
 Type=Application
-Name=Pycharm
-GenericName=Pycharm3
-Comment=Pycharm3:The Python IDE
-Exec=sh ~/pycharm-2018.3.3/bin/pycharm.sh
-Icon=~/pycharm-2018.3.3/bin/pycharm.png
-Terminal=pycharm
-Categories=Pycharm;
+Name=PyCharm Professional Edition
+Icon=/home/josonlee/pycharm-2018.3.3/bin/pycharm.svg
+Exec="/home/josonlee/pycharm-2018.3.3/bin/pycharm.sh" %f
+Comment=Python IDE for Professional Developers
+Categories=Development;IDE;
+Terminal=false
+StartupWMClass=jetbrains-pycharm
+X-Deepin-CreatedBy=com.deepin.dde.daemon.Launcher
+X-Deepin-AppID=jetbrains-pycharm
 ```
 **主要是Exec、Icon改成你pycharm安装的位置**，然后启动器里会有pycharm图标，你右键给发送到桌面即可
 
