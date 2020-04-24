@@ -1,6 +1,6 @@
 asn1crypto==0.24.0
 backcall==0.1.0
-bleach==3.1.0
+bleach==3.1.4
 certifi==2018.1.18
 cffi==1.11.5
 chardet==3.0.4
