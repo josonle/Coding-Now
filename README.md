@@ -217,6 +217,7 @@
 - [【干货】史上最全的Tensorflow学习资源汇总](https://zhuanlan.zhihu.com/p/35515805)
 - [GitHub - apachecn/hands_on_Ml_with_Sklearn_and_TF: OReilly Hands On Machine Learning with Scikit Learn and TensorFlow (Sklearn与TensorFlow机器学习实用指南)](https://github.com/apachecn/hands_on_Ml_with_Sklearn_and_TF)
 - [AI研习社 - 研习AI产学研新知，助力AI学术开发者成长。](https://ai.yanxishe.com/)
+- [了解什么是深度学习以及深度学习如何工作？](https://www.scaler.com/topics/what-is-deep-learning/)
 
 ### GitHub上相关项目推荐
 
